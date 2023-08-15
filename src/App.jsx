@@ -11,7 +11,10 @@ function App() {
 
   return (
     <>
-      <div className="bg-melon bg-no-repeat bg-cover h-screen bg-center dark:bg-gunmetal transition_darkmode">
+      <div className="
+      h-screen  bg-melon bg-center dark:bg-gunmetal transition_darkmode flex
+      md:block
+      ">
         <Header />
         
         <Home />

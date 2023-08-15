@@ -1,16 +1,18 @@
-import { OrbitControls } from '@react-three/drei'
+import { AsciiRenderer, OrbitControls } from '@react-three/drei'
 import * as three from 'three'
 
 export default function HomeCanvas(){
 
 
-    return(<>
+    return(
+    <>
 
         <OrbitControls enableZoom={false} />
         
-        <mesh scale={2}>
-        <boxGeometry />
-        <meshNormalMaterial />
+        <mesh scale={1.5}>
+        <torusKnotGeometry args={[1, 0.2, 128, 32]} />
+        <meshNormalMaterial/>
         </mesh>
-    </>)
+    </>
+    )
 }
