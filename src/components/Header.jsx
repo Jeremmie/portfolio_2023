@@ -1,8 +1,8 @@
 import Nightmode from "./Nightmode"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useMediaQuery } from 'react-responsive'
 
-export default function Header(){
+export default function Header({switchBetweenMode}){
 
     const isSM = useMediaQuery({ query: '(max-width: 640px)' })
     const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -16,6 +16,7 @@ export default function Header(){
         var menuVisible = document.querySelector('#menu');
         menuVisible.classList.toggle('menu_animation');
     }
+    
 
     return (<>
     <button ref={menuButton} onClick={openMenu} className="w-10 h-fit block absolute sticky top-5 left-5 z-20 md:hidden">{isSM && <svg className="shadow-warm dark:shadow-cold w-10 h-10 rounded-full p-2 bg-melon fill-gunmetal dark:fill-melon dark:bg-gunmetal transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.*/} <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>}</button>
@@ -45,7 +46,7 @@ export default function Header(){
             {isSM && <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.*/} <path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>}
             </button>
             <div className="my-5 w-14 shadow-inner rounded-full md:my-0 md:ml-3 md:mr-5">
-            <Nightmode/>
+            <Nightmode switchBetweenMode={switchBetweenMode}/>
             </div>
         </div>
         
