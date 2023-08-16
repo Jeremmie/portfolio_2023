@@ -1,9 +1,16 @@
 import { AsciiRenderer, OrbitControls } from '@react-three/drei'
-import React,  { useState, useEffect } from 'react'
+import { useFrame } from '@react-three/fiber';
+import React,  { useState, useEffect, useRef } from 'react'
+import * as THREE from 'three'
+import { Color } from 'three'
 
+
+const aliceblue = new Color('aliceblue')
+const red = new Color('red')
 export default function HomeCanvas({toggleBetweenMode}){
-  
+
     const doesModeSwitch = toggleBetweenMode
+
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
@@ -21,8 +28,11 @@ export default function HomeCanvas({toggleBetweenMode}){
         };
       }, []);
 
+      const colorTransition = useRef()
+      useFrame(()=>{
+        isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch ? red : aliceblue, 0.050) : colorTransition.current.material.color.lerp(doesModeSwitch ? aliceblue : red, 0.050)
+      })
 
-      
       
     return(
     <>
@@ -32,9 +42,9 @@ export default function HomeCanvas({toggleBetweenMode}){
         <ambientLight intensity={2} />
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
 
-        <mesh scale={1.5}>
+        <mesh ref={colorTransition} scale={1.5}>
         <torusKnotGeometry args={[1, 0.2, 128, 32]} />
-        <meshToonMaterial color={doesModeSwitch? 'aliceblue' : 'red'}/>
+        <meshToonMaterial />
         </mesh>
     </>
     )
