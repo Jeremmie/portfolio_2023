@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import React,  { useState, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { Color } from 'three'
+import Phare from './Phare.jsx'
 
 
 const aliceblue = new Color('aliceblue')
@@ -37,13 +38,13 @@ export default function HomeCanvas({toggleBetweenMode}){
     return(
     <>
 
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} />
         
         <ambientLight intensity={2} />
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
-
+        <Phare />
         <mesh ref={colorTransition} scale={1.5}>
-        <torusKnotGeometry args={[1, 0.2, 128, 32]} />
+        {/* <torusKnotGeometry args={[1, 0.2, 128, 32]} /> */}
         <meshToonMaterial />
         </mesh>
     </>
