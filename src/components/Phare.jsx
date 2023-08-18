@@ -6,13 +6,15 @@ export default function Phare(){
     const textureVitre = useTexture('../src/assets/models/textures/phare_vitre_texture.png')
     texturePhare.flipY = false
     textureVitre.flipY = false
-    console.log(phare.nodes);
+    
     return(<>
-    <mesh geometry={phare.nodes.phare.geometry} scale={2}>
+    <mesh
+    geometry={phare.nodes.phare.geometry} scale={2}>
     <meshBasicMaterial map={texturePhare} />
     </mesh>
     <mesh geometry={phare.nodes.vitre.geometry} scale={2}>
-    <meshBasicMaterial map={textureVitre} />
+    <meshBasicMaterial rougness={1} metalness={0} map={textureVitre}/>
     </mesh>
+    
     </>)
 }

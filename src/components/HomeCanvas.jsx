@@ -38,14 +38,18 @@ export default function HomeCanvas({toggleBetweenMode}){
     return(
     <>
 
-        <OrbitControls enableZoom={true} />
+        <OrbitControls
+        maxAzimuthAngle={10} // highlight-line
+        maxPolarAngle={0} // highlight-line
+        minAzimuthAngle={0} // highlight-line
+        minPolarAngle={0} // highlight-line
+        enableZoom={false} />
         
         <ambientLight intensity={2} />
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
         <Phare />
         <mesh ref={colorTransition} scale={1.5}>
         {/* <torusKnotGeometry args={[1, 0.2, 128, 32]} /> */}
-        <meshToonMaterial />
         </mesh>
     </>
     )

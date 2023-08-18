@@ -6,16 +6,17 @@ export default function Home({toggleBetweenMode}){
 
 
     return (<>
-        <div className="h-full w-full absolute justify-between">
-        <div className="h-1/2">
-            <Canvas>
-                <HomeCanvas toggleBetweenMode={toggleBetweenMode} />
-            </Canvas>
-        </div>
-        <div className="h-1/3">
+        <div className="h-full w-full flex flex-col justify-center items-center">
+        <div className="h-fit relative z-10 ">
             <h1>Hey c'est mon portfolio</h1>
             <p>bienvenu🖐️</p>
         </div>
         </div>
+        <div className="h-full w-full">
+            <Canvas>
+                <HomeCanvas toggleBetweenMode={toggleBetweenMode} />
+            </Canvas>
+        </div>
+        
     </>)
 }
