@@ -9,10 +9,29 @@ import darkmodeReversed from '../assets/lottie/menu_animation/darkmodeTimeRevers
 
 
 
-export default function Nightmode({toggleBetweenMode}){
+export default function Nightmode(){
+  const [, updateState] = React.useState();
+  const forceUpdate = React.useCallback(() => updateState({}), []);
 
-  // Created ref
-  this.domRef = React.createRef();
+  const chang0 = () => {
+    const allSvg = document.getElementsByTagName("svg");
+    console.log(allSvg);
+  }
+
+  const change = () => {
+    if(lottieRef.current.animationItem){
+      for (let i = 0; i<lottieRef.current.animationItem["assets"].length; i++) {
+        try {
+          console.log("before:",lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"]);
+          lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"] = [1,0.721568627451,0.721568627451,1]
+          forceUpdate();
+          console.log("after:",lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"]);              
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    }
+  }
 
   const [isDarkMode, setIsDarkMode] = useState(false);
     useEffect(() => {
@@ -22,25 +41,26 @@ export default function Nightmode({toggleBetweenMode}){
       };
       darkModeMediaQuery.addListener(handleDarkModeChange);
       setIsDarkMode(darkModeMediaQuery.matches);
+
       return () => {
+        
         darkModeMediaQuery.removeListener(handleDarkModeChange);
       };
-    }, []);
+      
+    });
    
     const lottieRef = useRef(); // permet d'appeller l'animation
     const [animDirection, setAnimDirection] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
     
     
     const playAnimationNow = () => {
-        element = ReactDOM.findDOMNode(this.domRef);
-        console.log(element);
         setAnimDirection(animDirection * -1) // permet à l'animation de se jouer en avant une fois sur 2
         lottieRef.current.setDirection(animDirection); // définit la direction de l'animation
         lottieRef.current.play(); // joue l'animation
     }
     const handleLottieClick = () => { // appelle les deux fonctions --> react ne peut pas avoir 2 onClick sur le même item
         playAnimationNow();
-
+        change();
     }
   
     return (
