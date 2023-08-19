@@ -1,27 +1,20 @@
 import React, {useEffect, useRef, useState} from "react"
+import ReactDOM from "react-dom";
 import Lottie from "lottie-react"
-import fromLightmodeAnim from '../assets/lottie/darkModeAnimation/fromLightmodeAnim.json'
-import fromDarkmodeAnim from '../assets/lottie/darkModeAnimation/fromDarkmodeAnim.json'
-
-// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-  // Whenever the user explicitly chooses light mode
-  localStorage.theme = 'light'
-  // Whenever the user explicitly chooses dark mode
-  localStorage.theme = 'dark'
-  // Whenever the user explicitly chooses to respect the OS preference
-  localStorage.removeItem('theme')
-
-  
-
-export default function Nightmode({switchBetweenMode}){
+import fromLightmodeAnim from '../assets/lottie/menu_animation/fromLightmodeAnim.json'
+import lightmodeReversed from '../assets/lottie/menu_animation/lightmodeTimeReversed.json'
+import fromDarkmodeAnim from '../assets/lottie/menu_animation/fromDarkmodeAnim.json'
+import darkmodeReversed from '../assets/lottie/menu_animation/darkmodeTimeReversed.json'
 
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
+
+
+export default function Nightmode({toggleBetweenMode}){
+
+  // Created ref
+  this.domRef = React.createRef();
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
     useEffect(() => {
       const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       const handleDarkModeChange = (event) => {
@@ -33,25 +26,21 @@ export default function Nightmode({switchBetweenMode}){
         darkModeMediaQuery.removeListener(handleDarkModeChange);
       };
     }, []);
-
+   
     const lottieRef = useRef(); // permet d'appeller l'animation
     const [animDirection, setAnimDirection] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
-
-    function blackTheme() {
-        var switchDarkMode = document.documentElement;
-        switchDarkMode.classList.toggle('dark');
-    }
+    
     
     const playAnimationNow = () => {
+        element = ReactDOM.findDOMNode(this.domRef);
+        console.log(element);
         setAnimDirection(animDirection * -1) // permet à l'animation de se jouer en avant une fois sur 2
         lottieRef.current.setDirection(animDirection); // définit la direction de l'animation
         lottieRef.current.play(); // joue l'animation
     }
-    
     const handleLottieClick = () => { // appelle les deux fonctions --> react ne peut pas avoir 2 onClick sur le même item
         playAnimationNow();
-        blackTheme();
-        switchBetweenMode();
+
     }
   
     return (
