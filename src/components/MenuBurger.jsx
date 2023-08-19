@@ -39,7 +39,6 @@ export default function Nightmode(){
     }
     const handleLottieClick = () => { // appelle les deux fonctions --> react ne peut pas avoir 2 onClick sur le même item
         playAnimationNow();
-        change();
     }
   
     return (
