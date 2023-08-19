@@ -1,9 +1,8 @@
 import Nightmode from "./Nightmode"
 import React, { useEffect, useRef, useState } from "react"
 import { useMediaQuery } from 'react-responsive'
-import MenuBurger from './MenuBurger.jsx'
 
-export default function Header({switchBetweenMode, toggleBetweenMode}){
+export default function Header({switchBetweenMode}){
 
     const isSM = useMediaQuery({ query: '(max-width: 640px)' })
     const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -20,7 +19,7 @@ export default function Header({switchBetweenMode, toggleBetweenMode}){
     
 
     return (<>
-    <div ref={menuButton} onClick={openMenu} className="w-60 p-2 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon dark:bg-gunmetal dark:shadow-cold md:hidden">{isSM && <MenuBurger toggleBetweenMode={toggleBetweenMode} className="w-3 h-fit sticky"/>}</div>
+    <button ref={menuButton} onClick={openMenu} className="w-10 h-fit block absolute sticky top-5 left-5 z-20 md:hidden">{isSM && <svg className="shadow-warm dark:shadow-cold w-10 h-10 rounded-full p-2 bg-melon fill-gunmetal dark:fill-melon dark:bg-gunmetal transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.*/} <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>}</button>
     <div className="
         flex justify-start items-center h-screen z-50 fixed
         md:flex md:justify-center md:relative md:h-auto

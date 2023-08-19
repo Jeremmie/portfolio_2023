@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react"
 import Lottie from "lottie-react"
-import fromLightmodeAnim from '../assets/lottie/darkModeAnimation/fromLightmodeAnim.json'
-import fromDarkmodeAnim from '../assets/lottie/darkModeAnimation/fromDarkmodeAnim.json'
+import fromLightmodeAnim from '../assets/lottie/fromLightmodeAnim.json'
+import fromDarkmodeAnim from '../assets/lottie/fromDarkmodeAnim.json'
 
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -19,7 +19,6 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   
 
 export default function Nightmode({switchBetweenMode}){
-
 
     const [isDarkMode, setIsDarkMode] = useState(false);
     useEffect(() => {
@@ -52,6 +51,7 @@ export default function Nightmode({switchBetweenMode}){
         playAnimationNow();
         blackTheme();
         switchBetweenMode();
+
     }
   
     return (

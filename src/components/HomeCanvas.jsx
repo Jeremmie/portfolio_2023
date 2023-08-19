@@ -39,8 +39,10 @@ export default function HomeCanvas({toggleBetweenMode}){
     <>
 
         <OrbitControls
-        maxPolarAngle={1.5} // highlight-line
-        minPolarAngle={1.5} // highlight-line
+        maxAzimuthAngle={10} // highlight-line
+        maxPolarAngle={0} // highlight-line
+        minAzimuthAngle={0} // highlight-line
+        minPolarAngle={0} // highlight-line
         enableZoom={false} />
         
         <ambientLight intensity={2} />
