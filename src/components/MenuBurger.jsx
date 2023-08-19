@@ -10,28 +10,7 @@ import darkmodeReversed from '../assets/lottie/menu_animation/darkmodeTimeRevers
 
 
 export default function Nightmode(){
-  const [, updateState] = React.useState();
-  const forceUpdate = React.useCallback(() => updateState({}), []);
 
-  const chang0 = () => {
-    const allSvg = document.getElementsByTagName("svg");
-    console.log(allSvg);
-  }
-
-  const change = () => {
-    if(lottieRef.current.animationItem){
-      for (let i = 0; i<lottieRef.current.animationItem["assets"].length; i++) {
-        try {
-          console.log("before:",lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"]);
-          lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"] = [1,0.721568627451,0.721568627451,1]
-          forceUpdate();
-          console.log("after:",lottieRef.current.animationItem["assets"][i]["layers"]["1"]["shapes"][0]["it"][1]["c"]["k"]);              
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    }
-  }
 
   const [isDarkMode, setIsDarkMode] = useState(false);
     useEffect(() => {
