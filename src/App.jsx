@@ -13,7 +13,7 @@ function App() {
   const [toggleBetweenMode, setToggleModeEnabeld] = useState(true);
 
   function switchBetweenMode() {
-    setToggleModeEnabeld(!toggleBetweenMode)
+    setToggleModeEnabeld(!toggleBetweenMode) 
   }
   return (
     <>

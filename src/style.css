@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.logo_menu path {
+    fill: inherit;
+}
+
 *{
     -webkit-tap-highlight-color: transparent;
 }
@@ -32,3 +36,8 @@ p{
 canvas{
     touch-action: none;
 }
+
+
+
+
+
