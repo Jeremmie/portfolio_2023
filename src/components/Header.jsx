@@ -1,5 +1,5 @@
 import Nightmode from "./Nightmode"
-import { useEffect, useRef, useState } from "react"
+import { useRef } from "react"
 import { useMediaQuery } from 'react-responsive'
 import MenuBurger from './MenuBurger.jsx'
 
@@ -20,7 +20,7 @@ export default function Header({switchBetweenMode, toggleBetweenMode}){
     
 
     return (<>
-    <div ref={menuButton} onClick={openMenu} className="w-60 p-2 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon dark:bg-gunmetal dark:shadow-cold md:hidden transition_darkmode">{isSM && <MenuBurger toggleBetweenMode={toggleBetweenMode} className="w-3 h-fit sticky"/>}</div>
+    <div ref={menuButton} onClick={openMenu} className="w-14 p-2 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon dark:bg-gunmetal dark:shadow-cold md:hidden transition_darkmode">{isSM && <MenuBurger className="w-3 h-fit sticky"/>}</div>
     <div className="
         flex justify-start items-center h-screen z-50 fixed
         md:flex md:justify-center md:relative md:h-auto

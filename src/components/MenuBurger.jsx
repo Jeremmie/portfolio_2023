@@ -5,7 +5,7 @@ import menuAnimation from '../assets/lottie/menu_animation/menu_animation.json'
 import "../style.css"
 
 
-export default function MenuBurger({toggleBetweenMode}){
+export default function MenuBurger(){
   const allpath = (document.getElementsByTagName('path'));
   if(allpath.length > 0){
     console.log(allpath);

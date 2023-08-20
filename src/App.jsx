@@ -1,7 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { useState } from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import './style.css'
