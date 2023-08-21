@@ -62,7 +62,7 @@ export default function HomeCanvas({toggleBetweenMode}){
         scale={0.6}
         position={[0, 1, 1.2]}
         startFrame={0}
-        fps={2}
+        fps={4}
         autoPlay={true}
         loop={true}
         textureImageURL={'./testSprite.png'}
