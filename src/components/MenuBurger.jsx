@@ -42,7 +42,7 @@ export default function MenuBurger(){
 
   return (
       <>
-          <Lottie className="fill-gunmetal dark:fill-melon transition_darkmode" onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={menuAnimation} loop={false} />
+          <Lottie className="fill-gunmetal dark:fill-melon transition_darkmode logo_menu_target" onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={menuAnimation} loop={false} />
       </>
   );
 }

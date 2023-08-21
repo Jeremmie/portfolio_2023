@@ -1,4 +1,4 @@
-import { AsciiRenderer, Cloud, OrbitControls, Sparkles } from '@react-three/drei'
+import { AsciiRenderer, Cloud, OrbitControls, Sparkles, SpriteAnimator } from '@react-three/drei'
 import { Bloom, EffectComposer, Noise, DotScreen } from "@react-three/postprocessing"
 import { BlendFunction } from 'postprocessing'
 import { useFrame } from '@react-three/fiber';
@@ -32,9 +32,10 @@ export default function HomeCanvas({toggleBetweenMode}){
       }, []);
 
       let sparklOpacity = isDarkMode? doesModeSwitch? 1 : 0 : doesModeSwitch? 0 : 1
-      console.log(sparklOpacity);
+      const colorTransition = useRef()
+      console.log(colorTransition);
       // useFrame(()=>{
-      //   isDarkMode? sparklOpacity.lerp(doesModeSwitch ? red : aliceblue, 0.050) : colorTransition.current.material.color.lerp(doesModeSwitch ? aliceblue : red, 0.050)
+      //   isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch ? red : aliceblue, 0.050) : colorTransition.current.material.color.lerp(doesModeSwitch ? aliceblue : red, 0.050)
       // })
 
       
@@ -48,7 +49,7 @@ export default function HomeCanvas({toggleBetweenMode}){
         />
 
         
-        <Sparkles
+        <Sparkles ref={colorTransition}
           count={40}
           opacity={sparklOpacity}
           size={2}
@@ -56,6 +57,17 @@ export default function HomeCanvas({toggleBetweenMode}){
           noise={1}
           speed={0.5}
           color={'aliceblue'}
+        />
+        <SpriteAnimator
+        scale={0.6}
+        position={[0, 1, 1.2]}
+        startFrame={0}
+        fps={2}
+        autoPlay={true}
+        loop={true}
+        textureImageURL={'./testSprite.png'}
+        textureDataURL={'./testSprite.json'}
+        alphaTest={0.01}
         />
         
         <ambientLight intensity={2} />
