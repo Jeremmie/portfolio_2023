@@ -37,7 +37,7 @@ export default {
       'innercold': 'inset 0px 4px 4px 0 #000000;',
     },
     backgroundImage: {
-      'placeholder-bg': "url('./src/assets/img/placeholder/bg-placeholder.jpg')",
+      'placeholder-bg': "url('./src/assets/img/placeholder/bg.jpg')",
     }
   },
 

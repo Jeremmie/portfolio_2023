@@ -1,19 +1,12 @@
-import { AsciiRenderer, Cloud, OrbitControls, Sparkles, SpriteAnimator } from '@react-three/drei'
-import { Bloom, EffectComposer, Noise, DotScreen } from "@react-three/postprocessing"
-import { BlendFunction } from 'postprocessing'
-import { useFrame } from '@react-three/fiber';
+import { OrbitControls, Sparkles, SpriteAnimator, PresentationControls } from '@react-three/drei'
 import React,  { useState, useEffect, useRef } from 'react'
-import * as THREE from 'three'
 import { Color } from 'three'
 import Phare from './Phare.jsx'
 
-
-const aliceblue = new Color('aliceblue')
-const red = new Color('red')
 export default function HomeCanvas({toggleBetweenMode}){
 
     const doesModeSwitch = toggleBetweenMode
-
+    const sparklOpacity = useRef()
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
@@ -31,32 +24,27 @@ export default function HomeCanvas({toggleBetweenMode}){
         };
       }, []);
 
-      let sparklOpacity = isDarkMode? doesModeSwitch? 1 : 0 : doesModeSwitch? 0 : 1
-      const colorTransition = useRef()
-      console.log(colorTransition);
-      // useFrame(()=>{
-      //   isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch ? red : aliceblue, 0.050) : colorTransition.current.material.color.lerp(doesModeSwitch ? aliceblue : red, 0.050)
-      // })
-
       
     return(
     <>
         
-        <OrbitControls
-        // maxPolarAngle={1.5} // highlight-line
-        // minPolarAngle={1.5} // highlight-line
-        // enableZoom={false} 
-        />
-
         
-        <Sparkles ref={colorTransition}
+        <PresentationControls 
+        global
+        polar={[-Math.PI * 0.04, Math.PI * 0.2]}
+        azimuth={[-Math.PI * 0.2, Math.PI * 0.2]}
+        config={{mass: 2, tension: 400}}
+        snap={{mass: 3, tension: 100}}
+        >
+        
+        <Sparkles ref={sparklOpacity}
           count={40}
-          opacity={sparklOpacity}
+          opacity={isDarkMode? doesModeSwitch? 0.9 : 0 : doesModeSwitch? 0 : 0.9}
           size={2}
           scale={5}
           noise={1}
           speed={0.5}
-          color={'aliceblue'}
+          color={'#FFB8B8'}
         />
         <SpriteAnimator
         scale={0.6}
@@ -73,10 +61,7 @@ export default function HomeCanvas({toggleBetweenMode}){
         <ambientLight intensity={2} />
         <directionalLight position={ [ 1, 2, 3 ] } intensity={ 1.5 } />
         <Phare toggleBetweenMode={toggleBetweenMode} />
-        
-        {/* <mesh ref={colorTransition} scale={1.2}>
-        <torusKnotGeometry color={[1.5, 1, 4]} args={[1, 0.2, 128, 32]} />
-        </mesh> */}
+      </PresentationControls>
     </>
     )
 }

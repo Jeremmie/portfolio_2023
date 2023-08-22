@@ -1,5 +1,7 @@
 import { useGLTF, useTexture } from "@react-three/drei"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import { useFrame } from '@react-three/fiber';
+import { Color } from 'three'
 
 export default function Phare({toggleBetweenMode}){
     const doesModeSwitch = toggleBetweenMode
@@ -27,7 +29,14 @@ export default function Phare({toggleBetweenMode}){
     texturePhare.flipY = false
     textureVitre.flipY = false
 
+
     
+    const colorTransition = useRef();
+    const day = new Color(30, 30, 10)
+    const night = new Color(1, 1, 1)
+    useFrame(()=>{
+      isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch ? day : night, 0.05) : colorTransition.current.material.color.lerp(doesModeSwitch ? night : day, 0.050)
+    })
     
     return(<>
 
@@ -37,9 +46,9 @@ export default function Phare({toggleBetweenMode}){
     geometry={phare.nodes.phare.geometry} scale={2}>
     <meshBasicMaterial map={texturePhare} />
     </mesh>
-    <mesh geometry={phare.nodes.vitre.geometry} scale={2}>
+    <mesh ref={colorTransition} geometry={phare.nodes.vitre.geometry} scale={2}>
     <meshBasicMaterial 
-    color={isDarkMode? [500.5, 20, 10] : [1, 1, 1]} 
+    color={doesModeSwitch? day : night} 
     rougness={1} metalness={0} toneMapped={false} map={textureVitre}/>
     </mesh>
 
