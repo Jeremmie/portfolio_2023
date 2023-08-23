@@ -1,15 +1,27 @@
 import { OrbitControls, Sparkles, SpriteAnimator, Environment, PerspectiveCamera, Float } from '@react-three/drei'
 import { useState, useEffect, useRef } from 'react'
 import Phare from './Phare.jsx'
-
+import { useMediaQuery } from 'react-responsive'
 import * as THREE from 'three'
 
 export default function HomeCanvas({toggleBetweenMode}) {
+
+  const isSM = useMediaQuery({ query: '(max-width: 640px)' })
+  const isMD = useMediaQuery({ query: '(min-width: 768px)' })
+  const isLG = useMediaQuery({ query: '(min-width: 1024px)' })
+  const isXL = useMediaQuery({ query: '(min-width: 1280px)' })
+  const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
+
 
   const doesModeSwitch = toggleBetweenMode
   const sparklOpacity = useRef()
   const [isDarkMode, setIsDarkMode] = useState(false);
   const phare = useRef()
+  
+  const envMapNightMD = './waterColorBgNight.hdr';
+  const envMapMD = './waterColorBg.hdr';
+  const envMapNight = './waterColorBgNight_light.hdr'
+  const envMap = './waterColorBg_light.hdr'
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -41,11 +53,11 @@ export default function HomeCanvas({toggleBetweenMode}) {
   return (
     <>
       <Float rotationIntensity={3, 3, 0.1} >
-        <PerspectiveCamera makeDefault position={[1, 0.3, 7]} />
+        <PerspectiveCamera makeDefault position={[0, 0.3, 7]} />
       </Float>
 
-      <Environment files={isDarkMode ? doesModeSwitch ? "./waterColorBgNight.hdr" : "./waterColorBg.hdr" : doesModeSwitch ? "./waterColorBg.hdr" : "./waterColorBgNight.hdr"} background blur={0.04} />
-
+      <Environment files={isDarkMode ? doesModeSwitch ? envMapNight : envMap : doesModeSwitch ? envMap : envMapNight} background blur={0.07} />
+      {isLG && <Environment files={isDarkMode ? doesModeSwitch ? envMapNightMD : envMapMD : doesModeSwitch ? envMapMD : envMapNightMD} background blur={0.03} />}
 
 
       <Sparkles ref={sparklOpacity}
