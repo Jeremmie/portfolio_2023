@@ -48,7 +48,7 @@ export default function Phare({toggleBetweenMode}){
     </mesh>
     <mesh ref={colorTransition} geometry={phare.nodes.vitre.geometry} scale={2}>
     <meshBasicMaterial 
-    color={isDarkMode? doesModeSwitch? day : night : doesModeSwitch? night : day} 
+    color={isDarkMode? doesModeSwitch? night : day : doesModeSwitch? day : night} 
     rougness={1} metalness={0} toneMapped={false} map={textureVitre}/>
     </mesh>
 
