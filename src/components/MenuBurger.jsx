@@ -1,6 +1,5 @@
 import React, {useEffect, useRef, useState} from "react"
-import ReactDOM from "react-dom";
-import Lottie, {useLottie} from "lottie-react"
+import Lottie from "lottie-react"
 import menuAnimation from '../assets/lottie/menu_animation/menu_animation.json'
 import "../style.css"
 

@@ -5,6 +5,9 @@ import { useMediaQuery } from 'react-responsive'
 import * as THREE from 'three'
 
 export default function HomeCanvas({toggleBetweenMode}) {
+  const doesModeSwitch = toggleBetweenMode
+  const sparklOpacity = useRef()
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
   const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -12,12 +15,6 @@ export default function HomeCanvas({toggleBetweenMode}) {
   const isXL = useMediaQuery({ query: '(min-width: 1280px)' })
   const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
 
-
-  const doesModeSwitch = toggleBetweenMode
-  const sparklOpacity = useRef()
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const phare = useRef()
-  
   const envMapNightMD = './waterColorBgNight.hdr';
   const envMapMD = './waterColorBg.hdr';
   const envMapNight = './waterColorBgNight_light.hdr'
@@ -56,7 +53,7 @@ export default function HomeCanvas({toggleBetweenMode}) {
         <PerspectiveCamera makeDefault position={[0, 0.3, 7]} />
       </Float>
 
-      <Environment files={isDarkMode ? doesModeSwitch ? envMapNight : envMap : doesModeSwitch ? envMap : envMapNight} background blur={0.07} />
+      {isSM && <Environment files={isDarkMode? doesModeSwitch ? envMapNight : envMap : doesModeSwitch? envMap : envMapNight} background blur={0.07} />}
       {isLG && <Environment files={isDarkMode ? doesModeSwitch ? envMapNightMD : envMapMD : doesModeSwitch ? envMapMD : envMapNightMD} background blur={0.03} />}
 
 
@@ -83,9 +80,7 @@ export default function HomeCanvas({toggleBetweenMode}) {
 
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
-      <mesh ref={phare}>
-        <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
-      </mesh>
+      <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
       {/* </PresentationControls> */}
     </>
   )

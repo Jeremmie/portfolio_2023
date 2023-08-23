@@ -35,7 +35,7 @@ export default function Phare({toggleBetweenMode}){
     const day = new Color(30, 30, 10)
     const night = new Color(1, 1, 1)
     useFrame(()=>{
-      isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch ? day : night, 0.05) : colorTransition.current.material.color.lerp(doesModeSwitch ? night : day, 0.050)
+      isDarkMode? colorTransition.current.material.color.lerp(doesModeSwitch? day : night, 0.05) : colorTransition.current.material.color.lerp(doesModeSwitch? night : day, 0.05)
     })
     
     return(<>
@@ -48,7 +48,7 @@ export default function Phare({toggleBetweenMode}){
     </mesh>
     <mesh ref={colorTransition} geometry={phare.nodes.vitre.geometry} scale={2}>
     <meshBasicMaterial 
-    color={doesModeSwitch? day : night} 
+    color={isDarkMode? doesModeSwitch? day : night : doesModeSwitch? night : day} 
     rougness={1} metalness={0} toneMapped={false} map={textureVitre}/>
     </mesh>
 
