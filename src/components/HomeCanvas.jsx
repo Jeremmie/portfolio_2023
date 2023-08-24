@@ -11,6 +11,14 @@ export default function HomeCanvas({toggleBetweenMode}) {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const defaultCamera = useRef();
   const vec = new THREE.Vector3()
+  const envMap = [
+    '../src/assets/img/background/day/px.jpg',
+    '../src/assets/img/background/day/nx.jpg',
+    '../src/assets/img/background/day/py.jpg',
+    '../src/assets/img/background/day/ny.jpg',
+    '../src/assets/img/background/day/pz.jpg',
+    '../src/assets/img/background/day/nz.jpg',
+  ]
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
   const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -40,56 +48,19 @@ export default function HomeCanvas({toggleBetweenMode}) {
     state.camera.lookAt(0, 0, 0)
     defaultCamera.current.position.lerp(vec.set(mousX * -1.5, mousY * 1, defaultCamera.current.position.z), 0.01)
   })}
+  {isSM &&   useFrame((state, delta) => {
+    state.camera.lookAt(0, 0, 0)
+  })}
 
 
   return (
     <>
+      <Environment files={envMap} background blur={0.03} />
       <Float rotationIntensity={(3, 3, 0.1)} >
        {isSM &&  <PerspectiveCamera makeDefault  />}
        <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
       </Float>
    
-      <Environment files={isDarkMode? doesModeSwitch ? [
-        '../src/assets/img/background/day/px.jpg',
-        '../src/assets/img/background/day/nx.jpg',
-        '../src/assets/img/background/day/py.jpg',
-        '../src/assets/img/background/day/ny.jpg',
-        '../src/assets/img/background/day/pz.jpg',
-        '../src/assets/img/background/day/nz.jpg',
-      ] : [
-        '../src/assets/img/background/day/px.jpg',
-        '../src/assets/img/background/day/nx.jpg',
-        '../src/assets/img/background/day/py.jpg',
-        '../src/assets/img/background/day/ny.jpg',
-        '../src/assets/img/background/day/pz.jpg',
-        '../src/assets/img/background/day/nz.jpg',
-      ] : doesModeSwitch? [
-        '../src/assets/img/background/day/px.jpg',
-        '../src/assets/img/background/day/nx.jpg',
-        '../src/assets/img/background/day/py.jpg',
-        '../src/assets/img/background/day/ny.jpg',
-        '../src/assets/img/background/day/pz.jpg',
-        '../src/assets/img/background/day/nz.jpg',
-      ] : [
-        '../src/assets/img/background/day/px.jpg',
-        '../src/assets/img/background/day/nx.jpg',
-        '../src/assets/img/background/day/py.jpg',
-        '../src/assets/img/background/day/ny.jpg',
-        '../src/assets/img/background/day/pz.jpg',
-        '../src/assets/img/background/day/nz.jpg',
-      ]} background blur={0.03} />
-
-      <Sparkles ref={sparklOpacity}
-        count={40}
-        opacity={isDarkMode ? doesModeSwitch ? 0.9 : 0 : doesModeSwitch ? 0 : 0.9}
-        size={10}
-        scale={5}
-        noise={1}
-        speed={0.5}
-        color={'#FFB8B8'}
-      />
-
-
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
 
@@ -106,8 +77,16 @@ export default function HomeCanvas({toggleBetweenMode}) {
         textureDataURL={'./testSprite.json'}
         alphaTest={0.01}
       />
+      <Sparkles ref={sparklOpacity}
+        count={40}
+        opacity={isDarkMode ? doesModeSwitch ? 0.9 : 0 : doesModeSwitch ? 0 : 0.9}
+        size={10}
+        scale={5}
+        noise={1}
+        speed={0.5}
+        color={'#FFB8B8'}
+      />
       </group>
-      {/* </PresentationControls> */}
     </>
   )
 }
