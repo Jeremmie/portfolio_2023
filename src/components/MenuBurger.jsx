@@ -5,11 +5,6 @@ import "../style.css"
 
 
 export default function MenuBurger(){
-  const allpath = (document.getElementsByTagName('path'));
-  if(allpath.length > 0){
-    console.log(allpath);
-    console.log(allpath[0]);
-  }
 
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {

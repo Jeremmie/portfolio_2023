@@ -1,13 +1,16 @@
-import { OrbitControls, Sparkles, SpriteAnimator, Environment, PerspectiveCamera, Float } from '@react-three/drei'
-import { useState, useEffect, useRef } from 'react'
+import { OrbitControls, Sparkles, SpriteAnimator, Environment, PerspectiveCamera, Float, CameraControls } from '@react-three/drei'
+import React, { useState, useEffect, useRef } from 'react'
 import Phare from './Phare.jsx'
 import { useMediaQuery } from 'react-responsive'
 import * as THREE from 'three'
+import { useFrame } from '@react-three/fiber'
 
 export default function HomeCanvas({toggleBetweenMode}) {
   const doesModeSwitch = toggleBetweenMode
   const sparklOpacity = useRef()
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const defaultCamera = useRef();
+  const vec = new THREE.Vector3()
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
   const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -15,10 +18,6 @@ export default function HomeCanvas({toggleBetweenMode}) {
   const isXL = useMediaQuery({ query: '(min-width: 1280px)' })
   const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
 
-  const envMapNightMD = './waterColorBgNight.hdr';
-  const envMapMD = './waterColorBg.hdr';
-  const envMapNight = './waterColorBgNight_light.hdr'
-  const envMap = './waterColorBg_light.hdr'
 
   useEffect(() => {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -34,41 +33,71 @@ export default function HomeCanvas({toggleBetweenMode}) {
       darkModeMediaQuery.removeListener(handleDarkModeChange);
     };
   }, []);
-  const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
-  const cursor = {}
-  cursor.x = 0
-  cursor.y = 0
-  window.addEventListener('mousemove', (event) => {
-    cursor.x = event.clientX / sizes.width - 0.5
-    cursor.y = event.clientY / sizes.height - 0.5
-  })
-  const parallaxX = cursor.x
-  const parallaxY = cursor.y
+
+  {isMD &&   useFrame((state, delta) => {
+    const mousX = state.mouse.x
+    const mousY = state.mouse.y
+    state.camera.lookAt(0, 0, 0)
+    defaultCamera.current.position.lerp(vec.set(mousX * -1.5, mousY * 1, defaultCamera.current.position.z), 0.01)
+  })}
+
+
   return (
     <>
-      <Float rotationIntensity={3, 3, 0.1} >
-        <PerspectiveCamera makeDefault position={[0, 0.3, 7]} />
+      <Float rotationIntensity={(3, 3, 0.1)} >
+       {isSM &&  <PerspectiveCamera makeDefault  />}
+       <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
       </Float>
-
-      {isSM && <Environment files={isDarkMode? doesModeSwitch ? envMapNight : envMap : doesModeSwitch? envMap : envMapNight} background blur={0.07} />}
-      {isLG && <Environment files={isDarkMode ? doesModeSwitch ? envMapNightMD : envMapMD : doesModeSwitch ? envMapMD : envMapNightMD} background blur={0.03} />}
-
+   
+      <Environment files={isDarkMode? doesModeSwitch ? [
+        '../src/assets/img/background/day/px.jpg',
+        '../src/assets/img/background/day/nx.jpg',
+        '../src/assets/img/background/day/py.jpg',
+        '../src/assets/img/background/day/ny.jpg',
+        '../src/assets/img/background/day/pz.jpg',
+        '../src/assets/img/background/day/nz.jpg',
+      ] : [
+        '../src/assets/img/background/day/px.jpg',
+        '../src/assets/img/background/day/nx.jpg',
+        '../src/assets/img/background/day/py.jpg',
+        '../src/assets/img/background/day/ny.jpg',
+        '../src/assets/img/background/day/pz.jpg',
+        '../src/assets/img/background/day/nz.jpg',
+      ] : doesModeSwitch? [
+        '../src/assets/img/background/day/px.jpg',
+        '../src/assets/img/background/day/nx.jpg',
+        '../src/assets/img/background/day/py.jpg',
+        '../src/assets/img/background/day/ny.jpg',
+        '../src/assets/img/background/day/pz.jpg',
+        '../src/assets/img/background/day/nz.jpg',
+      ] : [
+        '../src/assets/img/background/day/px.jpg',
+        '../src/assets/img/background/day/nx.jpg',
+        '../src/assets/img/background/day/py.jpg',
+        '../src/assets/img/background/day/ny.jpg',
+        '../src/assets/img/background/day/pz.jpg',
+        '../src/assets/img/background/day/nz.jpg',
+      ]} background blur={0.03} />
 
       <Sparkles ref={sparklOpacity}
         count={40}
         opacity={isDarkMode ? doesModeSwitch ? 0.9 : 0 : doesModeSwitch ? 0 : 0.9}
-        size={2}
+        size={10}
         scale={5}
         noise={1}
         speed={0.5}
         color={'#FFB8B8'}
       />
+
+
+      <ambientLight intensity={2} />
+      <directionalLight position={[1, 2, 3]} intensity={1.5} />
+
+      <group scale={1.3} position={[0, 0.5, 0]}>
+      <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
       <SpriteAnimator
         scale={0.6}
-        position={[0, 1, 1.2]}
+        position={[0, 1, -1.2]}
         startFrame={0}
         fps={4}
         autoPlay={true}
@@ -77,10 +106,7 @@ export default function HomeCanvas({toggleBetweenMode}) {
         textureDataURL={'./testSprite.json'}
         alphaTest={0.01}
       />
-
-      <ambientLight intensity={2} />
-      <directionalLight position={[1, 2, 3]} intensity={1.5} />
-      <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
+      </group>
       {/* </PresentationControls> */}
     </>
   )

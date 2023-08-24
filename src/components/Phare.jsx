@@ -5,7 +5,6 @@ import { Color } from 'three'
 
 export default function Phare({toggleBetweenMode}){
     const doesModeSwitch = toggleBetweenMode
-
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
