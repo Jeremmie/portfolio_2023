@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 
-export default function HomeCanvas({toggleBetweenMode}) {
+export default function HomeCanvas({ toggleBetweenMode }) {
   const doesModeSwitch = toggleBetweenMode
   const sparklOpacity = useRef()
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -42,50 +42,54 @@ export default function HomeCanvas({toggleBetweenMode}) {
     };
   }, []);
 
-  {isMD &&   useFrame((state, delta) => {
-    const mousX = state.mouse.x
-    const mousY = state.mouse.y
-    state.camera.lookAt(0, 0, 0)
-    defaultCamera.current.position.lerp(vec.set(mousX * -1.5, mousY * 1, defaultCamera.current.position.z), 0.01)
-  })}
-  {isSM &&   useFrame((state, delta) => {
-    state.camera.lookAt(0, 0, 0)
-  })}
+  {
+    isMD && useFrame((state, delta) => {
+      const mousX = state.mouse.x
+      const mousY = state.mouse.y
+      state.camera.lookAt(0, 0, 0)
+      defaultCamera.current.position.lerp(vec.set(mousX * -1.5, mousY * 1, defaultCamera.current.position.z), 0.01)
+    })
+  }
+  {
+    isSM && useFrame((state, delta) => {
+      state.camera.lookAt(0, 0, 0)
+    })
+  }
 
 
   return (
     <>
       <Environment files={envMap} background blur={0.03} />
       <Float rotationIntensity={(3, 3, 0.1)} >
-       {isSM &&  <PerspectiveCamera makeDefault  />}
-       <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
+        {isSM && <PerspectiveCamera makeDefault />}
+        <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
       </Float>
-   
+
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
 
-      <group scale={1.3} position={[0, 0.5, 0]}>
-      <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
-      <SpriteAnimator
-        scale={0.6}
-        position={[0, 1, -1.2]}
-        startFrame={0}
-        fps={4}
-        autoPlay={true}
-        loop={true}
-        textureImageURL={'./testSprite.png'}
-        textureDataURL={'./testSprite.json'}
-        alphaTest={0.01}
-      />
-      <Sparkles ref={sparklOpacity}
-        count={40}
-        opacity={isDarkMode ? doesModeSwitch ? 0.9 : 0 : doesModeSwitch ? 0 : 0.9}
-        size={10}
-        scale={5}
-        noise={1}
-        speed={0.5}
-        color={'#FFB8B8'}
-      />
+      <group scale={1.3} position={[0, -0.2, 0]}>
+        <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
+        <SpriteAnimator
+          scale={0.7}
+          position={[0, 0.9, -1.2]}
+          startFrame={0}
+          fps={4}
+          autoPlay={true}
+          loop={true}
+          textureImageURL={'./captainSprite.png'}
+          //  textureDataURL={'./testSprite.json'}
+          alphaTest={0.01}
+        />
+        <Sparkles ref={sparklOpacity}
+          count={40}
+          opacity={isDarkMode ? doesModeSwitch ? 0.9 : 0 : doesModeSwitch ? 0 : 0.9}
+          size={10}
+          scale={5}
+          noise={1}
+          speed={0.5}
+          color={'#FFB8B8'}
+        />
       </group>
     </>
   )
