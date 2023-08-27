@@ -1,4 +1,4 @@
-import { OrbitControls, Sparkles, SpriteAnimator, Environment, PerspectiveCamera, Float, CameraControls } from '@react-three/drei'
+import { OrbitControls, Sparkles, SpriteAnimator, Environment, PerspectiveCamera, Float, CameraControls, Html } from '@react-three/drei'
 import React, { useState, useEffect, useRef } from 'react'
 import Phare from './Phare.jsx'
 import { useMediaQuery } from 'react-responsive'
@@ -67,18 +67,20 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
-
       <group scale={1.3} position={[0, -0.2, 0]}>
+        <Html className='bg-gunmetal text-melon px-3 py-1 rounded-lg' position={[-1, 1.2, -1]}>
+          <p>asd</p>
+        </Html>
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
         <SpriteAnimator
           scale={0.7}
           position={[0, 0.9, -1.2]}
           startFrame={0}
-          fps={4}
+          fps={6}
           autoPlay={true}
           loop={true}
           textureImageURL={'./captainSprite.png'}
-          //  textureDataURL={'./testSprite.json'}
+          textureDataURL={'./captainSprite.json'}
           alphaTest={0.01}
         />
         <Sparkles ref={sparklOpacity}

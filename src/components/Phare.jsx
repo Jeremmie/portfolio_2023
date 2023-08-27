@@ -24,7 +24,7 @@ export default function Phare({toggleBetweenMode}){
 
     const phare = useGLTF('../src/assets/models/phare.glb')
     const texturePhare = useTexture('../src/assets/models/textures/phare_texture.jpg')
-    const textureVitre = useTexture('../src/assets/models/textures/phare_vitre_texture.png')
+    const textureVitre = useTexture('../src/assets/models/textures/phare_vitre_texture.jpg')
     texturePhare.flipY = false
     textureVitre.flipY = false
 
@@ -40,7 +40,7 @@ export default function Phare({toggleBetweenMode}){
     return(<>
 
 
-
+      <group rotation={[0, 4, 0]}>
     <mesh
     geometry={phare.nodes.phare.geometry} scale={2}>
     <meshBasicMaterial map={texturePhare} />
@@ -50,6 +50,7 @@ export default function Phare({toggleBetweenMode}){
     color={isDarkMode? doesModeSwitch? night : day : doesModeSwitch? day : night} 
     rougness={1} metalness={0} toneMapped={false} map={textureVitre}/>
     </mesh>
+    </group>
 
     </>)
 }
