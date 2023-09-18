@@ -59,22 +59,25 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
   return (
     <>
-      <Environment files={envMap} background blur={0.03} />
-      <Float rotationIntensity={(3, 3, 0.1)} >
-        {isSM && <PerspectiveCamera makeDefault />}
+      {isMD && <Environment files={envMap} background blur={0.03} />}
+      {isMD && <Float rotationIntensity={(3, 3, 0.1)} >
         <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
-      </Float>
+      </Float>}
+
+      {isSM &&
+        <Float rotationIntensity={(13, 13, 0.9)} >
+          <PerspectiveCamera makeDefault position={[0, 0, -10]} />
+        </Float>}
+      {/* <OrbitControls /> */}
 
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <group scale={1.3} position={[0, -0.2, 0]}>
-        <Html className='bg-gunmetal text-melon px-3 py-1 rounded-lg' position={[-1, 1.2, -1]}>
-          <p>asd</p>
-        </Html>
+
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
         <SpriteAnimator
           scale={0.7}
-          position={[0, 0.9, -1.2]}
+          position={[0, 1, -1.2]}
           startFrame={0}
           fps={6}
           autoPlay={true}

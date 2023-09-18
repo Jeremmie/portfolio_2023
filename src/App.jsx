@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div className="
-      h-screen  bg-center transition_darkmode flex
+      h-screen bg-center transition_darkmode flex
       ">
         <Header switchBetweenMode={switchBetweenMode} />
         
