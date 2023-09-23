@@ -27,7 +27,7 @@ export default function Header({switchBetweenMode, toggleBetweenMode}){
         ">
         
         <div id="menu" className="
-        text-gunmetal fixed -left-full md:bg-melon/10 flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-cold transition_darkmode shadow-warm border-y-2 border-r-2 border-gray-800/10
+        text-gunmetal fixed -left-full md:bg-melon/10 flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-warm border-y-2 border-r-2 border-gray-800/10
         " >
             <button className="my-5 px-6 py-3 rounded-full  transition_manual ">
             

@@ -35,9 +35,23 @@ export default {
       'cold': 'rgba(0, 0, 0, 1) 0px 2px 5px 0px',
       'inner': 'inset 0px 4px 4px 0 #00000036;',
       'innercold': 'inset 0px 4px 4px 0 #000000;',
+      'neumorhismLight': '-8px 5px 15px #d99c9c, 8px -5px 15px #ffd4d4'
     },
     backgroundImage: {
-      'placeholder-bg': "url('./src/assets/img/placeholder/bg.jpg')",
+      'placeholder-bg': "url('https://jeremiejaouen.ch/img/works_modal/modal_10/leon_original.jpg')",
+      'video': "url('https://jeremiejaouen.ch/img/works_modal/modal_1/vignette.jpg')",
+      'dessin': "url('https://jeremiejaouen.ch/img/works_modal/modal_11/vignette.png')",
+      'web': "url('./web.png')",
+      'photo': "url('https://jeremiejaouen.ch/img/nature_morte/naturemorte_2.png')",
+      'JV': "url('https://jeremiejaouen.ch/img/works_modal/modal_12/vignette.jpg')",
+      
+    },
+    gridTemplateRows: {
+      // Simple 8 row grid
+      '8': 'repeat(8, minmax(0, 1fr))',
+
+      // Complex site-specific row configuration
+      'layout': '200px',
     }
   },
 

@@ -21,6 +21,14 @@
     transition: all 1s ease-in-out;
 }
 
+.openWindow {
+    bottom: 0;
+}
+
+.travauxWindow{
+    bottom: -100%
+}
+
 .menu_animation {
     left: 0;
     transition: all 400ms;

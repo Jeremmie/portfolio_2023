@@ -31,7 +31,6 @@ export default function Phare({toggleBetweenMode}){
     const phare = useGLTF('../src/assets/models/phareOeil.glb')
     const oeil = useGLTF('../src/assets/models/oeil_apply.glb')
     const animations = useAnimations(oeil.animations, oeil.scene)
-    console.log(animations);
     const texturePhare = useTexture('../src/assets/models/textures/phare_texture.jpg')
     const textureVitre = useTexture('../src/assets/models/textures/phare_vitre_texture.jpg')
     const textureOeil = useTexture('../src/assets/models/textures/murOeilTexturePack.jpg')
