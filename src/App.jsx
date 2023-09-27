@@ -21,7 +21,7 @@ function App() {
       ">
         <Header switchBetweenMode={switchBetweenMode} />
         <div className='fixed z-10 flex bottom-[10%] w-screen justify-center align-center'>
-        <p className='bg-gunmetal text-melon px-4 py-4 rounded-full shadow-cold'>voir les travaux</p>
+        <p className='bg-gunmetal text-melon px-4 py-4 rounded-full shadow-cold cursor-pointer hover:bg-melon hover:text-gunmetal transition_manual'>voir les travaux</p>
         </div>
         <Home toggleBetweenMode={toggleBetweenMode} />
 
