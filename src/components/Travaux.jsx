@@ -1,4 +1,4 @@
-export default function Travaux() {
+export default function Travaux({ clickInHouse }) {
 
 
     return (<>
