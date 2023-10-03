@@ -12,12 +12,12 @@ export default function HomeCanvas({ toggleBetweenMode }) {
   const defaultCamera = useRef();
   const vec = new THREE.Vector3()
   const envMap = [
-    '../src/assets/img/background/day/px.jpg',
-    '../src/assets/img/background/day/nx.jpg',
-    '../src/assets/img/background/day/py.jpg',
-    '../src/assets/img/background/day/ny.jpg',
-    '../src/assets/img/background/day/pz.jpg',
-    '../src/assets/img/background/day/nz.jpg',
+    './img/background/day/px.jpg',
+    './img/background/day/nx.jpg',
+    './img/background/day/py.jpg',
+    './img/background/day/ny.jpg',
+    './img/background/day/pz.jpg',
+    './img/background/day/nz.jpg',
   ]
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
@@ -82,8 +82,8 @@ export default function HomeCanvas({ toggleBetweenMode }) {
           fps={6}
           autoPlay={true}
           loop={true}
-          textureImageURL={'./captainSprite.png'}
-          textureDataURL={'./captainSprite.json'}
+          textureImageURL={'./sprite/captainSprite.png'}
+          textureDataURL={'./sprite/captainSprite.json'}
           alphaTest={0.01}
         />
         <Sparkles ref={sparklOpacity}
