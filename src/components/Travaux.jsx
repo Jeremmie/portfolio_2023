@@ -3,9 +3,12 @@ export default function Travaux({ clickInHouse }) {
 
     return (<>
 
-        <div className="fixed bg-melon dark:bg-gunmetal flex flex-col justify-end items-center w-screen h-screen transition_darkmode">
-            <div className="w-11/12 overflow-auto mt-24 rounded-xl">
-                <div className="bg-placeholder-bg bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl">
+        <div className="fixed bg-melon dark:bg-gunmetal flex flex-col justify-end items-center w-screen h-screen transition_darkmode
+        md:flex md:justify-center md:items-center">
+            <div className="w-11/12 overflow-auto mt-24 rounded-xl
+            md:grid md:w-8/12 md:h-3/6  md:overflow-hidden md:grid-cols-4 md:grid-rows-2 md:gap-4">
+                <div className="bg-placeholder-bg bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                md:row-start-1 md:row-end-3 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">01</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
@@ -14,7 +17,8 @@ export default function Travaux({ clickInHouse }) {
                         <p className="w-full text-end font-bold">3D</p>
                     </div>
                 </div>
-                <div className=" bg-video bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl">
+                <div className=" bg-video bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                md:row-start-1 md:row-end-1 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">02</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
@@ -23,7 +27,8 @@ export default function Travaux({ clickInHouse }) {
                         <p className="w-full text-end font-bold">video</p>
                     </div>
                 </div>
-                <div className=" bg-dessin bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl">
+                <div className=" bg-dessin bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                md:row-start-1 md:row-end-1 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">03</p>
                         <svg className="scale-75" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
@@ -32,7 +37,8 @@ export default function Travaux({ clickInHouse }) {
                         <p className="w-full text-end font-bold">2D</p>
                     </div>
                 </div>
-                <div className=" bg-web bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl">
+                <div className=" bg-web bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                md:row-start-1 md:row-end-3 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">04</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
@@ -41,7 +47,8 @@ export default function Travaux({ clickInHouse }) {
                         <p className="w-full text-end font-bold">web</p>
                     </div>
                 </div>
-                <div className=" bg-photo bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl">
+                <div className=" bg-photo bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                md:row-start-2 md:row-end-2 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">05</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -50,7 +57,8 @@ export default function Travaux({ clickInHouse }) {
                         <p className="w-full text-end font-bold">photography</p>
                     </div>
                 </div>
-                <div className=" bg-JV bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 mb-4 rounded-3xl">
+                <div className=" bg-JV bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 mb-4 rounded-3xl
+                md:row-start-2 md:row-end-2 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">05</p>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
