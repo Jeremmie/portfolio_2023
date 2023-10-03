@@ -19,6 +19,14 @@ export default function HomeCanvas({ toggleBetweenMode }) {
     './img/background/day/pz.jpg',
     './img/background/day/nz.jpg',
   ]
+  const envMapLight = [
+    './img/background/day_light/px.jpg',
+    './img/background/day_light/nx.jpg',
+    './img/background/day_light/py.jpg',
+    './img/background/day_light/ny.jpg',
+    './img/background/day_light/pz.jpg',
+    './img/background/day_light/nz.jpg',
+  ]
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
   const isMD = useMediaQuery({ query: '(min-width: 768px)' })
@@ -59,6 +67,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
   return (
     <>
+      {isSM && <Environment files={envMapLight} background blur={0.03} />}
       {isMD && <Environment files={envMap} background blur={0.03} />}
       {isMD && <Float rotationIntensity={(3, 3, 0.1)} >
         <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
