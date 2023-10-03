@@ -34,7 +34,7 @@ function App() {
       <div className="
         h-screen bg-center transition_darkmode flex
       ">
-        <Header switchBetweenMode={switchBetweenMode} clickInHouse={clickInHouse} clickInContact={clickInContact} />
+        <Header switchBetweenMode={switchBetweenMode} toggleHouse={toggleHouse} clickInHouse={clickInHouse} toggleContact={toggleContact} clickInContact={clickInContact} />
 
         {toggleTravaux ? null : <div className='fixed z-10 flex bottom-[10%] w-screen justify-center align-center'>
           <p onClick={switchToggleTravaux} className='bg-gunmetal text-melon px-4 py-4 rounded-full shadow-cold cursor-pointer hover:bg-melon hover:text-gunmetal transition_manual'>voir les travaux</p>
