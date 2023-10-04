@@ -1,7 +1,10 @@
 import Nightmode from "./Nightmode"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useMediaQuery } from 'react-responsive'
 import MenuBurger from './MenuBurger.jsx'
+import Lottie from "lottie-react"
+import boxAnimation from '../../public/lottie/iconAnimation/animBox.json'
+import "../style.css"
 
 export default function Header({ switchBetweenMode, toggleBetweenMode, clickHouse, toggleHouse, clickTravaux, toggleTravaux, clickContact, toggleContact, clickLiens, toggleLiens }) {
     const isSM = useMediaQuery({ query: '(max-width: 640px)' })
@@ -10,18 +13,30 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const isXL = useMediaQuery({ query: '(min-width: 1280px)' })
     const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
 
+    const lottieTravaux = useRef(); // permet d'appeller l'animation
+    const [animDirection, setAnimDirection] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
+  
+  
+
+
+
+
     var houseState = toggleHouse
     var contactState = toggleContact
     var travauxState = toggleTravaux
     var liensState = toggleLiens
     const houseFunction = clickHouse
     const travauxFunction = clickTravaux
+    const travauxReverseAnim = useState(0)
     const contactFunction = clickContact
     const liensFunction = clickLiens
 
     function onlyHouseOpen() {
         if (travauxState === false) {
             travauxFunction()
+            setAnimDirection(animDirection * -1) 
+            lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
+            lottieTravaux.current.play();
         } else { }
         if (contactState === false) {
             contactFunction()
@@ -42,11 +57,17 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function travauxFull() {
         onlyTravauxOpen();
         travauxFunction()
+        setAnimDirection(animDirection * -1) 
+        lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
+        lottieTravaux.current.play();
     }
 
     function onlyContactOpen() {
         if (travauxState === false) {
             travauxFunction()
+            setAnimDirection(animDirection * -1) 
+            lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
+            lottieTravaux.current.play();
         } else { }
         if (liensState === false) {
             liensFunction()
@@ -60,6 +81,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function onlyLiensOpen() {
         if (travauxState === false) {
             travauxFunction()
+            setAnimDirection(animDirection * -1) 
+            lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
+            lottieTravaux.current.play();
         } else { }
         if (contactState === false) {
             contactFunction()
@@ -71,6 +95,13 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     }
 
 
+    // const playAnimationNow = () => {
+    //     setAnimDirection(animDirection * -1) // permet à l'animation de se jouer en avant une fois sur 2
+    //     lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
+    //     lottieTravaux.current.play(); // joue l'animation
+  
+    //   }
+console.log(animDirection);
     //toggle menu
     const menuButton = useRef()
     const openMenu = () => {
@@ -92,8 +123,10 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
                     <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" /></svg>
                 </button >
                 <button onClick={travauxFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
-
-                    <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.*/} <path d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" /></svg>
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
+ 
+                    {/* <Box travauxReverseAnim={travauxReverseAnim} toggleTravaux={toggleTravaux}/> */}
+                    {/* <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. <path d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" /></svg>*/}
                 </button>
                 <button onClick={contactFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
 

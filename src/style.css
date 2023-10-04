@@ -5,6 +5,9 @@
 .logo_menu path {
     fill: inherit;
 }
+.boxAnimation path {
+    fill: inherit;
+}
 .logo_menu_target > svg {
     border-radius: 10px;
 }
