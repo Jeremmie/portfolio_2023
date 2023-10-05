@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 import MenuBurger from './MenuBurger.jsx'
 import Lottie from "lottie-react"
 import boxAnimation from '../../public/lottie/iconAnimation/animBox.json'
+import contactAnimation from '../../public/lottie/iconAnimation/animContact.json'
 import "../style.css"
 
 export default function Header({ switchBetweenMode, toggleBetweenMode, clickHouse, toggleHouse, clickTravaux, toggleTravaux, clickContact, toggleContact, clickLiens, toggleLiens }) {
@@ -14,9 +15,10 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
 
     const lottieTravaux = useRef(); // permet d'appeller l'animation
+    const lottieContact = useRef(); // permet d'appeller l'animation
     const [animDirection, setAnimDirection] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
-  
-  
+
+
 
 
 
@@ -34,7 +36,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function onlyHouseOpen() {
         if (travauxState === false) {
             travauxFunction()
-            setAnimDirection(animDirection * -1) 
+            setAnimDirection(animDirection * -1)
             lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
             lottieTravaux.current.play();
         } else { }
@@ -57,7 +59,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function travauxFull() {
         onlyTravauxOpen();
         travauxFunction()
-        setAnimDirection(animDirection * -1) 
+        setAnimDirection(animDirection * -1)
         lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
         lottieTravaux.current.play();
     }
@@ -65,7 +67,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function onlyContactOpen() {
         if (travauxState === false) {
             travauxFunction()
-            setAnimDirection(animDirection * -1) 
+            setAnimDirection(animDirection * -1)
             lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
             lottieTravaux.current.play();
         } else { }
@@ -76,12 +78,15 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function contactFull() {
         onlyContactOpen();
         contactFunction()
+        setAnimDirection(animDirection * -1)
+        lottieContact.current.setDirection(animDirection); // définit la direction de l'animation
+        lottieContact.current.play();
     }
 
     function onlyLiensOpen() {
         if (travauxState === false) {
             travauxFunction()
-            setAnimDirection(animDirection * -1) 
+            setAnimDirection(animDirection * -1)
             lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
             lottieTravaux.current.play();
         } else { }
@@ -99,9 +104,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     //     setAnimDirection(animDirection * -1) // permet à l'animation de se jouer en avant une fois sur 2
     //     lottieTravaux.current.setDirection(animDirection); // définit la direction de l'animation
     //     lottieTravaux.current.play(); // joue l'animation
-  
+
     //   }
-console.log(animDirection);
+    console.log(animDirection);
     //toggle menu
     const menuButton = useRef()
     const openMenu = () => {
@@ -124,15 +129,12 @@ console.log(animDirection);
                 </button >
                 <button onClick={travauxFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
- 
+
                     {/* <Box travauxReverseAnim={travauxReverseAnim} toggleTravaux={toggleTravaux}/> */}
                     {/* <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. <path d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" /></svg>*/}
                 </button>
                 <button onClick={contactFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
-
-                    <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
-                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" /></svg>
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
                 </button>
                 <button onClick={liensFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
 

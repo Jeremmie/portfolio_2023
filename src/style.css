@@ -5,22 +5,28 @@
 .logo_menu path {
     fill: inherit;
 }
+
 .boxAnimation path {
     fill: inherit;
 }
-.logo_menu_target > svg {
+
+.contactAnimation {
+    fill: inherit;
+}
+
+.logo_menu_target>svg {
     border-radius: 10px;
 }
 
-*{
+* {
     -webkit-tap-highlight-color: transparent;
 }
 
-.transition_manual{
+.transition_manual {
     transition: all 150ms ease-in-out;
 }
 
-.transition_darkmode{
+.transition_darkmode {
     transition: all 1s ease-in-out;
 }
 
@@ -28,7 +34,7 @@
     bottom: 0;
 }
 
-.travauxWindow{
+.travauxWindow {
     bottom: -100%
 }
 
@@ -42,16 +48,12 @@ h1 {
     font-family: Helvtica, sans-serif;
     font-weight: bold;
 }
-p{
+
+p {
     font-size: 1.2rem;
 }
 
 
-canvas{
+canvas {
     touch-action: none;
 }
-
-
-
-
-
