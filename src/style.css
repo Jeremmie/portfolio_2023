@@ -10,7 +10,15 @@
     fill: inherit;
 }
 
-.contactAnimation {
+.contactAnimation path {
+    fill: inherit;
+}
+
+.houseAnimation path {
+    fill: inherit;
+}
+
+.houseAnimation rect {
     fill: inherit;
 }
 
