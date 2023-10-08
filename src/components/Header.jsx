@@ -25,11 +25,6 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const [animDirectionContact, setAnimDirectionContact] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
     const [animDirectionLiens, setAnimDirectionLiens] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
 
-
-
-
-
-
     var houseState = toggleHouse
     var contactState = toggleContact
     var travauxState = toggleTravaux
@@ -39,6 +34,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const travauxReverseAnim = useState(0)
     const contactFunction = clickContact
     const liensFunction = clickLiens
+    var travauxStyle = document.getElementById('travauxID')
 
     function onlyHouseOpen() {
         if (travauxState === false) {
@@ -46,18 +42,21 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
             setAnimDirectionTravaux(animDirectionTravaux * -1)
             lottieTravaux.current.setDirection(animDirectionTravaux); // définit la direction de l'animation
             lottieTravaux.current.play();
+            document.getElementById('travauxID').classList.remove('activeBox')
         } else { }
         if (contactState === false) {
             contactFunction()
             setAnimDirectionContact(animDirectionContact * -1)
             lottieContact.current.setDirection(animDirectionContact); // définit la direction de l'animation
             lottieContact.current.play();
+            document.getElementById('contactID').classList.remove('activeBox')
         } else { }
         if (liensState === false) {
             liensFunction()
             setAnimDirectionLiens(animDirectionLiens * -1)
             lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
             lottieLiens.current.play();
+            document.getElementById('liensID').classList.remove('activeBox')
         } else { }
     }
     function houseFull() {
@@ -66,6 +65,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         lottieHouse.current.play();
         onlyHouseOpen()
         houseFunction()
+        
     }
 
     function onlyTravauxOpen() {
@@ -74,12 +74,14 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
             setAnimDirectionContact(animDirectionContact * -1)
             lottieContact.current.setDirection(animDirectionContact); // définit la direction de l'animation
             lottieContact.current.play();
+            document.getElementById('contactID').classList.remove('activeBox')
         } else { }
         if (liensState === false) {
             liensFunction()
             setAnimDirectionLiens(animDirectionLiens * -1)
             lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
             lottieLiens.current.play();
+            document.getElementById('liensID').classList.remove('activeBox')
         } else { }
         if (houseState === false) {
             houseFunction()
@@ -94,7 +96,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         lottieTravaux.current.play();
         onlyTravauxOpen()
         travauxFunction()
-        console.log('played');
+        document.getElementById('travauxID').classList.toggle('activeBox')
     }
 
     function onlyContactOpen() {
@@ -103,12 +105,14 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
             setAnimDirectionTravaux(animDirectionTravaux * -1)
             lottieTravaux.current.setDirection(animDirectionTravaux); // définit la direction de l'animation
             lottieTravaux.current.play();
+            document.getElementById('travauxID').classList.remove('activeBox')
         } else { }
         if (liensState === false) {
             liensFunction()
             setAnimDirectionLiens(animDirectionLiens * -1)
             lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
             lottieLiens.current.play();
+            document.getElementById('liensID').classList.remove('activeBox')
         } else { }
         if (houseState === false) {
             houseFunction()
@@ -123,6 +127,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         setAnimDirectionContact(animDirectionContact * -1)
         lottieContact.current.setDirection(animDirectionContact); // définit la direction de l'animation
         lottieContact.current.play();
+        document.getElementById('contactID').classList.toggle('activeBox')
     }
 
     function onlyLiensOpen() {
@@ -131,12 +136,14 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
             setAnimDirectionTravaux(animDirectionTravaux * -1)
             lottieTravaux.current.setDirection(animDirectionTravaux); // définit la direction de l'animation
             lottieTravaux.current.play();
+            document.getElementById('travauxID').classList.remove('activeBox')
         } else { }
         if (contactState === false) {
             contactFunction()
             setAnimDirectionContact(animDirectionContact * -1)
             lottieContact.current.setDirection(animDirectionContact); // définit la direction de l'animation
             lottieContact.current.play();
+            document.getElementById('contactID').classList.remove('activeBox')
         } else { }
         if (houseState === false) {
             houseFunction()
@@ -151,6 +158,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         setAnimDirectionLiens(animDirectionLiens * -1)
         lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
         lottieLiens.current.play();
+        document.getElementById('liensID').classList.toggle('activeBox')
     }
 
 
@@ -160,7 +168,6 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     //     lottieTravaux.current.play(); // joue l'animation
 
     //   }
-    console.log(animDirectionContact);
     //toggle menu
     const menuButton = useRef()
     const openMenu = () => {
@@ -180,13 +187,13 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
                 <button onClick={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
                 </button >
-                <button onClick={travauxFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
+                <button onClick={travauxFull} id="travauxID" className="my-5 px-5 py-3 rounded-full  transition_manual">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
                 </button>
-                <button onClick={contactFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
+                <button onClick={contactFull} id="contactID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
                 </button>
-                <button onClick={liensFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
+                <button onClick={liensFull} id="liensID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
 
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
                 </button>
