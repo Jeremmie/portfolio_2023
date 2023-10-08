@@ -1,4 +1,14 @@
+import { useState } from 'react'
+import Travaux3D from './travaux/Travaux_3D'
+
+
+
 export default function Travaux({ clickInHouse }) {
+
+    const [toggle3D, setClick3D] = useState(true);
+    function click3D() {
+        setClick3D(!toggle3D)
+    }
 
 
     return (<>
@@ -7,7 +17,7 @@ export default function Travaux({ clickInHouse }) {
         md:flex md:justify-center md:items-center">
             <div className="w-11/12 overflow-auto mt-24 rounded-xl
             md:grid md:w-8/12 md:h-3/6  md:overflow-hidden md:grid-cols-4 md:grid-rows-2 md:gap-4">
-                <div className="bg-placeholder-bg bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
+                <div onClick={click3D} click3D={click3D} toggle3D={toggle3D} className="bg-placeholder-bg bg-cover text-melon w-full flex justify-center items-center h-[25vh] mt-6 rounded-3xl
                 md:row-start-1 md:row-end-3 md:h-full md:mt-0">
                     <div className="backdrop-blur-md w-10/12 h-4/5 backdrop-melon bg-white/30 flex flex-col justify-between items-center rounded-3xl text-black font-bold text-3xl p-4">
                         <p className="w-full font-bold">01</p>
@@ -69,5 +79,9 @@ export default function Travaux({ clickInHouse }) {
                 </div>
             </div>
         </div>
+
+
+        {toggle3D ? null : <Travaux3D />}
+
     </>)
 }

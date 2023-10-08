@@ -31,11 +31,10 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     var liensState = toggleLiens
     const houseFunction = clickHouse
     const travauxFunction = clickTravaux
-    const travauxReverseAnim = useState(0)
     const contactFunction = clickContact
     const liensFunction = clickLiens
     var travauxStyle = document.getElementById('travauxID')
-
+    
     function onlyHouseOpen() {
         if (travauxState === false) {
             travauxFunction()

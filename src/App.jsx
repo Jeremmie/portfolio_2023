@@ -45,12 +45,6 @@ function App() {
       ">
         <Header switchBetweenMode={switchBetweenMode} toggleHouse={toggleHouse} clickHouse={clickHouse} toggleContact={toggleContact} clickTravaux={clickTravaux} toggleTravaux={toggleTravaux} clickContact={clickContact} clickLiens={clickLiens} toggleLiens={toggleLiens} />
 
-        {/* {toggleTravaux ? null : <div className='fixed z-10 flex bottom-[10%] w-screen justify-center align-center'> */}
-        {/* <p onClick={switchToggleTravaux} className='bg-gunmetal text-melon px-4 py-4 rounded-full shadow-cold cursor-pointer hover:bg-melon hover:text-gunmetal transition_manual'>voir les travaux</p> */}
-        {/* </div>} */}
-
-
-
         <Home toggleBetweenMode={toggleBetweenMode} />
 
         {toggleTravaux ? null : <Travaux />}
