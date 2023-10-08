@@ -6,6 +6,7 @@ import Lottie from "lottie-react"
 import boxAnimation from '../../public/lottie/iconAnimation/animBox.json'
 import contactAnimation from '../../public/lottie/iconAnimation/animContact.json'
 import houseAnimation from '../../public/lottie/iconAnimation/animHouse.json'
+import liensAnimation from '../../public/lottie/iconAnimation/animLiens.json'
 import "../style.css"
 
 export default function Header({ switchBetweenMode, toggleBetweenMode, clickHouse, toggleHouse, clickTravaux, toggleTravaux, clickContact, toggleContact, clickLiens, toggleLiens }) {
@@ -54,6 +55,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         } else { }
         if (liensState === false) {
             liensFunction()
+            setAnimDirectionLiens(animDirectionLiens * -1)
+            lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
+            lottieLiens.current.play();
         } else { }
     }
     function houseFull() {
@@ -73,6 +77,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         } else { }
         if (liensState === false) {
             liensFunction()
+            setAnimDirectionLiens(animDirectionLiens * -1)
+            lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
+            lottieLiens.current.play();
         } else { }
         if (houseState === false) {
             houseFunction()
@@ -99,6 +106,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         } else { }
         if (liensState === false) {
             liensFunction()
+            setAnimDirectionLiens(animDirectionLiens * -1)
+            lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
+            lottieLiens.current.play();
         } else { }
         if (houseState === false) {
             houseFunction()
@@ -138,6 +148,9 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     function liensFull() {
         onlyLiensOpen();
         liensFunction()
+        setAnimDirectionLiens(animDirectionLiens * -1)
+        lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
+        lottieLiens.current.play();
     }
 
 
@@ -175,7 +188,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
                 </button>
                 <button onClick={liensFull} className="my-5 px-5 py-3 rounded-full  transition_manual ">
 
-                    <svg className="w-6 fill-gunmetal dark:fill-melon transition_darkmode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/*Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.*/} <path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z" /></svg>
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
                 </button>
                 <div className="my-5 w-14 shadow-inner rounded-full ">
                     <Nightmode switchBetweenMode={switchBetweenMode} />

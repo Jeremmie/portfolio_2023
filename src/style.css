@@ -22,6 +22,14 @@
     fill: inherit;
 }
 
+.liensAnimation path {
+    fill: inherit;
+}
+
+.liensAnimation rect {
+    fill: inherit;
+}
+
 .logo_menu_target>svg {
     border-radius: 10px;
 }
