@@ -44,6 +44,9 @@ export default {
         'web': "url('https://i.ibb.co/x1j72Sc/web.png')",
         'photo': "url('https://jeremiejaouen.ch/img/nature_morte/naturemorte_2.png')",
         'JV': "url('https://jeremiejaouen.ch/img/works_modal/modal_12/vignette.jpg')",
+        'leonAscii': "url('https://i.ibb.co/ZzPHtcb/leon.jpgjpg')",
+        'galaxyGroove': "url('https://i.ibb.co/Ws5bfB7/galaxygroove.png')",
+        'loop': "url('https://i.ibb.co/D9F2Hx4/vignette.png')",
 
       },
       gridTemplateRows: {

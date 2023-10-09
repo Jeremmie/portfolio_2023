@@ -34,7 +34,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const contactFunction = clickContact
     const liensFunction = clickLiens
     var travauxStyle = document.getElementById('travauxID')
-    
+
     function onlyHouseOpen() {
         if (travauxState === false) {
             travauxFunction()
@@ -64,7 +64,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         lottieHouse.current.play();
         onlyHouseOpen()
         houseFunction()
-        
+
     }
 
     function onlyTravauxOpen() {
@@ -181,7 +181,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         ">
 
             <div id="menu" className="
-        text-gunmetal fixed -left-full md:bg-melon/10 flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-warm border-y-2 border-r-2 border-gray-800/10
+        text-gunmetal fixed -left-full md:bg-melon/10 bg-melon/30 flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
         " >
                 <button onClick={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
