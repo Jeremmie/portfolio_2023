@@ -35,7 +35,8 @@ export default {
         'cold': 'rgba(0, 0, 0, 1) 0px 2px 5px 0px',
         'inner': 'inset 0px 4px 4px 0 #00000036;',
         'innercold': 'inset 0px 4px 4px 0 #000000;',
-        'neumorhismLight': '-8px 5px 15px #d99c9c, 8px -5px 15px #ffd4d4'
+        'neumorhismLight': '-8px 5px 15px #d99c9c, 8px -5px 15px #ffd4d4',
+        'figma': 'box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
       },
       backgroundImage: {
         'placeholder-bg': "url('https://jeremiejaouen.ch/img/works_modal/modal_10/leon_original.jpg')",
@@ -47,6 +48,7 @@ export default {
         'leonAscii': "url('https://i.ibb.co/ZzPHtcb/leon.jpgjpg')",
         'galaxyGroove': "url('https://i.ibb.co/Ws5bfB7/galaxygroove.png')",
         'loop': "url('https://i.ibb.co/D9F2Hx4/vignette.png')",
+        'asciiCube': "url('https://i.ibb.co/Z6ty3C0/vignette.png')",
 
       },
       gridTemplateRows: {
