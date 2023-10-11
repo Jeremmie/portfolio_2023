@@ -40,23 +40,20 @@ export default function Travaux({ clickInHouse }) {
             </div>
 
 
-            <div className='overflow-x-scroll whitespace-nowrap rounded-lg mb-5'>
-                <div className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                    <div className='bg-asciiCube bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                    <p className='text-sm ml-2 mt-2'>shaders</p>
-                    <p className=' text-3xl ml-2 mt-2'>ascii</p>
+            <div className='overflow-x-scroll whitespace-nowrap rounded-lg ml-5 mb-5'>
+                <div className='inline-block shadow-lg mb-5 text-melon flex flex-col w-[40vw] dark:text-gunmetal'>
+                    <div className='bg-asciiCube bg-center bg-cover w-[40vw] aspect-square rounded-t-lg w-full'></div>
+                    <div className='h-[10vh] dark:bg-melon bg-gunmetal rounded-b-xl transition_darkmode'>
+                        <p className='text-sm ml-2 mt-2'>shaders</p>
+                        <p className=' text-3xl ml-2 mt-2'>ascii</p>
+                    </div>
                 </div>
-
-                <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                    <div className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                    <p className='text-sm ml-2 mt-2'>album cover</p>
-                    <p className=' text-3xl ml-2 mt-2'>Galaxy Groove</p>
-                </div>
-
-                <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                    <div className='bg-loop bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                    <p className='text-sm ml-2 mt-2'>3D animation</p>
-                    <p className=' text-3xl ml-2 mt-2'>Loop</p>
+                <div className='inline-block shadow-lg mb-5 text-melon flex flex-col w-[40vw] dark:text-gunmetal'>
+                    <div className='bg-asciiCube bg-center bg-cover w-[40vw] aspect-square rounded-t-lg w-full'></div>
+                    <div className='h-[10vh] dark:bg-melon bg-gunmetal rounded-b-xl transition_darkmode'>
+                        <p className='text-sm ml-2 mt-2'>shaders</p>
+                        <p className=' text-3xl ml-2 mt-2'>ascii</p>
+                    </div>
                 </div>
             </div>
         </div >
