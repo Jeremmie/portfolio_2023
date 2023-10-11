@@ -49,6 +49,16 @@ export default {
         'galaxyGroove': "url('https://i.ibb.co/Ws5bfB7/galaxygroove.png')",
         'loop': "url('https://i.ibb.co/D9F2Hx4/vignette.png')",
         'asciiCube': "url('https://i.ibb.co/Z6ty3C0/vignette.png')",
+        'videoGame': "url('https://i.ibb.co/7JS3NKb/miniature.jpg')",
+        'natureMorte': "url('https://i.ibb.co/4jkrxdf/nature-morte.jpg')",
+        'rollUp': "url('https://i.ibb.co/f8DVyMS/roll-Up-Light.jpg')",
+        'vinyle': "url('https://i.ibb.co/MMLnr1X/vinyle-recto-light.jpg')",
+        'threejs': "url('https://i.ibb.co/sqv3Hsv/vignette-galaxy.jpg')",
+        'speed': "url('https://i.ibb.co/qrtQh7c/speed-Vignette.jpg')",
+        'sketchfab': "url('https://i.ibb.co/HBsbGLF/sketchfab-vignette.jpg')",
+        'rapportStage': "url('https://i.ibb.co/x1h9GhF/rapport-Stage.jpg')",
+        'none': "url('https://i.ibb.co/sqv3Hsv/vignette-galaxy.jpg')",
+
 
       },
       gridTemplateRows: {
