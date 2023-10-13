@@ -5,8 +5,20 @@ import Travaux3D from './travaux/Travaux_3D'
 
 export default function Travaux({ clickInHouse }) {
 
+    function popUpLeon() {
+        const popUpLeon = document.querySelector('#popUpLeon')
+        popUpLeon.classList.toggle('showPopUp')
+    }
+
 
     return (<>
+        <div id='popUpLeon' className='fixed p-4 bg-melon text-gunmetal bottom-0 w-screen h-screen z-50 transition_pop-up'>
+            <button onClick={popUpLeon} className='bg-gunmetal text-melon px-4 py-2 rounded-full shadow-lg mb-4'>retour</button>
+            <div className='overflow-auto h-full rounded-xl'>
+                <h1>coucou</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum veritatis architecto repellendus ipsum quibusdam iste consectetur, voluptatibus iusto magnam aut ut? Laudantium exercitationem voluptas natus illo autem incidunt consequuntur in.</p>
+            </div>
+        </div>
 
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal '>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
@@ -15,7 +27,7 @@ export default function Travaux({ clickInHouse }) {
                     <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 </div>
                 <div className='overflow-x-scroll whitespace-nowrap rounded-lg mb-5'>
-                    <div className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
+                    <div onClick={popUpLeon} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
                         <div className='bg-leonAscii bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
                         <p className='text-sm ml-2 mt-2'>charachter design</p>
                         <p className=' text-3xl ml-2 mt-2'>Leon</p>
