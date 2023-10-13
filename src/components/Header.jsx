@@ -1,12 +1,12 @@
 import Nightmode from "./Nightmode"
 import { useRef, useState } from "react"
 import { useMediaQuery } from 'react-responsive'
-import MenuBurger from './MenuBurger.jsx'
 import Lottie from "lottie-react"
 import boxAnimation from '../../public/lottie/iconAnimation/animBox.json'
 import contactAnimation from '../../public/lottie/iconAnimation/animContact.json'
 import houseAnimation from '../../public/lottie/iconAnimation/animHouse.json'
 import liensAnimation from '../../public/lottie/iconAnimation/animLiens.json'
+import menuAnimation from '../../public/lottie/menu_animation/menu_animation.json'
 import "../style.css"
 
 export default function Header({ switchBetweenMode, toggleBetweenMode, clickHouse, toggleHouse, clickTravaux, toggleTravaux, clickContact, toggleContact, clickLiens, toggleLiens }) {
@@ -20,10 +20,12 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const lottieTravaux = useRef(); // permet d'appeller l'animation
     const lottieContact = useRef(); // permet d'appeller l'animation
     const lottieLiens = useRef(); // permet d'appeller l'animation
+    const lottieRefBurgerMenu = useRef(); // permet d'appeller l'animation
     const [animDirectionHouse, setAnimDirectionHouse] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
     const [animDirectionTravaux, setAnimDirectionTravaux] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
     const [animDirectionContact, setAnimDirectionContact] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
     const [animDirectionLiens, setAnimDirectionLiens] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
+    const [animDirectionBurger, setAnimDirectionBurger] = useState(1); // définit si l'animation se joue en avant(1) ou en arrière(-1)
 
     var houseState = toggleHouse
     var contactState = toggleContact
@@ -171,17 +173,39 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     const menuButton = useRef()
     const openMenu = () => {
         var menuVisible = document.querySelector('#menu');
+        const modalHeader = document.querySelector('#modalHeader')
         menuVisible.classList.toggle('menu_animation');
+        modalHeader.classList.toggle('modalHeader')
+    }
+    // function modalHeaderClose(){
+    //     console.log('coucou');
+    //     var menuVisible = document.querySelector('#menu');
+    //     const modalHeader = document.querySelector('#modalHeader')
+    //     modalHeader.classList.toggle('modalHeader')
+    // }
+
+  
+  
+    const playAnimationNow = () => {
+        setAnimDirectionBurger(animDirectionBurger * -1) // permet à l'animation de se jouer en avant une fois sur 2
+        lottieRefBurgerMenu.current.setDirection(animDirectionBurger); // définit la direction de l'animation
+        lottieRefBurgerMenu.current.play(); // joue l'animation
+    }
+    function handleBurgerClick(){
+        playAnimationNow();
+        openMenu();
     }
 
     return (<>
-        <div ref={menuButton} onClick={openMenu} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon md:bg-melon/50 md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode"><MenuBurger className="w-3 md:w-8 h-fit sticky" /></div>
+        <div onClick={handleBurgerClick} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon md:bg-melon/50 md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode">
+        <Lottie className="logo_menu_target fill-gunmetal dark:fill-melon" autoplay={false} lottieRef={lottieRefBurgerMenu} animationData={menuAnimation} loop={false} />
+        </div>
+        <div id="modalHeader" onClick={handleBurgerClick} className="bg-gunmetal/60 opacity-[0%] hidden fixed h-screen z-10 w-screen transition_pop-up"></div>
         <div className="
         flex justify-start items-center h-screen z-50 fixed
         ">
-
             <div id="menu" className="
-        text-gunmetal fixed -left-full md:bg-melon/10 bg-melon/30 flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
+        text-gunmetal fixed -left-full md:bg-melon/10 bg-melon dark:bg-gunmetal flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
         " >
                 <button onClick={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
                     <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
