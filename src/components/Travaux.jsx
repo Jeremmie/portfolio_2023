@@ -29,7 +29,7 @@ export default function Travaux({ clickInHouse }) {
 
 
 
-        <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal '>
+        <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
                 <div className='flex flex-col justify-center my-5 items-center'>
                     <div className='w-[90%] text-melon bg-gunmetal rounded-t-lg'><p className=' px-2 py-1 text-base'>showreel</p></div>
