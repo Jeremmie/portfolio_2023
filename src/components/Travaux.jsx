@@ -9,6 +9,10 @@ export default function Travaux({ clickInHouse }) {
         const popUpLeon = document.querySelector('#popUpLeon')
         popUpLeon.classList.toggle('showPopUp')
     }
+    function popUpGalaxyGroove() {
+        const popUpGalaxyGroove = document.querySelector('#popUpGalaxyGroove')
+        popUpGalaxyGroove.classList.toggle('showPopUp')
+    }
 
 
     return (<>
@@ -23,10 +27,27 @@ export default function Travaux({ clickInHouse }) {
                 <h1 className='mb-2 text-3xl'>Leon</h1>
                 <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 <div className='w-full aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
-                <p className='mt-3'>3D modelisation of a human face in a cartoon style.</p>
+                <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
+                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video rounded-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
             </div>
         </div>
 
+        {/*Galaxy GROOVE*/}
+        <div id='popUpGalaxyGroove' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-50 transition_pop-up'>
+            <button onClick={popUpLeon} className='block ml-auto mb-4'>
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+            </button>
+            <div className='overflow-auto h-full rounded-xl'>
+                <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
+                <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
+                <div className='w-full aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
+                <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
+                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video rounded-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
+            </div>
+        </div>
 
 
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
@@ -49,7 +70,7 @@ export default function Travaux({ clickInHouse }) {
                     </div>
 
                     <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                        <div className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
+                        <div onClick={popUpGalaxyGroove} className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
                         <p className='text-sm ml-2 mt-2'>album cover</p>
                         <p className=' text-2xl ml-2 mt-2'>Galaxy Groove</p>
                     </div>
