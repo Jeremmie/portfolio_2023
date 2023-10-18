@@ -16,25 +16,54 @@ export default function Travaux({ clickInHouse }) {
 
 
     return (<>
-        <div id='popUpLeon' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-50 transition_pop-up'>
-            <button onClick={popUpLeon} className='block ml-auto mb-4'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
-                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
-            </button>
+        <div id='popUpLeon' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+            <div className='flex flex-row w-screen justify-between items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <h1 className='mb-2 text-3xl'>Leon</h1>
+                </div>
+
+                <button onClick={popUpLeon} className='mb-4 p-4'>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='mb-5 w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
             <div className='overflow-auto h-full rounded-xl'>
-                <p className='text-gunmetal/70 text-l mb-3'>2022</p>
-                <h1 className='mb-2 text-3xl'>Leon</h1>
-                <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
-                <div className='w-full aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
-                <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
-                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video rounded-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
+                <div>
+                    <div className='overflow-x-scroll w-full px-4 whitespace-nowrap rounded-lg'>
+                        <div className='w-full inline-block mr-4 aspect-square bg-leonOriginal bg-cover rounded-lg shadow-lg'></div>
+                        <div className='w-full inline-block mr-4 aspect-square bg-leonBlackWhite bg-cover rounded-lg shadow-lg'></div>
+                        <div className='w-full inline-block mr-4 aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
+                    </div>
+                    <div className='flex flex-row justify-between px-7'>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z" /></svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z" /></svg>
+                    </div>
+                </div>
+                <p className='mt-3 p-4'>3D modelisation of a human face in a cartoon style.</p>
+                <div className='flex flex-col px-4'>
+                    <div className='flex flex-row items-center bg-gunmetal text-melon py-0.5 rounded-t-lg w-full'>
+                        <svg className='fill-melon px-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
+                        <p className='text-base'>3D model</p>
+                    </div>
+                    <div class="sketchfab-embed-wrapper mb-5"> <iframe className='w-full aspect-video rounded-b-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe></div> </div>
+                <div className='w-screen h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
             </div>
         </div>
 
         {/*Galaxy GROOVE*/}
-        <div id='popUpGalaxyGroove' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-50 transition_pop-up'>
-            <button onClick={popUpLeon} className='block ml-auto mb-4'>
+        <div id='popUpGalaxyGroove' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+            <button onClick={popUpGalaxyGroove} className='block ml-auto mb-4'>
                 <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                     {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                     <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
@@ -45,7 +74,7 @@ export default function Travaux({ clickInHouse }) {
                 <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 <div className='w-full aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
-                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video rounded-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
+                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
             </div>
         </div>
 

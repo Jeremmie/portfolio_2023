@@ -61,6 +61,8 @@ export default {
         'serif': "url('https://i.ibb.co/QHxqmx9/Plan-de-travail-1.png')",
         'gameboy': "url('https://i.ibb.co/xs083TD/gameb.png')",
         'visagesculpt': "url('https://i.ibb.co/dgP74WS/face.png')",
+        'leonBlackWhite': "url('https://i.ibb.co/jz3CjjH/leon-noir-blanc.jpg')",
+        'leonOriginal': "url('https://i.ibb.co/hYgdYdb/leon-original.jpg')",
         'none': "url('https://i.ibb.co/xs083TD/gameb.png')",
         'none': "url('https://i.ibb.co/xs083TD/gameb.png')",
 
