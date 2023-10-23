@@ -75,8 +75,8 @@ export default function Travaux({ clickInHouse }) {
                 <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
                 <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 <div className='w-full aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
-                <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
-                <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
+                <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
+                <iframe className='w-full aspect-video rounded-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
         </div>
 
