@@ -38,10 +38,12 @@ export default function Travaux({ clickInHouse }) {
                         <div className='w-full inline-block mr-4 aspect-square bg-leonBlackWhite bg-cover rounded-lg shadow-lg'></div>
                         <div className='w-full inline-block mr-4 aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
                     </div>
-                    <div className='flex flex-row justify-between px-7'>
+                    <div className='flex flex-row justify-between items-center px-7 fill-gunmetal/80 text-gunmetal/50'>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z" /></svg>
+
+                        <p className='text_1rem'>use horizontal scroll to see more</p>
 
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
@@ -72,7 +74,7 @@ export default function Travaux({ clickInHouse }) {
                 <p className='text-gunmetal/70 text-l mb-3'>2022</p>
                 <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
                 <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
-                <div className='w-full aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
+                <div className='w-full aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>3D modelisation of a human face in a cartoon style.</p>
                 <div class="sketchfab-embed-wrapper"> <iframe className='w-full aspect-video shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe> </div>
             </div>
