@@ -63,7 +63,7 @@ export default {
         'visagesculpt': "url('https://i.ibb.co/dgP74WS/face.png')",
         'leonBlackWhite': "url('https://i.ibb.co/jz3CjjH/leon-noir-blanc.jpg')",
         'leonOriginal': "url('https://i.ibb.co/hYgdYdb/leon-original.jpg')",
-        'none': "url('https://i.ibb.co/xs083TD/gameb.png')",
+        'Ryslo': "url('https://i.ibb.co/zP9VYGK/Ryslo.jpg')",
         'none': "url('https://i.ibb.co/xs083TD/gameb.png')",
 
 

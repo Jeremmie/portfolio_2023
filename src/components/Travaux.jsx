@@ -76,7 +76,11 @@ export default function Travaux({ clickInHouse }) {
                 <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 <div className='w-full aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
-                <iframe className='w-full aspect-video rounded-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <div className='flex flex-col justify-center items-center bg-gunmetal rounded-lg text-melon p-4'>
+                    <div className='w-1/4 aspect-square bg-Ryslo rounded-full bg-center bg-cover mb-1'></div>
+                    <p className='mb-4'>Ryslo</p>
+                    <iframe className='w-full aspect-video rounded-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </div>
             </div>
         </div>
 
