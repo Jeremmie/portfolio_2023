@@ -65,22 +65,35 @@ export default function Travaux({ clickInHouse }) {
 
         {/*Galaxy GROOVE*/}
         <div id='popUpGalaxyGroove' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
-            <button onClick={popUpGalaxyGroove} className='block ml-auto mb-4'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
-                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
-            </button>
+
+            <div className='flex flex-row justify-between w-[90vw] items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
+                </div>
+
+                <button onClick={popUpGalaxyGroove} className='mb-4 px-4'>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='mb-5 w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
             <div className='overflow-auto h-full rounded-xl'>
-                <p className='text-gunmetal/70 text-l mb-3'>2022</p>
-                <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
-                <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
+
                 <div className='w-full aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
-                <div className='flex flex-col justify-center items-center bg-gunmetal rounded-lg text-melon p-4'>
-                    <div className='w-1/4 aspect-square bg-Ryslo rounded-full bg-center bg-cover mb-1'></div>
-                    <p className='mb-4'>Ryslo</p>
-                    <iframe className='w-full aspect-video rounded-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <div>
+                    <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
+                        <svg className='fill-melon mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" /></svg>
+                        <p className='small_text'>Ryslo's project</p>
+                    </div>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
+                <div className='w-screen pr-4 mt-5 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
             </div>
         </div>
 
