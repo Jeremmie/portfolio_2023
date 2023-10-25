@@ -118,23 +118,20 @@ export default function Travaux({ clickInHouse }) {
             </div>
             <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
 
-            <div className='overflow-auto h-full rounded-xl px-4'>
+            <div className='overflow-auto h-full mt-4 rounded-xl px-4'>
 
-                <div>
-                    <iframe src="https://player.vimeo.com/video/732440647?h=761109574b&title=0&byline=0&portrait=0" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen>
-                    </iframe>
-                </div>
-                <script src="https://player.vimeo.com/api/player.js"></script>
-                <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
                 <div>
                     <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
                         <svg className='fill-melon mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" /></svg>
-                        <p className='small_text'>Ryslo's project</p>
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p className='small_text'>Loop render</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/2IpeLgXe4ns?si=7f-2GOc_rPkn8dxl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
+
+                <p className='mt-3 mb-5'>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
+
                 <div className='flex justify-center mt-10'>
                     <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
                 </div>
