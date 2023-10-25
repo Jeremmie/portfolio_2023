@@ -20,15 +20,15 @@ export default function Travaux({ clickInHouse }) {
 
 
     return (<>
-        <div id='popUpLeon' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+        <div id='popUpLeon' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up'>
             <div className='flex flex-row w-screen justify-between items-start'>
                 <div className='pt-4 px-4 w-11/12'>
-                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
                     <h1 className='mb-2 text-3xl'>Leon</h1>
                 </div>
 
                 <button onClick={popUpLeon} className='mb-4 p-4'>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
@@ -42,7 +42,7 @@ export default function Travaux({ clickInHouse }) {
                         <div className='w-full inline-block mr-4 aspect-square bg-leonBlackWhite bg-cover rounded-lg shadow-lg'></div>
                         <div className='w-full inline-block mr-4 aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
                     </div>
-                    <div className='flex flex-row justify-between items-center px-7 fill-gunmetal/80 text-gunmetal/50'>
+                    <div className='flex flex-row justify-between items-center px-7 fill-gunmetal/80 dark:fill-melon/80 text-gunmetal/50 dark:text-melon/50'>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z" /></svg>
@@ -56,27 +56,27 @@ export default function Travaux({ clickInHouse }) {
                 </div>
                 <p className='mt-3 p-4'>3D modelisation of a human face in a cartoon style.</p>
                 <div className='flex flex-col px-4'>
-                    <div className='flex flex-row items-center bg-gunmetal text-melon py-0.5 rounded-t-lg w-full'>
-                        <svg className='fill-melon px-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <div className='flex flex-row items-center bg-gunmetal dark:bg-melon text-melon dark:text-gunmetal py-0.5 rounded-t-lg w-full'>
+                        <svg className='fill-melon dark:fill-gunmetal ml-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
-                        <p className='text-base'>3D model</p>
+                        <p className='text-base ml-2'>3D model</p>
                     </div>
                     <div class="sketchfab-embed-wrapper mb-5"> <iframe className='w-full aspect-video rounded-b-lg shadow-lg' title="leon" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d0632e76c56c4e76b2b7122a4a8fbc9d/embed"> </iframe></div> </div>
                 <div className='w-screen h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
             </div>
-        </div>
+        </div >
 
         {/*Galaxy GROOVE*/}
-        <div id='popUpGalaxyGroove' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+        < div id='popUpGalaxyGroove' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
             <div className='flex flex-row w-screen justify-between items-start'>
                 <div className='pt-4 px-4 w-11/12'>
-                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
                     <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
                 </div>
 
                 <button onClick={popUpGalaxyGroove} className='mb-4 p-4'>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
@@ -88,8 +88,8 @@ export default function Travaux({ clickInHouse }) {
                 <div className='w-full mt-5 aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
                 <div>
-                    <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
-                        <svg className='fill-melon mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" /></svg>
                         <p className='small_text'>Ryslo's project</p>
@@ -100,18 +100,18 @@ export default function Travaux({ clickInHouse }) {
                     <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
                 </div>
             </div>
-        </div>
+        </div >
 
         {/*LOOP*/}
-        <div id='popUpLoop' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+        < div id='popUpLoop' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
             <div className='flex flex-row w-screen justify-between items-start'>
                 <div className='pt-4 px-4 w-11/12'>
-                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
                     <h1 className='mb-2 text-3xl'>Loop</h1>
                 </div>
 
                 <button onClick={popUpLoop} className='mb-4 p-4'>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
@@ -121,8 +121,8 @@ export default function Travaux({ clickInHouse }) {
             <div className='overflow-auto h-full mt-4 rounded-xl px-4'>
 
                 <div>
-                    <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
-                        <svg className='fill-melon mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
                         <p className='small_text'>Loop render</p>
@@ -130,13 +130,21 @@ export default function Travaux({ clickInHouse }) {
                     <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
 
-                <p className='mt-3 mb-5'>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
-
+                <p className='mt-3 mb-3'>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
+                <div>
+                    <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
+                        <p className='small_text'>3D scene</p>
+                    </div>
+                    <div class="sketchfab-embed-wrapper mb-5"> <iframe className='w-full aspect-video rounded-b-lg shadow-lg' title="loop - scene" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2a332de2209448eae09c7536cc48fee/embed"> </iframe></div>
+                </div>
                 <div className='flex justify-center mt-10'>
                     <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
                 </div>
             </div>
-        </div>
+        </div >
 
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
