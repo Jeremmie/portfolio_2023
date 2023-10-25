@@ -13,6 +13,10 @@ export default function Travaux({ clickInHouse }) {
         const popUpGalaxyGroove = document.querySelector('#popUpGalaxyGroove')
         popUpGalaxyGroove.classList.toggle('showPopUp')
     }
+    function popUpLoop() {
+        const popUpLoop = document.querySelector('#popUpLoop')
+        popUpLoop.classList.toggle('showPopUp')
+    }
 
 
     return (<>
@@ -29,11 +33,11 @@ export default function Travaux({ clickInHouse }) {
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='mb-5 w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
 
             <div className='overflow-auto h-full rounded-xl'>
                 <div>
-                    <div className='overflow-x-scroll w-full px-4 whitespace-nowrap rounded-lg'>
+                    <div className='overflow-x-scroll w-full px-4 mt-5 whitespace-nowrap rounded-lg'>
                         <div className='w-full inline-block mr-4 aspect-square bg-leonOriginal bg-cover rounded-lg shadow-lg'></div>
                         <div className='w-full inline-block mr-4 aspect-square bg-leonBlackWhite bg-cover rounded-lg shadow-lg'></div>
                         <div className='w-full inline-block mr-4 aspect-square bg-leonAscii bg-cover rounded-lg shadow-lg'></div>
@@ -64,25 +68,24 @@ export default function Travaux({ clickInHouse }) {
         </div>
 
         {/*Galaxy GROOVE*/}
-        <div id='popUpGalaxyGroove' className='fixed p-4 bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
-
-            <div className='flex flex-row justify-between w-[90vw] items-start'>
+        <div id='popUpGalaxyGroove' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+            <div className='flex flex-row w-screen justify-between items-start'>
                 <div className='pt-4 px-4 w-11/12'>
                     <p className='text-gunmetal/70 text-l mb-3'>2022</p>
                     <h1 className='mb-2 text-3xl'>Galaxy Groove</h1>
                 </div>
 
-                <button onClick={popUpGalaxyGroove} className='mb-4 px-4'>
+                <button onClick={popUpGalaxyGroove} className='mb-4 p-4'>
                     <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='mb-5 w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
 
-            <div className='overflow-auto h-full rounded-xl'>
+            <div className='overflow-auto h-full rounded-xl px-4'>
 
-                <div className='w-full aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
+                <div className='w-full mt-5 aspect-square bg-galaxyGroove bg-cover rounded-lg shadow-lg'></div>
                 <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
                 <div>
                     <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
@@ -91,12 +94,52 @@ export default function Travaux({ clickInHouse }) {
                             <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" /></svg>
                         <p className='small_text'>Ryslo's project</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/videoseries?si=eEGELF81j8K-XHT3&amp;list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/2IpeLgXe4ns?si=7f-2GOc_rPkn8dxl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
-                <div className='w-screen pr-4 mt-5 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
+                <div className='flex justify-center mt-10'>
+                    <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
+                </div>
             </div>
         </div>
 
+        {/*LOOP*/}
+        <div id='popUpLoop' className='fixed bg-melon text-gunmetal -bottom-full w-screen h-screen z-40 transition_pop-up'>
+            <div className='flex flex-row w-screen justify-between items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 text-l mb-3'>2022</p>
+                    <h1 className='mb-2 text-3xl'>Loop</h1>
+                </div>
+
+                <button onClick={popUpLoop} className='mb-4 p-4'>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
+            <div className='overflow-auto h-full rounded-xl px-4'>
+
+                <div>
+                    <iframe src="https://player.vimeo.com/video/732440647?h=761109574b&title=0&byline=0&portrait=0" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen>
+                    </iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+                <p className='mt-3 mb-5'>I did this visual for <a className='decoration-solid text-sky-600 underline' href="https://youtube.com/playlist?list=OLAK5uy_lt3rbekjynUJUHvMdQF4KcKjA_-mqljYA&si=M__ZoUKJKb5ofGPN" target='blank'>Ryslo</a>'s album cover.</p>
+                <div>
+                    <div className='bg-gunmetal px-2 py-1 rounded-t-lg text-melon flex items-center'>
+                        <svg className='fill-melon mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" /></svg>
+                        <p className='small_text'>Ryslo's project</p>
+                    </div>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/2IpeLgXe4ns?si=7f-2GOc_rPkn8dxl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </div>
+                <div className='flex justify-center mt-10'>
+                    <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen touts droits résérvés</p></div>
+                </div>
+            </div>
+        </div>
 
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
@@ -124,7 +167,7 @@ export default function Travaux({ clickInHouse }) {
                     </div>
 
                     <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode mr-5'>
-                        <div className='bg-loop bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
+                        <div onClick={popUpLoop} className='bg-loop bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
                         <p className='text-sm ml-2 mt-2'>3D animation</p>
                         <p className=' text-2xl ml-2 mt-2'>Loop</p>
                     </div>
