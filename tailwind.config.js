@@ -64,8 +64,9 @@ export default {
         'leonBlackWhite': "url('https://i.ibb.co/jz3CjjH/leon-noir-blanc.jpg')",
         'leonOriginal': "url('https://i.ibb.co/hYgdYdb/leon-original.jpg')",
         'Ryslo': "url('https://i.ibb.co/zP9VYGK/Ryslo.jpg')",
-        'none': "url('https://i.ibb.co/xs083TD/gameb.png')",
-
+        'moodboadLoop': "url('https://i.ibb.co/xqQ7sVp/moodboard-All.jpg')",
+        'dedouze': "url('https://i.ibb.co/F6Yn0cw/dedouze.jpg')",
+        'MarcAntoine': "url('https://i.ibb.co/qjgY4jL/Marc-Antoine-Mathieu.jpg')",
 
       },
       gridTemplateRows: {
