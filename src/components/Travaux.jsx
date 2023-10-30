@@ -184,7 +184,7 @@ export default function Travaux({ clickInHouse }) {
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
                 <div className='flex flex-col justify-center my-5 items-center'>
-                    <div className='w-[90%] text-melon bg-gunmetal rounded-t-lg'><p className=' px-2 py-1 text-base'>showreel</p></div>
+                    <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg'><p className=' px-2 py-1 text-base'>showreel</p></div>
                     <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal flex justify-center p-2'>
                         <iframe className='rounded-lg w-full bg-gunmetal' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
