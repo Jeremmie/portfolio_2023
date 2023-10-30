@@ -67,6 +67,8 @@ export default {
         'moodboadLoop': "url('https://i.ibb.co/xqQ7sVp/moodboard-All.jpg')",
         'dedouze': "url('https://i.ibb.co/F6Yn0cw/dedouze.jpg')",
         'MarcAntoine': "url('https://i.ibb.co/qjgY4jL/Marc-Antoine-Mathieu.jpg')",
+        'souvienstanzan': "url('https://i.ibb.co/qR6mHDH/souvientanzan.png')",
+        'boris': "url('https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg')",
 
       },
       gridTemplateRows: {
