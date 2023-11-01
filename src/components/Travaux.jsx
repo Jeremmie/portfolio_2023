@@ -21,6 +21,22 @@ export default function Travaux({ clickInHouse }) {
         const popUpVideoGame = document.querySelector('#popUpVideoGame')
         popUpVideoGame.classList.toggle('showPopUp')
     }
+    function popUpSpeed() {
+        const popUpSpeed = document.querySelector('#popUpSpeed')
+        popUpSpeed.classList.toggle('showPopUp')
+    }
+    function popUpAscii() {
+        const popUpAscii = document.querySelector('#popUpAscii')
+        popUpAscii.classList.toggle('showPopUp')
+    }
+    function popUpRollUp() {
+        const popUpRollUp = document.querySelector('#popUpRollUp')
+        popUpRollUp.classList.toggle('showPopUp')
+    }
+    function popUpFace() {
+        const popUpFace = document.querySelector('#popUpFace')
+        popUpFace.classList.toggle('showPopUp')
+    }
 
 
     return (<>
@@ -253,6 +269,121 @@ export default function Travaux({ clickInHouse }) {
             </div>
         </div >
 
+        {/* SPEED */}
+        < div id='popUpSpeed' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
+            <div className='flex flex-row w-screen justify-between items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
+                    <h1 className='mb-2 text-3xl'>Speed</h1>
+                </div>
+
+                <button onClick={popUpSpeed} className='mb-4 p-4'>
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
+            <div className='overflow-auto h-full rounded-xl px-4'>
+
+                <div>
+                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p className='small_text'>Gameplay</p>
+                    </div>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/Wsk_QnBW1x0?si=CsefvMfDyeqpR1oC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                </div>
+
+                <p className='my-3'>Together with two other people, we made this video to illustrate the feelings of doubt, rebellion and irritation that most people have already experienced. Our theme was "Rebellion".
+                </p>
+
+                <div className='w-screen absolute bottom-0 mb-10'>
+                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+        {/* ASCII */}
+        < div id='popUpAscii' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
+            <div className='flex flex-row w-screen justify-between items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
+                    <h1 className='mb-2 text-3xl'>Ascii</h1>
+                </div>
+
+                <button onClick={popUpAscii} className='mb-4 p-4'>
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
+            <div className='overflow-auto h-full rounded-xl px-4'>
+
+                <div>
+                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p className='small_text'>Gameplay</p>
+                    </div>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/4t_01gAzoiM?si=4tXxZj-gTJPlfInO" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                </div>
+
+                <p className='my-3'>Shader exercise on blender.
+                </p>
+
+                <div className='w-screen absolute bottom-0 mb-10'>
+                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+        {/* RollUp */}
+        < div id='popUpRollUp' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
+            <div className='flex flex-row w-screen justify-between items-start'>
+                <div className='pt-4 px-4 w-11/12'>
+                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2021</p>
+                    <h1 className='mb-2 text-3xl'>Roll-Up</h1>
+                </div>
+
+                <button onClick={popUpAscii} className='mb-4 p-4'>
+                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+
+            <div className='overflow-auto h-full rounded-xl px-4'>
+
+                <div>
+                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
+                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p className='small_text'>Gameplay</p>
+                    </div>
+                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/4t_01gAzoiM?si=4tXxZj-gTJPlfInO" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                </div>
+
+                <p className='my-3'>Shader exercise on blender.
+                </p>
+
+                <div className='w-screen absolute bottom-0 mb-10'>
+                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+
 
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
@@ -375,9 +506,8 @@ export default function Travaux({ clickInHouse }) {
                 </div>
 
 
-
                 {/* Speed */}
-                <div className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
+                <div id='popUpSpeed' onClick={popUpSpeed} className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
                     <div className='bg-speed bg-center bg-cover shadow-lg rounded-lg w-[90vw] h-[18vh] flex items-center justify-end mb-5'>
                         <div className='h-full dark:bg-melon/90 bg-gunmetal/90 text-melon dark:text-gunmetal flex items-center rounded-r-lg w-1/3 transition_darkmode'>
                             <div className='flex flex-col'>
@@ -394,7 +524,7 @@ export default function Travaux({ clickInHouse }) {
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>3D / animation</p></div>
                         <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon py-4 pl-3 rounded-l-lg mb-5'>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpAscii} className='inline-block mr-5'>
                                 <div className='bg-asciiCube inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
@@ -403,7 +533,7 @@ export default function Travaux({ clickInHouse }) {
                                 </div>
                             </div>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpRollUp} className='inline-block mr-5'>
                                 <div className='bg-rollUp inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
@@ -412,7 +542,7 @@ export default function Travaux({ clickInHouse }) {
                                 </div>
                             </div>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpFace} className='inline-block mr-5'>
                                 <div className='bg-visagesculpt inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
