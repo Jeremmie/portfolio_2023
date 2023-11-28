@@ -446,33 +446,33 @@ export default function Travaux({ clickInHouse }) {
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
                 <div className='flex flex-col justify-center my-5 items-center'>
-                    <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg'><p className=' px-2 py-1 text-base'>showreel</p></div>
-                    <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal dark:bg-melon flex justify-center p-2'>
-                        <iframe className='rounded-lg w-full bg-gunmetal' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg lg:hidden'><p className=' px-2 py-1 text-base'>showreel</p></div>
+                    <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal dark:bg-melon flex justify-center p-2 lg:p-0 lg:rounded-none'>
+                        <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-none' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                 </div>
-                <div className='px-5'>
+                <div className='px-5 lg:hidden'>
                     <h1>Highlighted projects</h1>
                     <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
                 </div>
                 {/* HIGHLITED PROJECT */}
-                <div className='overflow-x-scroll whitespace-nowrap rounded-lg mb-5'>
-                    <div onClick={popUpLeon} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                        <div className='bg-leonAscii bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                        <p className='text-sm ml-2 mt-2'>charachter design</p>
-                        <p className=' text-2xl ml-2 mt-2'>Leon</p>
+                <div className='overflow-x-scroll whitespace-nowrap rounded-lg mb-5 lg:overflow-y-scroll lg:whitespace-none'>
+                    <div onClick={popUpLeon} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode lg:bg-leonAscii lg:rounded-none'>
+                        <div className='bg-leonAscii bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden lg:h-[100%]'></div>
+                        <p className='text-sm ml-2 mt-2 lg:hidden'>charachter design</p>
+                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>Leon</p>
                     </div>
 
-                    <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode'>
-                        <div onClick={popUpGalaxyGroove} className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                        <p className='text-sm ml-2 mt-2'>album cover</p>
-                        <p className=' text-2xl ml-2 mt-2'>Galaxy Groove</p>
+                    <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode bg-center bg-cover lg:bg-galaxyGroove lg:rounded-none'>
+                        <div onClick={popUpGalaxyGroove} className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden'></div>
+                        <p className='text-sm ml-2 mt-2 lg:hidden'>album cover</p>
+                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>Galaxy Groove</p>
                     </div>
 
-                    <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode mr-5'>
-                        <div onClick={popUpLoop} className='bg-loop bg-center bg-cover h-2/3 rounded-t-lg w-full'></div>
-                        <p className='text-sm ml-2 mt-2'>3D animation</p>
-                        <p className=' text-2xl ml-2 mt-2'>Loop</p>
+                    <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode mr-5 lg:bg-loop lg:rounded-none'>
+                        <div onClick={popUpLoop} className='bg-loop bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden'></div>
+                        <p className='text-sm ml-2 mt-2 lg:hidden'>3D animation</p>
+                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>Loop</p>
                     </div>
 
 
