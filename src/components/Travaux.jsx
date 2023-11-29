@@ -443,8 +443,8 @@ export default function Travaux({ clickInHouse }) {
             </div>
         </div >
 
-        <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none'>
-            <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen'>
+        <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none lg:flex lg:items-center lg:justify-center'>
+            <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen lg:hidden'>
                 <div className='flex flex-col justify-center my-5 items-center'>
                     <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg lg:hidden'><p className=' px-2 py-1 text-base'>showreel</p></div>
                     <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal dark:bg-melon flex justify-center p-2 lg:p-0 lg:rounded-none'>
@@ -666,6 +666,28 @@ export default function Travaux({ clickInHouse }) {
 
 
                 <div className='w-full mb-40 mt-1'><p className='text-[0.8rem] text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+            </div>
+
+            <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] grid-cols-4 grid_row_template w-screen mt-20 h-screen hidden lg:rounded-none bg-white lg:mt-0 lg:grid'>
+                <div className='bg-loopTram bg-center bg-cover row-span-3 col-span-2'></div>
+                <div className='bg-face_2Tram bg-center bg-cover row-span-2 col-span-2'></div>
+                <div className='bg-leoTram row-span-2 col-span-1 bg-center bg-cover'>
+                    {/* <div className='bg-black'>
+                        <h1>hahah</h1>
+                    </div> */}
+                </div>
+                <div className='bg-photo_2Tram row-span-3 Tram bg-bottom bg-cover'></div>
+                <div className='bg-vinylTram row-span-2 bg-left bg-cover'></div>
+                <div className='bg-speedTram bg-center bg-cover'></div>
+                <div className='bg-astronauteTram col-span-2 bg-center bg-cover'></div>
+                <div className='bg-three_1Tram col-span-2 bg-center bg-cover '></div>
+                <div className='bg-jvTram bg-center bg-cover '></div>
+                <div className='bg-three_2Tram bg-center bg-cover '></div>
+                <div className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '></div>
+                <div className='bg-fireTram row-span-4 bg-center bg-cover '></div>
+                <div className='bg-knucksTram row-span-2 bg-center bg-cover '></div>
+                <div className='bg-face_1Tram row-span-4 col-span-2 bg-center bg-cover'></div>
+                <div className='bg-AE_1 row-span-2 bg-center bg-cover '></div>
             </div>
         </div >
     </>)

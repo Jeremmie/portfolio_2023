@@ -23,6 +23,11 @@ export default {
     },
 
     extend: {
+      gridTemplateRows: {
+        // Simple 8 row grid
+        '8': 'repeat(8, minmax(0, 2fr))',
+        'layout': 'repeat(5, minmax(100px, 250px))',
+      },
       colors: {
         'powder-blue': '#ACC8E5',
         'prussian-blue': '#112A46',
@@ -69,6 +74,22 @@ export default {
         'MarcAntoine': "url('https://i.ibb.co/qjgY4jL/Marc-Antoine-Mathieu.jpg')",
         'souvienstanzan': "url('https://i.ibb.co/qR6mHDH/souvientanzan.png')",
         'boris': "url('https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg')",
+
+        'AE_1': "url('./img/tram/after_1Tram.jpg')",
+        'astronauteTram': "url('./img/tram/astronauteTram.jpg')",
+        'face_1Tram': "url('./img/tram/face_1Tram.jpg')",
+        'face_2Tram': "url('./img/tram/face_2Tram.jpg')",
+        'fireTram': "url('./img/tram/fireTram.jpg')",
+        'jvTram': "url('./img/tram/jvTram.jpg')",
+        'knucksTram': "url('./img/tram/knucksTram.jpg')",
+        'loopTram': "url('./img/tram/loopTram.jpg')",
+        'photo_2Tram': "url('./img/tram/photo_2Tram.jpg')",
+        'serifTram': "url('./img/tram/serifTram.jpg')",
+        'speedTram': "url('./img/tram/speedTram.jpg')",
+        'three_1Tram': "url('./img/tram/three_1Tram.jpg')",
+        'three_2Tram': "url('./img/tram/three_2Tram.jpg')",
+        'vinylTram': "url('./img/tram/vinylTram.jpg')",
+        'leoTram': "url('./img/tram/leoTram.jpg')",
 
       },
       gridTemplateRows: {
