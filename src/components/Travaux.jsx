@@ -669,7 +669,7 @@ export default function Travaux({ clickInHouse }) {
             </div>
 
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] grid-cols-4 grid_row_template w-screen mt-20 h-screen hidden lg:rounded-none bg-white lg:mt-0 lg:grid'>
-                <div className='bg-loopTram bg-center bg-cover row-span-3 col-span-2'>
+                <div onClick={popUpLoop} className='bg-loopTram bg-center bg-cover row-span-3 col-span-2'>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>Loop</h1>
@@ -678,7 +678,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-face_2Tram bg-center bg-cover row-span-2 col-span-2'>
+                <div onClick={popUpFace} className='bg-face_2Tram bg-center bg-cover row-span-2 col-span-2'>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>Face</h1>
@@ -705,17 +705,123 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-vinylTram row-span-2 bg-left bg-cover'></div>
-                <div className='bg-speedTram bg-center bg-cover'></div>
-                <div className='bg-astronauteTram col-span-2 bg-center bg-cover'></div>
-                <div className='bg-three_1Tram col-span-2 bg-center bg-cover '></div>
-                <div className='bg-jvTram bg-center bg-cover '></div>
-                <div className='bg-three_2Tram bg-center bg-cover '></div>
-                <div className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '></div>
-                <div className='bg-fireTram row-span-4 bg-center bg-cover '></div>
-                <div className='bg-knucksTram row-span-2 bg-center bg-cover '></div>
-                <div className='bg-face_1Tram row-span-4 col-span-2 bg-center bg-cover'></div>
-                <div className='bg-AE_1 row-span-2 bg-center bg-cover '></div>
+                <div className='bg-vinylTram row-span-2 bg-left bg-cover'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Vinyl</h1>
+                            <p className='cursor-pointer'>Illustration</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={popUpSpeed} className='bg-speedTram bg-center bg-cover'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Speed</h1>
+                            <p className='cursor-pointer'>Video</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={popUpGalaxyGroove} className='bg-astronauteTram col-span-2 bg-center bg-cover'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Galaxy Groove</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-three_1Tram col-span-2 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Galaxy Generator</h1>
+                            <p className='cursor-pointer'>web / Three JS</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={popUpVideoGame} className='bg-jvTram bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Video Game</h1>
+                            <p className='cursor-pointer'>Unity</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-three_2Tram bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Gameboy</h1>
+                            <p className='cursor-pointer'>web / Three JS</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Serif</h1>
+                            <p className='cursor-pointer'>Gamejam / Unity</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-fireTram row-span-4 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center text-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Internship report</h1>
+                            <p className='cursor-pointer'>2023</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-knucksTram row-span-2 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>London Class</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={popUpLeon} className='bg-face_1Tram row-span-4 col-span-2 bg-center bg-cover'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Leon</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-AE_1 row-span-1 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>AE animation</h1>
+                            <p className='cursor-pointer'>2D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div onClick={popUpAscii} className='bg-asciiCube row-span-1 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Ascii</h1>
+                            <p className='cursor-pointer'>3D / shaders</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                {/* <div onClick={popUpRollUp} className='bg-rollUp row-span-2 col-span-4 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>RollUp 2.0</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div> */}
             </div>
         </div >
     </>)

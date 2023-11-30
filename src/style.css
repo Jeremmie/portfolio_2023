@@ -11,7 +11,7 @@
 }
 
 .grid_row_template {
-    grid-template-rows: repeat(12, minmax(230px, 230px));
+    grid-template-rows: repeat(14, minmax(230px, 230px));
     /* grid-template-columns: 360px 360px 360px 360px; */
 }
 
@@ -23,9 +23,21 @@
     transition: all ease-in-out 350ms;
 }
 
+.grid_items h1 {
+    font-size: 3rem;
+}
+
+/* .grid_items {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.135) 47.57%, #000 100%), rgba(0, 0, 0, 0.091);
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 0, 0, 0);
+    transition: all ease-in-out 350ms;
+} */
+
 
 .grid_items:hover {
-    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.604) 47.57%, #000 100%), rgba(0, 0, 0, 0.52);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 37.57%, #00000047 100%), rgba(0, 0, 0, 0.263);
     transition: all ease-in-out 350ms;
     color: rgb(255, 255, 255);
 }
