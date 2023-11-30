@@ -15,6 +15,21 @@
     /* grid-template-columns: 360px 360px 360px 360px; */
 }
 
+.grid_items {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 47.57%, #00000000 100%), rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+    color: rgba(255, 0, 0, 0);
+    transition: all ease-in-out 350ms;
+}
+
+
+.grid_items:hover {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.604) 47.57%, #000 100%), rgba(0, 0, 0, 0.52);
+    transition: all ease-in-out 350ms;
+    color: rgb(255, 255, 255);
+}
+
 .activeBox {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     transition: all 400ms;

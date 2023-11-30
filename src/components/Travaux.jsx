@@ -669,14 +669,42 @@ export default function Travaux({ clickInHouse }) {
             </div>
 
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] grid-cols-4 grid_row_template w-screen mt-20 h-screen hidden lg:rounded-none bg-white lg:mt-0 lg:grid'>
-                <div className='bg-loopTram bg-center bg-cover row-span-3 col-span-2'></div>
-                <div className='bg-face_2Tram bg-center bg-cover row-span-2 col-span-2'></div>
-                <div className='bg-leoTram row-span-2 col-span-1 bg-center bg-cover'>
-                    {/* <div className='bg-black'>
-                        <h1>hahah</h1>
-                    </div> */}
+                <div className='bg-loopTram bg-center bg-cover row-span-3 col-span-2'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Loop</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
                 </div>
-                <div className='bg-photo_2Tram row-span-3 Tram bg-bottom bg-cover'></div>
+                <div className='bg-face_2Tram bg-center bg-cover row-span-2 col-span-2'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Face</h1>
+                            <p className='cursor-pointer'>3D</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-leoTram row-span-2 col-span-1 bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Portrait</h1>
+                            <p className='cursor-pointer'>photogrpahy</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-photo_2Tram row-span-3 Tram bg-bottom bg-cover'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Still Life</h1>
+                            <p className='cursor-pointer'>photogrpahy</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
                 <div className='bg-vinylTram row-span-2 bg-left bg-cover'></div>
                 <div className='bg-speedTram bg-center bg-cover'></div>
                 <div className='bg-astronauteTram col-span-2 bg-center bg-cover'></div>
