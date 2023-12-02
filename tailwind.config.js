@@ -90,6 +90,7 @@ export default {
         'three_2Tram': "url('./img/tram/three_2Tram.jpg')",
         'vinylTram': "url('./img/tram/vinylTram.jpg')",
         'leoTram': "url('./img/tram/leoTram.jpg')",
+        'rollUpTram': "url('./img/tram/rollUp.jpg')",
 
       },
       gridTemplateRows: {

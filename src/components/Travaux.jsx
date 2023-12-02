@@ -123,22 +123,22 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/*LOOP*/}
-        < div id='popUpLoop' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-screen justify-between items-start'>
-                <div className='pt-4 px-4 w-11/12'>
+        < div id='popUpLoop' className='fixed bg-melon lg:bg-melon/80 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal dark:text-melon -bottom-full w-full h-screen z-40 transition_pop-up' >
+            <div className='flex flex-row w-full lg:w-1/2 lg:mx-auto justify-between items-center'>
+                <div className='pt-4 px-4 w-11/12 lg:w-full lg:mx-auto lg:p-0 lg:m-0'>
                     <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
                     <h1 className='mb-2 text-3xl'>Loop</h1>
                 </div>
 
-                <button onClick={popUpLoop} className='mb-4 p-4'>
-                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpLoop} className='mb-4 p-4 lg:p-0'>
+                    <svg className='fill-gunmetal lg:hover:fill-gunmetal/50 dark:fill-melon lg:dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl px-4'>
+            <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto'>
 
                 <div>
                     <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
@@ -161,7 +161,7 @@ export default function Travaux({ clickInHouse }) {
                     <div class="sketchfab-embed-wrapper mb-5"> <iframe className='w-full aspect-video rounded-b-lg shadow-lg' title="loop - scene" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2a332de2209448eae09c7536cc48fee/embed"> </iframe></div>
                 </div>
                 <p className='my-3'>Nous nous somme inspiré des visuels de Dedouze et des aventures de Julius Corentin Acquefacques (bande dessinée de Marc Antoine Mathieu).</p>
-                <div className='w-[90vw] my-4 h-auto flex justify-between'>
+                <div className='w-[90vw] lg:w-11/12 my-4 lg:my-8 h-auto flex justify-between'>
                     <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
                         <div className='bg-dedouze shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
                         <p className='small_text'>Dedouze</p>
@@ -235,7 +235,7 @@ export default function Travaux({ clickInHouse }) {
                 <div className='w-[90vw] h-1/6 rounded-lg flex justify-center items-center'>
                     <div className='h-full w-2/3 shadow-lg rounded-lg bg-videoGame bg-center bg-cover flex items-center justify-center'>
                         <div className='w-full md:hidden h-full bg-gunmetal/50 backdrop-blur-sm rounded-lg flex items-center justify-center text-melon'><p>only playable on desktop :(</p></div>
-                        <div className='w-1/2 h-1/2 hidden md:block bg-gunmetal/50 backdrop-blur-sm rounded-lg flex items-center justify-center text-melon'><a href="https://jeremmie.github.io/Workshop_2022_Jeux_video/" target='blank'><h1>play</h1></a></div>
+                        <div className='w-1/2 h-1/2 hidden md:block bg-gunmetal/50 backdrop-blur-sm rounded-lg items-center justify-center text-melon'><a href="https://jeremmie.github.io/Workshop_2022_Jeux_video/" target='blank'><h1>play</h1></a></div>
                     </div>
 
                 </div>
@@ -395,22 +395,22 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/* Face */}
-        < div id='popUpFace' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-screen justify-between items-start'>
-                <div className='pt-4 px-4 w-11/12'>
+        < div id='popUpFace' className='fixed bg-melon lg:bg-melon/80 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal dark:text-melon -bottom-full w-full h-screen z-40 transition_pop-up' >
+            <div className='flex flex-row w-full lg:w-1/2 lg:mx-auto justify-between items-center'>
+                <div className='pt-4 px-4 w-11/12 lg:w-full lg:mx-auto lg:p-0 lg:m-0'>
                     <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2023</p>
                     <h1 className='mb-2 text-3xl'>Cartoon Face</h1>
                 </div>
 
-                <button onClick={popUpFace} className='mb-4 p-4'>
-                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpFace} className='mb-4 p-4 lg:p-0'>
+                    <svg className='fill-gunmetal lg:hover:fill-gunmetal/50 dark:fill-melon lg:dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl px-4'>
+            <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto'>
 
                 <div>
                     <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
@@ -438,7 +438,7 @@ export default function Travaux({ clickInHouse }) {
                 </div>
 
                 <div className='w-screen absolute bottom-0 '>
-                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
             </div>
         </div >
@@ -502,11 +502,11 @@ export default function Travaux({ clickInHouse }) {
                 <div className='flex justify-end'>
                     <div className='w-[95vw]'>
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>web / interactiv</p></div>
-                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon py-4 pl-3 rounded-l-lg mb-5'>
+                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
                             <div className='inline-block mr-5'>
                                 <a className='inline-block' href="https://jeremmie.github.io/galaxy_generator_animate-build-/" target='blank'>
                                     <div className='bg-threejs bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
-                                        <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 dark:bg-gunmetal/90 text-gunmetal dark:text-melon dark:text-gunmetal rounded-b-lg w-full transition_darkmode'>
+                                        <div className='h-fit bg-melon/90 dark:bg-gunmetal/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                             <p className='text-sm ml-2 mt-2'>threeJS</p>
                                             <div className='flex flex-row items-center w-full justify-between pr-5'>
                                                 <p className=' text-2xl ml-2 mb-2'>Galaxy</p>
@@ -536,7 +536,7 @@ export default function Travaux({ clickInHouse }) {
                             </div>
 
                             <div onClick={popUpVideoGame} className='inline-block mr-5'>
-                                <div className='bg-videoGame inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-videoGame bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>Unity</p>
                                         <p className=' text-2xl ml-2 mb-2'>Video Game</p>
@@ -580,10 +580,10 @@ export default function Travaux({ clickInHouse }) {
                 <div className='flex justify-end'>
                     <div className='w-[95vw]'>
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>3D / animation</p></div>
-                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon py-4 pl-3 rounded-l-lg mb-5'>
+                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
 
                             <div onClick={popUpAscii} className='inline-block mr-5'>
-                                <div className='bg-asciiCube inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-asciiCube bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
                                         <p className=' text-2xl ml-2 mb-2'>Ascii</p>
@@ -592,7 +592,7 @@ export default function Travaux({ clickInHouse }) {
                             </div>
 
                             <div onClick={popUpRollUp} className='inline-block mr-5'>
-                                <div className='bg-rollUp inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-rollUp bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
                                         <p className=' text-2xl ml-2 mb-2'>Roll-Up</p>
@@ -601,7 +601,7 @@ export default function Travaux({ clickInHouse }) {
                             </div>
 
                             <div onClick={popUpFace} className='inline-block mr-5'>
-                                <div className='bg-visagesculpt inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-visagesculpt bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>blender</p>
                                         <p className=' text-2xl ml-2 mb-2'>Face</p>
@@ -632,10 +632,10 @@ export default function Travaux({ clickInHouse }) {
                 <div className='flex justify-end'>
                     <div className='w-[95vw]'>
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>2D / animation / other</p></div>
-                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon py-4 pl-3 rounded-l-lg mb-5'>
+                        <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
 
                             <div className='inline-block mr-5'>
-                                <div className='bg-dessin inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-dessin bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>After effect</p>
                                         <p className=' text-2xl ml-2 mb-2'>Walk Cycle</p>
@@ -644,7 +644,7 @@ export default function Travaux({ clickInHouse }) {
                             </div>
 
                             <div className='inline-block mr-5'>
-                                <div className='bg-vinyle inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-vinyle bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>Illustrator</p>
                                         <p className=' text-2xl ml-2 mb-2'>Vinyl Cover</p>
@@ -653,7 +653,7 @@ export default function Travaux({ clickInHouse }) {
                             </div>
 
                             <div className='inline-block mr-5'>
-                                <div className='bg-natureMorte inline-block bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                <div className='bg-natureMorte bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>photography</p>
                                         <p className=' text-2xl ml-2 mb-2'>Still Life</p>
@@ -696,11 +696,11 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-photo_2Tram row-span-3 Tram bg-bottom bg-cover'>
-                    <div className='grid_items flex justify-center items-center'>
+                <div className='bg-fireTram row-span-4 Tram bg-bottom bg-cover'>
+                    <div className='grid_items flex justify-center text-center items-center'>
                         <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Still Life</h1>
-                            <p className='cursor-pointer'>photogrpahy</p>
+                            <h1 className='cursor-pointer'>Internship report</h1>
+                            <p className='cursor-pointer'>2023</p>
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
@@ -750,15 +750,6 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-three_2Tram bg-center bg-cover '>
-                    <div className='grid_items flex justify-center items-center'>
-                        <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Gameboy</h1>
-                            <p className='cursor-pointer'>web / Three JS</p>
-                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
-                        </div>
-                    </div>
-                </div>
                 <div className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
@@ -768,11 +759,11 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-fireTram row-span-4 bg-center bg-cover '>
+                <div className='bg-fireTram row-span-3 bg-center bg-cover '>
                     <div className='grid_items flex justify-center text-center items-center'>
                         <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Internship report</h1>
-                            <p className='cursor-pointer'>2023</p>
+                            <h1 className='cursor-pointer'>Still Life</h1>
+                            <p className='cursor-pointer'>photogrpahy</p>
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
@@ -804,6 +795,15 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
+                <div className='bg-three_2Tram bg-center bg-cover '>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Gameboy</h1>
+                            <p className='cursor-pointer'>web / Three JS</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
                 <div onClick={popUpAscii} className='bg-asciiCube row-span-1 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
@@ -813,7 +813,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                {/* <div onClick={popUpRollUp} className='bg-rollUp row-span-2 col-span-4 bg-center bg-cover '>
+                <div onClick={popUpRollUp} className='bg-rollUpTram row-span-1 col-span-4 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>RollUp 2.0</h1>
@@ -821,7 +821,7 @@ export default function Travaux({ clickInHouse }) {
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div >
     </>)
