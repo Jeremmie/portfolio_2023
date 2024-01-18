@@ -202,7 +202,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         </div>
         <div id="modalHeader" onClick={handleBurgerClick} className="bg-gunmetal/60 opacity-[0%] hidden fixed h-screen z-10 w-screen transition_pop-up"></div>
         <div className="
-        flex justify-start items-center h-screen z-50 fixed
+        flex justify-start items-center h-screen z-20 fixed
         ">
             <div id="menu" className="
  fixed -left-full md:bg-melon/10 bg-melon dark:bg-gunmetal flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
