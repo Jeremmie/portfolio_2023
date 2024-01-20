@@ -30,9 +30,6 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
   const isSM = useMediaQuery({ query: '(max-width: 640px)' })
   const isMD = useMediaQuery({ query: '(min-width: 768px)' })
-  const isLG = useMediaQuery({ query: '(min-width: 1024px)' })
-  const isXL = useMediaQuery({ query: '(min-width: 1280px)' })
-  const isXXL = useMediaQuery({ query: '(min-width: 1536px)' })
 
 
   useEffect(() => {
@@ -86,7 +83,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
         <SpriteAnimator
           scale={0.7}
-          position={[0, 1, -1.2]}
+          position={[0, 1.05, -1.2]}
           startFrame={0}
           fps={6}
           autoPlay={true}
