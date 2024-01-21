@@ -129,6 +129,7 @@ canvas {
     touch-action: none;
 }
 
+
 .work_header {
     display: flex;
     flex-direction: row;
@@ -168,6 +169,10 @@ canvas {
         margin-right: auto;
         padding: 0;
         margin-top: 2.5rem;
+    }
+
+    .work_header>div>h1 {
+        font-size: 4rem;
     }
 
     .work_header {

@@ -140,9 +140,8 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/*LOOP*/}
-        < div id='popUpLoop' className='fixed bg-center bg-no-repeat bg-cover bg-loopTram lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal -bottom-full w-full h-screen z-40 transition_pop-up' >
+        < div id='popUpLoop' className='fixed bg-center bg-no-repeat bg-cover bg-white/70 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal -bottom-full w-full h-screen z-40 transition_pop-up' >
             <div className='backdrop-blur-lg'>
-                <div className='bg-serifTram w-full bg-gradient-to-t from-cyan-500/20 to-blue-500/10 h-10'></div>
                 <div className='work_header'>
                     <div>
                         <p>2022</p>
