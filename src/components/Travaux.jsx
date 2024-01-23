@@ -140,83 +140,82 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/*LOOP*/}
-        < div id='popUpLoop' className='fixed bg-center bg-no-repeat bg-cover bg-white/70 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal -bottom-full w-full h-screen z-40 transition_pop-up' >
-            <div className='backdrop-blur-lg'>
-                <div className='work_header'>
-                    <div>
-                        <p>2022</p>
-                        <h1>Loop</h1>
-                    </div>
-
-                    <button onClick={popUpLoop}>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
-                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
-                    </button>
+        < div id='popUpLoop' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='work_header'>
+                <div>
+                    <p>2022</p>
+                    <h1>Loop</h1>
                 </div>
 
-                <hr className='w-11/12 block mx-auto border-gunmetal transition_darkmode lg:w-1/2' />
+                <button onClick={popUpLoop}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-                <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto'>
+            <div className='work_section'>
 
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p>Loop render</p>
+                    </div>
+                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </span>
+
+                <p>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
+
+                <span className='work_content_sketchfab'>
                     <span>
-                        <div className='work_content_video'>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                            <p>Loop render</p>
-                        </div>
-                        <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
+                        <p>3D scene</p>
                     </span>
+                    <div class="sketchfab-embed-wrapper"> <iframe title="loop - scene" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2a332de2209448eae09c7536cc48fee/embed"> </iframe></div>
+                </span>
+                <p>We were inspired by the visuals of Dedouze and the adventures of
+                    Julius Corentin Acquefacques (comic strip by Marc Antoine Mathieu).</p>
+                <div className='w-[90vw] lg:w-11/12 my-4 lg:my-8 h-auto flex justify-between'>
+                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
+                        <div className='bg-dedouze shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
+                        <p className='small_text'>Dedouze</p>
+                        <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
+                            <a href="https://www.dedouze.com/" target='blank'>
+                                <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                                    <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
+                            </a>
+                        </div>
+                    </div>
 
-                    <p className='my-3'>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
+                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
+                        <div className='bg-MarcAntoine shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
+                        <p className='small_text'>Marc-Antoine Mathieu</p>
+                        <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
+                            <a href="https://fr.wikipedia.org/wiki/Marc-Antoine_Mathieu" target='blank'>
+                                <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                                    <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <span className='work_content_video'>
                     <div>
-                        <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                            <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
-                            <p className='small_text'>3D scene</p>
-                        </div>
-                        <div class="sketchfab-embed-wrapper mb-5"> <iframe className='w-full aspect-video rounded-b-lg shadow-lg' title="loop - scene" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2a332de2209448eae09c7536cc48fee/embed"> </iframe></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" /></svg>
+                        <p>Moodboard</p>
                     </div>
-                    <p className='my-3'>Nous nous somme inspiré des visuels de Dedouze et des aventures de Julius Corentin Acquefacques (bande dessinée de Marc Antoine Mathieu).</p>
-                    <div className='w-[90vw] lg:w-11/12 my-4 lg:my-8 h-auto flex justify-between'>
-                        <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
-                            <div className='bg-dedouze shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
-                            <p className='small_text'>Dedouze</p>
-                            <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
-                                <a href="https://www.dedouze.com/" target='blank'>
-                                    <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                        <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
-                            <div className='bg-MarcAntoine shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
-                            <p className='small_text'>Marc-Antoine Mathieu</p>
-                            <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
-                                <a href="https://fr.wikipedia.org/wiki/Marc-Antoine_Mathieu" target='blank'>
-                                    <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                        <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                            <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" /></svg>
-                            <p className='small_text'>Moodboard</p>
-                        </div>
-                        <img className='w-full aspect-video rounded-b-lg shadow-lg' src="https://i.ibb.co/xqQ7sVp/moodboard-All.jpg" alt="" />
-                    </div>
-                    <div className='flex justify-center mt-10'>
-                        <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
-                    </div>
+                    <img src="https://i.ibb.co/xqQ7sVp/moodboard-All.jpg" alt="" />
+                </span>
+                <div className='flex justify-center mt-10'>
+                    <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
             </div>
         </div >

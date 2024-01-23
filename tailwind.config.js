@@ -32,6 +32,7 @@ export default {
         'powder-blue': '#ACC8E5',
         'prussian-blue': '#112A46',
         'melon': '#FFB8B8',
+        'melonSoft': 'rgb(255 255 255 / 0.7)',
         'gunmetal': '#002129',
       },
       boxShadow: {
