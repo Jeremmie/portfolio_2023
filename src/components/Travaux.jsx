@@ -184,9 +184,9 @@ export default function Travaux({ clickInHouse }) {
                     <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
                         <div className='bg-dedouze shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
                         <p className='small_text'>Dedouze</p>
-                        <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
+                        <div className='bg-melonSoft w-2/5 h-1/5 flex justify-center items-center rounded-full'>
                             <a href="https://www.dedouze.com/" target='blank'>
-                                <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <svg className='fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                                     {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                                     <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
                             </a>
@@ -196,9 +196,9 @@ export default function Travaux({ clickInHouse }) {
                     <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
                         <div className='bg-MarcAntoine shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
                         <p className='small_text'>Marc-Antoine Mathieu</p>
-                        <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
+                        <div className='bg-melonSoft w-2/5 h-1/5 flex justify-center items-center rounded-full'>
                             <a href="https://fr.wikipedia.org/wiki/Marc-Antoine_Mathieu" target='blank'>
-                                <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <svg className='fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                                     {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                                     <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
                             </a>
@@ -408,33 +408,36 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/* Face */}
-        < div id='popUpFace' className='fixed bg-melon lg:bg-melon/80 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal dark:text-melon -bottom-full w-full h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-full lg:w-1/2 lg:mx-auto justify-between items-center'>
-                <div className='pt-4 px-4 w-11/12 lg:w-full lg:mx-auto lg:p-0 lg:m-0'>
-                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2023</p>
-                    <h1 className='mb-2 text-3xl'>Cartoon Face</h1>
+        < div id='popUpFace' className='work_principal -bottom-full transition_pop-up' >
+            <div className='work_header'>
+                <div>
+                    <p>2023</p>
+                    <h1>Cartoon Face</h1>
                 </div>
 
-                <button onClick={popUpFace} className='mb-4 p-4 lg:p-0'>
-                    <svg className='fill-gunmetal lg:hover:fill-gunmetal/50 dark:fill-melon lg:dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpFace}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode lg:w-1/2' />
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto'>
+            <div className='work_section'>
 
-                <div>
-                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                        <p className='small_text'>Video</p>
-                    </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/4t_01gAzoiM?si=4tXxZj-gTJPlfInO" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
+                <div className='flex flex-row w-1/2 justify-between'>
+                    <img src="../img/placeholder/square.png" className='py-4 pr-4' alt="" />
+                    <img src="../img/placeholder/square.png" className='py-4 pl-4' alt="" />
                 </div>
+                <div className='flex flex-row w-1/2 justify-between'>
+                    <img src="../img/placeholder/square.png" className='py-4 pr-4' alt="" />
+                    <img src="../img/placeholder/square.png" className='py-4 pl-4' alt="" />
+                </div>
+
+                <p>asdasd</p>
+                <div className='h-[200px]'></div>
+
 
 
                 <div className='w-screen absolute bottom-0 '>
