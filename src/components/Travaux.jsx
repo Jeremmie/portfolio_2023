@@ -141,6 +141,9 @@ export default function Travaux({ clickInHouse }) {
 
         {/*LOOP*/}
         < div id='popUpLoop' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-loopTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
             <div className='work_header'>
                 <div>
                     <p>2022</p>
@@ -437,7 +440,7 @@ export default function Travaux({ clickInHouse }) {
 
                 <p>asdasd</p>
                 <div className='h-[200px]'></div>
-
+                n
 
 
                 <div className='w-screen absolute bottom-0 '>

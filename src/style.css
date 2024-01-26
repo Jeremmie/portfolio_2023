@@ -161,6 +161,10 @@ canvas {
     font-size: 1.87rem;
 }
 
+.work_header>div>p {
+    color: inherit;
+}
+
 .work_header>button {
     margin-bottom: 1rem;
     padding: 1rem;
