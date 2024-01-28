@@ -75,6 +75,7 @@ export default {
         'MarcAntoine': "url('https://i.ibb.co/qjgY4jL/Marc-Antoine-Mathieu.jpg')",
         'souvienstanzan': "url('https://i.ibb.co/qR6mHDH/souvientanzan.png')",
         'boris': "url('https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg')",
+        'clothSim': "url('../img/media/cloth_sim.png')",
 
         'AE_1': "url('../img/tram/after_1Tram.jpg')",
         'astronauteTram': "url('../img/tram/astronauteTram.jpg')",
@@ -92,6 +93,7 @@ export default {
         'vinylTram': "url('../img/tram/vinylTram.jpg')",
         'leoTram': "url('../img/tram/leoTram.jpg')",
         'rollUpTram': "url('../img/tram/rollUp.jpg')",
+
 
       },
       gridTemplateRows: {
