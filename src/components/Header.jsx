@@ -197,28 +197,28 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     }
 
     return (<>
-        <div onClick={handleBurgerClick} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melon  md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode">
-            <Lottie className="logo_menu_target fill-gunmetal dark:fill-melon" autoplay={false} lottieRef={lottieRefBurgerMenu} animationData={menuAnimation} loop={false} />
+        <div onClick={handleBurgerClick} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melonSoft  md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode">
+            <Lottie className="logo_menu_target fill-gunmetal dark:fill-melonSoft" autoplay={false} lottieRef={lottieRefBurgerMenu} animationData={menuAnimation} loop={false} />
         </div>
         <div id="modalHeader" onClick={handleBurgerClick} className="bg-gunmetal/60 opacity-[0%] hidden fixed h-screen z-10 w-screen transition_pop-up"></div>
         <div className="
         flex justify-start items-center h-screen z-20 fixed
         ">
             <div id="menu" className="
-            fixed -left-full bg-melon dark:bg-gunmetal flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
+            fixed -left-full bg-melonSoft dark:bg-gunmetal flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melonSoft dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
         " >
                 <button onClick={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melonSoft transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
                 </button >
                 <button onClick={travauxFull} id="travauxID" className="my-5 px-5 py-3 rounded-full  transition_manual">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melonSoft transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
                 </button>
                 <button onClick={contactFull} id="contactID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melonSoft transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
                 </button>
                 <button onClick={liensFull} id="liensID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
 
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
+                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melonSoft transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
                 </button>
                 <div className="my-5 w-14 shadow-inner rounded-full ">
                     <Nightmode switchBetweenMode={switchBetweenMode} />

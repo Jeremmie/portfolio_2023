@@ -76,6 +76,8 @@ export default {
         'souvienstanzan': "url('https://i.ibb.co/qR6mHDH/souvientanzan.png')",
         'boris': "url('https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg')",
         'clothSim': "url('../img/media/cloth_sim.png')",
+        'placeholder': "url('../img/placeholder/square.png')",
+
 
         'AE_1': "url('../img/tram/after_1Tram.jpg')",
         'astronauteTram': "url('../img/tram/astronauteTram.jpg')",

@@ -25,9 +25,9 @@ export default function Travaux({ clickInHouse }) {
         const popUpSpeed = document.querySelector('#popUpSpeed')
         popUpSpeed.classList.toggle('showPopUp')
     }
-    function popUpAscii() {
-        const popUpAscii = document.querySelector('#popUpAscii')
-        popUpAscii.classList.toggle('showPopUp')
+    function popUpEclipse() {
+        const popUpEclipse = document.querySelector('#popUpEclipse')
+        popUpEclipse.classList.toggle('showPopUp')
     }
     function popUpRollUp() {
         const popUpRollUp = document.querySelector('#popUpRollUp')
@@ -37,9 +37,9 @@ export default function Travaux({ clickInHouse }) {
         const popUpFace = document.querySelector('#popUpFace')
         popUpFace.classList.toggle('showPopUp')
     }
-    function popUpPortrait() {
-        const popUpPortrait = document.querySelector('#popUpPortrait')
-        popUpPortrait.classList.toggle('showPopUp')
+    function popUpAe() {
+        const popUpAe = document.querySelector('#popUpAe')
+        popUpAe.classList.toggle('showPopUp')
     }
     function popUpCloth() {
         const popUpCloth = document.querySelector('#popUpCloth')
@@ -49,6 +49,19 @@ export default function Travaux({ clickInHouse }) {
         const popUpGalaxygen = document.querySelector('#popUpGalaxygen')
         popUpGalaxygen.classList.toggle('showPopUp')
     }
+    function popUpSerif() {
+        const popUpSerif = document.querySelector('#popUpSerif')
+        popUpSerif.classList.toggle('showPopUp')
+    }
+    function popUpStillLife() {
+        const popUpStillLife = document.querySelector("#popUpStillLife")
+        popUpStillLife.classList.toggle('showPopUp')
+    }
+    function popUpTinyTroubles() {
+        const popUpTinyTroubles = document.querySelector("#popUpTinyTroubles")
+        popUpTinyTroubles.classList.toggle('showPopUp')
+    }
+
 
 
     return (<>
@@ -218,6 +231,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
+
                 <span className='work_content_video'>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -227,6 +241,7 @@ export default function Travaux({ clickInHouse }) {
                     </div>
                     <img src="../img/media/loop_moodboard.jpg" alt="" />
                 </span>
+
                 <div className='h-[300px] w-full'></div>
                 <div className='w-screen absolute bottom-0 '>
                     <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
@@ -236,69 +251,76 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/* ROBOT VIDEOGAME */}
-        < div id='popUpVideoGame' className='fixed bg-melon lg:bg-melon/80 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal dark:text-melon -bottom-full w-full h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-full lg:w-1/2 lg:mx-auto justify-between items-center'>
-                <div className='pt-4 px-4 w-11/12 lg:w-full lg:mx-auto lg:p-0 lg:m-0'>
-                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
-                    <h1 className='mb-2 text-3xl'>Video Game</h1>
+        < div id='popUpVideoGame' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-jvTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2022</p>
+                    <h1>Video Game</h1>
                 </div>
 
-                <button onClick={popUpVideoGame} className='mb-4 p-4 lg:p-0'>
-                    <svg className='fill-gunmetal lg:hover:fill-gunmetal/50 dark:fill-melon lg:dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpVideoGame}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 lg:w-1/2 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto px-4'>
 
-                <div>
-                    <div className='bg-gunmetal  mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+            <div className='work_section'>
+
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
                         <p className='small_text'>Gameplay</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube-nocookie.com/embed/ew2mZlE_C-k?si=5BlpC7JgX9eJk-k2" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/ew2mZlE_C-k?si=5BlpC7JgX9eJk-k2" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-                </div>
+                </span>
 
-                <p className='my-3'>This work is the result of a 5-day workshop designed to introduce us to Unity and create an interactive video game.
-                </p>
-                <div className='w-[90vw] h-1/6 rounded-lg flex justify-center items-center'>
-                    <div className='h-full w-2/3 shadow-lg rounded-lg bg-videoGame bg-center bg-cover flex items-center justify-center'>
+                <p>This work is the result of a 5-day workshop designed to introduce us to Unity and create an interactive video game.</p>
+                <div className='w-[90vw] h-1/6 rounded-lg flex justify-center items-center lg:w-full'>
+                    <div className='h-full w-2/3 shadow-lg rounded-lg bg-videoGame bg-center bg-cover flex items-center justify-center lg:w-1/3'>
                         <div className='w-full md:hidden h-full bg-gunmetal/50 backdrop-blur-sm rounded-lg flex items-center justify-center text-melon'><p>only playable on desktop :(</p></div>
-                        <div className='w-1/2 h-1/2 hidden md:block bg-gunmetal/50 backdrop-blur-sm rounded-lg items-center justify-center text-melon'><a href="https://jeremmie.github.io/Workshop_2022_Jeux_video/" target='blank'><h1>play</h1></a></div>
+                        <div className='w-1/2 h-1/2 hidden lg:flex bg-gunmetal/50 backdrop-blur-sm rounded-lg items-center justify-center text-melon'><a href="https://jeremmie.github.io/Workshop_2022_Jeux_video/" target='blank'><h1>play</h1></a></div>
                     </div>
 
                 </div>
                 <p className='my-3'>As I only had a week, I was inspired (a lot) by one of the characters in a Souviens Ten-Zan animation (Mother Fucking Dalle).</p>
+
                 <div className='w-[90vw] lg:w-11/12 lg:my-8 my-4 h-auto flex items-center justify-center'>
-                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
+                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl lg:w-1/2'>
                         <div className='bg-souvienstanzan shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
                         <p className='small_text'>Souviens Ten-Zan</p>
-                        <div className='bg-gunmetal dark:bg-melon w-2/5 h-1/5 flex justify-center items-center rounded-full'>
+                        <div className='bg-melonSoft w-2/5 h-1/5 flex justify-center items-center rounded-full'>
                             <a href="https://www.instagram.com/p/CGFE2UsjaxS/?img_index=1" target='blank'>
-                                <svg className='fill-melon dark:fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                <svg className='fill-gunmetal' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                                     {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                                     <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div className='bg-gunmetal dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" /></svg>
                         <p className='small_text'>Inspiration</p>
                     </div>
-                    <img className='w-full aspect-video rounded-b-lg shadow-lg' src="https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg" alt="" />
+                    <img src="https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg" alt="" />
                     <p className='small_text'>image taken from the "<a className='underline	' href="https://www.souvienstenzan.com/" target='blank'>Souviens Ten-zan</a>" website (site expired)</p>
-                </div>
-                <div className='flex justify-center mt-10'>
-                    <div className='w-11/12 h-[20vh]'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </span>
+
+                <div className='h-[300px] w-full'></div>
+                <div className='w-screen absolute bottom-0 '>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
             </div>
         </div >
@@ -342,92 +364,99 @@ export default function Travaux({ clickInHouse }) {
             </div>
         </div >
 
-        {/* ASCII */}
-        < div id='popUpAscii' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-screen justify-between items-start'>
-                <div className='pt-4 px-4 w-11/12'>
-                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
-                    <h1 className='mb-2 text-3xl'>Ascii</h1>
+        {/* Eclipse */}
+        < div id='popUpEclipse' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-placeholder bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2023</p>
+                    <h1>Eclipse</h1>
                 </div>
 
-                <button onClick={popUpAscii} className='mb-4 p-4'>
-                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpEclipse}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl px-4'>
+            <div className='work_section'>
 
-                <div>
-                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                        <p className='small_text'>Gameplay</p>
+                        <p>render</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/4t_01gAzoiM?si=4tXxZj-gTJPlfInO" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </span>
 
+                <p>Nous avons imaginé, écrit et tourné cette vidéo en un mois avec quatres autres personnes. Le thème: "Rebellion" nous à motivé à parlé des pensées rebelles qui nous traversent l'esprit.</p>
+
+                <div className='h-[300px] w-full'></div>
+                <div className='w-screen absolute bottom-0 '>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
 
-                <p className='my-3'>Shader exercise on blender.
-                </p>
-
-                <div className='w-screen absolute bottom-0 mb-10'>
-                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
-                </div>
             </div>
         </div >
 
         {/* RollUp */}
-        < div id='popUpRollUp' className='fixed bg-melon dark:bg-gunmetal text-gunmetal dark:text-melon -bottom-full w-screen h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-screen justify-between items-start'>
-                <div className='pt-4 px-4 w-11/12'>
-                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2021</p>
-                    <h1 className='mb-2 text-3xl'>Roll-Up</h1>
+        < div id='popUpRollUp' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-rollUpTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2021</p>
+                    <h1>Roll-Up</h1>
                 </div>
 
-                <button onClick={popUpRollUp} className='mb-4 p-4'>
-                    <svg className='fill-gunmetal dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpRollUp}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode' />
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl px-4 mb-20'>
+            <div className='work_section'>
 
-                <div>
-                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                        <p className='small_text'>Video</p>
+                        <p>Video</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/IF7aIzexB7k?si=Bp-xDKZ_V0-FAk4i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='shadow-lg' src="https://www.youtube.com/embed/IF7aIzexB7k?si=Bp-xDKZ_V0-FAk4i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-                </div>
+                </span>
 
-                <p className='my-3'>I made this animation for a week-long workshop. We then added it to a script made with Processing and an arduino-controlled motion detector. This device made it possible to play a game physically, and display the score on the screen on top of the video.
+                <p>I made this animation for a week-long workshop. We then added it to a script made with Processing and an arduino-controlled motion detector. This device made it possible to play a game physically, and display the score on the screen on top of the video.
                 </p>
 
-                <div>
-                    <div className='bg-gunmetal mt-4 dark:bg-melon px-2 py-1 rounded-t-lg text-melon dark:text-gunmetal flex items-center'>
-                        <svg className='fill-melon dark:fill-gunmetal mr-2' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                             {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                             <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                        <p className='small_text'>Loading screen</p>
+                        <p>Loading screen</p>
                     </div>
-                    <iframe className='w-full aspect-video rounded-b-lg shadow-lg' src="https://www.youtube.com/embed/Y9-3h646qB4?si=srUvprfRlei-44RD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe className='shadow-lg' src="https://www.youtube.com/embed/Y9-3h646qB4?si=srUvprfRlei-44RD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-                </div>
+                </span>
 
+                <div className='h-[300px] w-full'></div>
                 <div className='w-screen absolute bottom-0 '>
-                    <div className='w-11/12 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
             </div>
-        </div >
+        </div>
 
         {/* Face */}
         < div id='popUpFace' className='work_principal -bottom-full transition_pop-up' >
@@ -510,31 +539,80 @@ export default function Travaux({ clickInHouse }) {
             </div>
         </div >
 
-        {/* Portrait */}
-        < div id='popUpPortrait' className='fixed bg-melon lg:bg-melon/80 lg:backdrop-blur-xl dark:bg-gunmetal lg:dark:bg-gunmetal/80 text-gunmetal dark:text-melon -bottom-full w-full h-screen z-40 transition_pop-up' >
-            <div className='flex flex-row w-full lg:w-1/2 lg:mx-auto justify-between items-center'>
-                <div className='pt-4 px-4 w-11/12 lg:w-full lg:mx-auto lg:p-0 lg:m-0'>
-                    <p className='text-gunmetal/70 dark:text-melon/70 text-l mb-3'>2022</p>
-                    <h1 className='mb-2 text-3xl'>Portrait</h1>
+        {/* After_walkCycle */}
+        < div id='popUpAe' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-AE_1 bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2023</p>
+                    <h1>Walk cycle</h1>
                 </div>
 
-                <button onClick={popUpPortrait} className='mb-4 p-4 lg:p-0'>
-                    <svg className='fill-gunmetal lg:hover:fill-gunmetal/50 dark:fill-melon lg:dark:fill-melon' xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                <button onClick={popUpAe}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
                         {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
                         <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
                 </button>
             </div>
-            <hr className='w-11/12 block mx-auto border-gunmetal dark:border-melon transition_darkmode lg:w-1/2' />
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
-            <div className='overflow-auto h-full rounded-xl lg:rounded-none px-4 lg:px-0 lg:w-1/2 lg:block lg:mx-auto'>
+            <div className='work_section'>
 
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p>rendu</p>
+                    </div>
+                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </span>
+
+                <div className='h-[300px] w-full'></div>
+                <div className='w-screen absolute bottom-0 '>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+        {/* SERIF */}
+        < div id='popUpSerif' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-serifTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
                 <div>
-
-                    <img className='w-full rounded-b-lg shadow-lg' src="./img/media_desktop/portrait_leo.jpg" alt="" />
-                    <div className='h-40'></div>
+                    <p>2023</p>
+                    <h1>Sérif, un zeu de cowboy</h1>
                 </div>
 
+                <button onClick={popUpSerif}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
 
+            <div className='work_section'>
+                <div className='w-full h-10 mt-10'>
+                    <a href="https://jeremmie.github.io/galaxy_generator_animate-build-/" target='blank' className='bg-melonSoft text-gunmetal rounded-full px-3 py-3 hover:text-gunmetal hover:bg-melon transition_manual mt-5'>Play Sérif</a>
+                </div>
+
+                <span className='work_content_video'>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
+                        <p>gameplay</p>
+                    </div>
+                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                </span>
+                <p>Ce jeu à été réalisé en 48h avec trois autres personnes du studio Digital Kingdom. Nous l'avons fait dans le cadre d'une Game Jam sur le thème "The Good, the Bad and The Ugly". La consigne secondaire étant d'inclure l'utilisation de l'IA, nous avons généré les textes avec ChatGPT.</p>
+
+                <div className='h-[400px] w-full'></div>
                 <div className='w-screen absolute bottom-0 '>
                     <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
@@ -542,7 +620,6 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/* GALAXYGEN */}
-
         < div id='popUpGalaxygen' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
 
             <div className='bg-three_1Tram bg-cover bg-center '>
@@ -568,13 +645,8 @@ export default function Travaux({ clickInHouse }) {
 
                 <div className='w-full aspect-video rounded-b-lg shadow-lg bg-center bg-no-repeat bg-cover bg-threejs rounded-lg mt-10' />
                 <p >Coded with react and threeJS</p>
-                <a href="https://jeremmie.github.io/galaxy_generator_animate-build-/" target='blank' className='decoration-solid text-sky-600 underline'>Go to the website.</a>
+                <a href="https://jeremmie.github.io/galaxy_generator_animate-build-/" target='blank' className='bg-melonSoft text-gunmetal rounded-full px-3 py-3 hover:text-gunmetal hover:bg-melon transition_manual'>Customize your own galaxy!</a>
 
-
-
-                <div className='w-screen absolute bottom-0 '>
-                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
-                </div>
 
                 <div className='h-[300px] w-full'></div>
                 <div className='w-screen absolute bottom-0 '>
@@ -583,6 +655,77 @@ export default function Travaux({ clickInHouse }) {
             </div>
         </div >
 
+        {/*Still Life*/}
+        < div id='popUpStillLife' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-astronauteTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2021</p>
+                    <h1>Still Life</h1>
+                </div>
+
+                <button onClick={popUpStillLife}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
+
+            <div className='work_section'>
+
+
+                <img className='w-full shadow-lg' src="../img/placeholder/square.png" alt="" />
+                <img className='w-full my-4 shadow-lg' src="../img/placeholder/square.png" alt="" />
+                <img className='w-full shadow-lg' src="../img/placeholder/square.png" alt="" />
+
+                <p>Nature morte sur le thème des ustensiles de cuisine. Le but initiale était de recréer un lavabo avec de la vaisselle dedans, mais nous avons finalement joué avec les reflets de l'eau sur différentes textures.</p>
+
+                <div className='h-[300px] w-full'></div>
+                <div className='w-screen absolute bottom-0 '>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+        {/*Tiny Troubles*/}
+        < div id='popUpTinyTroubles' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-astronauteTram bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2024</p>
+                    <h1>Tiny Troubles</h1>
+                </div>
+
+                <button onClick={popUpTinyTroubles}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
+
+            <div className='work_section'>
+
+
+                <img className='w-full shadow-lg' src="../img/placeholder/square.png" alt="" />
+                <img className='w-full my-4 shadow-lg' src="../img/placeholder/square.png" alt="" />
+                <img className='w-full shadow-lg' src="../img/placeholder/square.png" alt="" />
+
+                <p>Nature morte sur le thème des ustensiles de cuisine. Le but initiale était de recréer un lavabo avec de la vaisselle dedans, mais nous avons finalement joué avec les reflets de l'eau sur différentes textures.</p>
+
+                <div className='h-[300px] w-full'></div>
+                <div className='w-screen absolute bottom-0 '>
+                    <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
+                </div>
+            </div>
+        </div >
+
+        {/* Vignettes */}
         <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none lg:flex lg:items-center lg:justify-center'>
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen lg:hidden'>
                 <div className='flex flex-col justify-center my-5 items-center'>
@@ -659,6 +802,15 @@ export default function Travaux({ clickInHouse }) {
                                 </a>
                             </div>
 
+                            <div onClick={popUpTinyTroubles} className='inline-block mr-5'>
+                                <div className='bg-videoGame bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                    <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
+                                        <p className='text-sm ml-2 mt-2'>Spline</p>
+                                        <p className=' text-2xl ml-2 mb-2'>Tiny Troubles</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className='inline-block mr-5 '>
                                 <a href="https://jeremmie.github.io/galaxy_generator_animate-build-/" target='blank'>
                                     <div className='bg-gameboy bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
@@ -705,12 +857,12 @@ export default function Travaux({ clickInHouse }) {
 
 
                 {/* Speed */}
-                <div id='popUpSpeed' onClick={popUpSpeed} className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
+                <div id='popUpEclipse' onClick={popUpEclipse} className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
                     <div className='bg-speed bg-center bg-cover shadow-lg rounded-lg w-[90vw] h-[18vh] flex items-center justify-end mb-5'>
                         <div className='h-full dark:bg-melon/90 bg-gunmetal/90 text-melon dark:text-gunmetal flex items-center rounded-r-lg w-1/3 transition_darkmode'>
                             <div className='flex flex-col'>
                                 <p className='text-sm ml-2 mt-2'>video</p>
-                                <p className=' text-2xl ml-2 mb-2'>Speed</p>
+                                <p className=' text-2xl ml-2 mb-2'>Eclipse</p>
                             </div>
                         </div>
                     </div>
@@ -722,10 +874,10 @@ export default function Travaux({ clickInHouse }) {
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>3D / animation</p></div>
                         <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
 
-                            <div onClick={popUpAscii} className='inline-block mr-5'>
+                            <div onClick={popUpEclipse} className='inline-block mr-5'>
                                 <div className='bg-asciiCube bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
-                                        <p className='text-sm ml-2 mt-2'>blender</p>
+                                        <p className='text-sm ml-2 mt-2'>Video</p>
                                         <p className=' text-2xl ml-2 mb-2'>Ascii</p>
                                     </div>
                                 </div>
@@ -756,7 +908,7 @@ export default function Travaux({ clickInHouse }) {
 
 
                 {/* serif */}
-                <div className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
+                <div onClick={popUpSerif} className='overflow-x-scroll whitespace-nowrap flex justify-center rounded-lg'>
                     <div className='bg-serif bg-center bg-cover shadow-lg rounded-lg w-[90vw] h-[18vh] flex items-center justify-end mb-5'>
                         <div className='h-full dark:bg-melon/90 bg-gunmetal/90 text-melon dark:text-gunmetal flex items-center rounded-r-lg w-1/3 transition_darkmode'>
                             <div className='flex flex-col'>
@@ -774,7 +926,7 @@ export default function Travaux({ clickInHouse }) {
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>2D / animation / other</p></div>
                         <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpAe} className='inline-block mr-5'>
                                 <div className='bg-dessin bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>After effect</p>
@@ -783,7 +935,7 @@ export default function Travaux({ clickInHouse }) {
                                 </div>
                             </div>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpCloth} className='inline-block mr-5'>
                                 <div className='bg-clothSim bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>Marvelous designer</p>
@@ -792,11 +944,20 @@ export default function Travaux({ clickInHouse }) {
                                 </div>
                             </div>
 
-                            <div className='inline-block mr-5'>
+                            <div onClick={popUpStillLife} className='inline-block mr-5'>
                                 <div className='bg-natureMorte bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
                                         <p className='text-sm ml-2 mt-2'>photography</p>
                                         <p className=' text-2xl ml-2 mb-2'>Still Life</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div onClick={popUpSpeed} className='inline-block mr-5'>
+                                <div className='bg-natureMorte bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                    <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
+                                        <p className='text-sm ml-2 mt-2'>Video</p>
+                                        <p className=' text-2xl ml-2 mb-2'>Speed</p>
                                     </div>
                                 </div>
                             </div>
@@ -827,11 +988,11 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div onClick={popUpPortrait} className='bg-leoTram row-span-2 col-span-1 bg-center bg-cover '>
+                <div onClick={popUpAe} className='bg-AE_1 row-span-2 col-span-1 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Portrait</h1>
-                            <p className='cursor-pointer'>photogrpahy</p>
+                            <h1 className='cursor-pointer'>AE animation</h1>
+                            <p className='cursor-pointer'>2D</p>
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
@@ -894,7 +1055,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '>
+                <div onClick={popUpSerif} className='bg-serifTram col-span-4 row-span-2 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>Serif</h1>
@@ -903,7 +1064,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-photo_2Tram row-span-3 bg-center bg-cover '>
+                <div onClick={popUpStillLife} className='bg-photo_2Tram row-span-4 bg-center bg-cover '>
                     <div className='grid_items flex justify-center text-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>Still Life</h1>
@@ -912,7 +1073,7 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-knucksTram row-span-2 bg-center bg-cover '>
+                <div className='bg-knucksTram row-span-3 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
                             <h1 className='cursor-pointer'>London Class</h1>
@@ -930,29 +1091,31 @@ export default function Travaux({ clickInHouse }) {
                         </div>
                     </div>
                 </div>
-                <div className='bg-AE_1 row-span-1 bg-center bg-cover '>
-                    <div className='grid_items flex justify-center items-center'>
-                        <div className='w-fit'>
-                            <h1 className='cursor-pointer'>AE animation</h1>
-                            <p className='cursor-pointer'>2D</p>
-                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
-                        </div>
-                    </div>
-                </div>
                 <div className='bg-three_2Tram bg-center bg-cover '>
+                    <a href="https://jeremmie.github.io/rapport_de_stage_main/dist/index.html" target='blank'>
+                        <div className='grid_items flex justify-center items-center'>
+                            <div className='w-fit'>
+                                <h1 className='cursor-pointer'>Gameboy</h1>
+                                <p className='cursor-pointer'>web / Three JS</p>
+                                <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div onClick={popUpEclipse} className='bg-placeholder row-span-1 col-span-2 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Gameboy</h1>
-                            <p className='cursor-pointer'>web / Three JS</p>
+                            <h1 className='cursor-pointer'>Eclipse</h1>
+                            <p className='cursor-pointer'>Vidéo</p>
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
                 </div>
-                <div onClick={popUpAscii} className='bg-asciiCube row-span-1 bg-center bg-cover '>
+                <div onClick={popUpTinyTroubles} className='bg-placeholder row-span-1 col-span-2 bg-center bg-cover '>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>
-                            <h1 className='cursor-pointer'>Ascii</h1>
-                            <p className='cursor-pointer'>3D / shaders</p>
+                            <h1 className='cursor-pointer'>Tiny Troubles</h1>
+                            <p className='cursor-pointer'>Vidéo Game / web</p>
                             <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
                         </div>
                     </div>
