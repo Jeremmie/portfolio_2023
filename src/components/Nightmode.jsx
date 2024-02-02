@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react"
 import Lottie from "lottie-react"
 import fromLightmodeAnim from '../../public/lottie/darkModeAnimation/fromLightmodeAnim.json'
 import fromDarkmodeAnim from '../../public/lottie/darkModeAnimation/fromDarkmodeAnim.json'
+import "../style.css"
+
 
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -56,7 +58,7 @@ export default function Nightmode({ switchBetweenMode }) {
 
   return (
     <>
-      <Lottie onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={isDarkMode ? fromDarkmodeAnim : fromLightmodeAnim} loop={false} />
+      <Lottie className="fill-gunmetal dark:fill-melonSoft boxAnimation transition_darkmode" onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={isDarkMode ? fromDarkmodeAnim : fromLightmodeAnim} loop={false} />
     </>
   );
 

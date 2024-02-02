@@ -316,3 +316,33 @@ canvas {
         margin-right: 10px;
     }
 }
+
+
+
+.copyToClickboardActif {
+    animation-duration: 2s;
+    animation-name: slidein;
+
+}
+
+@keyframes slidein {
+    0% {
+        bottom: -50%;
+        transition: ease-out;
+    }
+
+    20% {
+        bottom: 10%;
+        transition: ease-in-out;
+    }
+
+    80% {
+        bottom: 10%;
+        transition: ease-in-out;
+    }
+
+    100% {
+        bottom: -50%;
+        transition: ease-out;
+    }
+}

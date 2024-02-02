@@ -197,7 +197,7 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
     }
 
     return (<>
-        <div onClick={handleBurgerClick} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute sticky top-5 left-5 z-20 bg-melonSoft  md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode">
+        <div onClick={handleBurgerClick} className="w-14 md:w-10 p-2 md:p-1.5 shadow-warm rounded-full h-fit block absolute top-5 left-5 z-20 bg-melonSoft  md:backdrop-blur-xl dark:bg-gunmetal dark:shadow-cold transition_darkmode">
             <Lottie className="logo_menu_target fill-gunmetal dark:fill-melonSoft" autoplay={false} lottieRef={lottieRefBurgerMenu} animationData={menuAnimation} loop={false} />
         </div>
         <div id="modalHeader" onClick={handleBurgerClick} className="bg-gunmetal/60 opacity-[0%] hidden fixed h-screen z-10 w-screen transition_pop-up"></div>
