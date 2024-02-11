@@ -324,7 +324,7 @@ canvas {
 
 
 .copyToClickboardActif {
-    animation-duration: 2s;
+    animation-duration: 2000ms;
     animation-name: slidein;
 
 }
@@ -332,17 +332,26 @@ canvas {
 @keyframes slidein {
     0% {
         bottom: -50%;
+        transition: 0ms;
+    }
+
+    1% {
+        bottom: 10%;
+        transition: ease-in-out;
+    }
+
+    70% {
+        opacity: 100%;
+        bottom: 10%;
+
         transition: ease-out;
     }
 
-    20% {
+    99% {
+        opacity: 0%;
         bottom: 10%;
-        transition: ease-in-out;
-    }
 
-    80% {
-        bottom: 10%;
-        transition: ease-in-out;
+        transition: ease-out;
     }
 
     100% {

@@ -106,6 +106,7 @@ export default {
         'tinyTroublesTram': "url('../img/tram/tinyTroublesTram.jpg')",
         'eclipseTram': "url('../img/tram/eclipseTram.jpg')",
         'eclipseMobile': "url('../img/media/eclipse_mobile.jpg')",
+        'hehe': "url('../img/media/hehe.jpg')",
 
 
 
