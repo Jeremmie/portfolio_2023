@@ -75,8 +75,15 @@ export default {
         'MarcAntoine': "url('https://i.ibb.co/qjgY4jL/Marc-Antoine-Mathieu.jpg')",
         'souvienstanzan': "url('https://i.ibb.co/qR6mHDH/souvientanzan.png')",
         'boris': "url('https://i.ibb.co/NYGszk2/motherfuckingdalle.jpg')",
-        'clothSim': "url('../img/media/cloth_sim.png')",
+        'clothSim': "url('../img/media/render_HD.jpg')",
+        'clothSimSquare': "url('../img/media/render_HD_square.jpg')",
+        'clothSimSquare_2': "url('../img/media/render_HD_square2.jpg')",
+        'clothSimPaysage': "url('../img/media/render_HD_paysage.jpg')",
         'placeholder': "url('../img/placeholder/square.png')",
+        'processus': "url('../img/media/processus.jpeg')",
+        'processus_1': "url('../img/media/processus_2.jpeg')",
+        'processus_2': "url('../img/media/processus_3.png')",
+        'TinyTroublesMobile': "url('../img/media/TinyTroubleVignette.jpg')",
 
 
         'AE_1': "url('../img/tram/after_1Tram.jpg')",
@@ -95,6 +102,11 @@ export default {
         'vinylTram': "url('../img/tram/vinylTram.jpg')",
         'leoTram': "url('../img/tram/leoTram.jpg')",
         'rollUpTram': "url('../img/tram/rollUp.jpg')",
+        'clothTram': "url('../img/tram/render_HDTram.jpg')",
+        'tinyTroublesTram': "url('../img/tram/tinyTroublesTram.jpg')",
+        'eclipseTram': "url('../img/tram/eclipseTram.jpg')",
+        'eclipseMobile': "url('../img/media/eclipse_mobile.jpg')",
+
 
 
       },

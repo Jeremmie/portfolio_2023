@@ -301,6 +301,8 @@ canvas {
 
 }
 
+
+
 @media screen and (min-width: 1024px) {
     .work_section {
         border-radius: 0;
@@ -315,6 +317,8 @@ canvas {
     .work_section>p {
         margin-right: 10px;
     }
+
+
 }
 
 
@@ -345,4 +349,16 @@ canvas {
         bottom: -50%;
         transition: ease-out;
     }
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    /* 720 / 1280 = 0.5625 */
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
