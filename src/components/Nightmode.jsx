@@ -58,7 +58,7 @@ export default function Nightmode({ switchBetweenMode }) {
 
   return (
     <>
-      <Lottie className="fill-gunmetal dark:fill-melonSoft boxAnimation transition_darkmode" onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={isDarkMode ? fromDarkmodeAnim : fromLightmodeAnim} loop={false} />
+      <Lottie className="fill-gunmetal dark:fill-melon boxAnimation transition_darkmode" onClick={handleLottieClick} autoplay={false} lottieRef={lottieRef} animationData={isDarkMode ? fromDarkmodeAnim : fromLightmodeAnim} loop={false} />
     </>
   );
 

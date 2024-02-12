@@ -523,6 +523,9 @@ export default function Travaux({ clickInHouse }) {
                     </div>
                 </div>
                 <div className='bg-clothSimPaysage h-1/5 lg:h-1/2 bg-center bg-cover w-full bg-white'></div>
+
+                <iframe className='w-full h-1/4 lg:h-2/5' src="https://www.youtube-nocookie.com/embed/QKphD9ZJlX8?si=_p91qys0j8eyb9Vp" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
                 <p>Experimenting with Marvelous Designer to get good and accurate clothing simulations.</p>
                 <div className='h-[400px]'></div>
                 n

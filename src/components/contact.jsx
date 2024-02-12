@@ -22,13 +22,13 @@ export default function contact() {
                 </div> */}
 
                 <div className='flex flex-col lg:flex-row w-full my-10 h-auto justify-center lg:justify-around items-center'>
-                    <div className='w-1/3 lg:w-1/4 mb-5 bg-hehe bg-cover bg-center rounded-full lg:rounded-lg aspect-square'></div>
+                    <div className='w-1/3 lg:w-1/4 bg-hehe bg-cover bg-center rounded-full lg:rounded-lg aspect-square'></div>
                     <p className="w-2/3 lg:w-2/4 font-bold">Hey, you can contact me using this address:</p>
                 </div>
 
-                <CopyToClipboard onCopy={copied} text="jeremm.jaou@gmail.com">
+                <CopyToClipboard onCopy={copied} text="contact@jeremiejaouen.ch">
                     <div className="text-melon w-10/12 border-4 border-melon flex flex-row items-center justify-between bg-gunmetal px-7 py-3 rounded-full cursor-pointer">
-                        <p className="text-xl mr-5">jeremm.jaou@gmail.com</p>
+                        <p className="text-xl mr-5">contact@jeremiejaouen.ch</p>
                         <svg className="w-6 fill-melon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             {/* <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--> */}
                             <path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z" /></svg>
