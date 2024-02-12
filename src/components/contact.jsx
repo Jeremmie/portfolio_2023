@@ -1,4 +1,5 @@
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Header from './Header';
 import "../style.css"
 
 
@@ -9,7 +10,8 @@ export default function contact() {
         copiedClass.classList.toggle('copyToClickboardActif')
     }
     return (<>
-        <div className="fixed bg-melon/80 backdrop-blur-md text-gunmetal dark:text-melon dark:bg-gunmetal/80 flex flex-col justify-center items-center w-screen h-screen transition_darkmode">
+        <Header />
+        <div className="fixed bg-transparent backdrop-blur-md text-gunmetal dark:text-melon dark:bg-gunmetal/80 flex flex-col justify-center items-center w-screen h-screen transition_darkmode">
             <div className='flex flex-col justify-center items-center w-screen h-screen transition_darkmode
             lg:w-1/4
             '>

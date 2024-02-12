@@ -1,7 +1,9 @@
+import Header from "./Header"
+
 export default function Liens() {
 
     return (<>
-
+        <Header />
         <div className="fixed bg-melon dark:bg-gunmetal flex flex-col justify-center items-center w-screen h-screen transition_darkmode">
             <h1>Useful Links:</h1>
             ...working in :)

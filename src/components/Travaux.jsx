@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Travaux3D from './travaux/Travaux_3D'
 import ReactPlayer from 'react-player'
+import Header from './Header'
 
 
 
@@ -66,6 +67,8 @@ export default function Travaux({ clickInHouse }) {
 
 
     return (<>
+        <Header />
+
         < div id='popUpLeon' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
             <div className='bg-loopTram bg-cover bg-center '>
                 <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
