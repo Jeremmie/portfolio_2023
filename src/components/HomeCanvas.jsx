@@ -61,6 +61,11 @@ export default function HomeCanvas({ toggleBetweenMode }) {
     })
   }
 
+  function textChange() {
+    var text = "Hello"
+
+  }
+  console.log(textChange);
 
   return (
     <>
@@ -81,6 +86,10 @@ export default function HomeCanvas({ toggleBetweenMode }) {
       <group scale={1.3} position={[0, -0.2, 0]}>
 
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
+        <Html position={[-1.5, 1.05, -1.2]}>
+          <h1 className='w-full text-white'>Hello there!</h1>
+
+        </Html>
         <SpriteAnimator
           scale={0.7}
           position={[0, 1.05, -1.2]}
