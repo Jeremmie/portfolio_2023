@@ -22,7 +22,7 @@ export default function contact() {
 
                     <span className='h-full lg:h-1/2 flex justify-center items-center transition_darkmode'>
                         <CopyToClipboard onCopy={copied} text="contact@jeremiejaouen.ch">
-                            <div className="text-white hover:text-black dark:text-black dark:fill-black hover:dark:fill-white fill-white hover:fill-black dark:hover:bg-gunmetal dark:hover:text-white hover:bg-white shadow-warm shadow-black bg-gunmetal dark:bg-melon py-3 px-5 w-10/12 lg:w-full h-fit  flex flex-row items-center justify-center items-center rounded-lg cursor-pointer">
+                            <div className="text-white hover:text-black dark:text-black dark:fill-black hover:dark:fill-white fill-white hover:fill-black dark:hover:bg-gunmetal dark:hover:text-white hover:bg-white shadow-warm shadow-black bg-gunmetal dark:bg-melon py-3 px-5 w-10/12 lg:w-full h-fit  flex flex-row items-center justify-center rounded-lg cursor-pointer">
                                 <p className="text-base lg:text-xl lg:font-medium mr-5 transition_all">contact@jeremiejaouen.ch</p>
                                 <svg className="w-20 lg:w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                     {/* <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--> */}
