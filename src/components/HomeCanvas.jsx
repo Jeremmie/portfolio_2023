@@ -61,12 +61,9 @@ export default function HomeCanvas({ toggleBetweenMode }) {
     })
   }
 
-  function textChange() {
-    var text = "Hello"
-
+  function newText() {
+    document.getElementById("oldText").innerHTML = 'hehe';
   }
-  console.log(textChange);
-
   return (
     <>
       {isSM && <Environment files={envMapLight} background blur={0.03} />}
@@ -87,7 +84,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
         <Html position={[-1.5, 1.05, -1.2]}>
-          <h1 className='w-full text-white'>Hello there!</h1>
+          <h1 id='oldText' onClick={newText} className='w-full text-white'>Hello there!</h1>
 
         </Html>
         <SpriteAnimator
