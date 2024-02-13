@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './style.css'
-import Travaux from './components/Travaux.JSX'
+import Travaux from './components/Travaux.jsx'
 import Contact from './components/contact.jsx'
 import Liens from './components/Liens.jsx'
 import {
