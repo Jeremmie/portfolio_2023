@@ -6,11 +6,11 @@ import Travaux from './components/Travaux.jsx'
 import Contact from './components/contact.jsx'
 import Liens from './components/Liens.jsx'
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
