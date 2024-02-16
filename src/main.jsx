@@ -6,11 +6,13 @@ import Travaux from './components/Travaux.jsx'
 import Contact from './components/contact.jsx'
 import Liens from './components/Liens.jsx'
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
+import { HashRouter as Router } from 'react-router-dom';
 
-const router = createBrowserRouter([
+
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -31,6 +33,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )
