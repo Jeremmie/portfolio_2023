@@ -47,9 +47,9 @@ function App() {
 
         <Home toggleBetweenMode={toggleBetweenMode} />
 
-        {/* {toggleTravaux ? null : <Travaux />}
+        {toggleTravaux ? null : <Travaux />}
         {toggleContact ? null : <Contact />}
-        {toggleLiens ? null : <Liens />} */}
+        {toggleLiens ? null : <Liens />}
 
 
       </div >
