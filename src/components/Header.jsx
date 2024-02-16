@@ -8,6 +8,7 @@ import houseAnimation from '../../public/lottie/iconAnimation/animHouse.json'
 import liensAnimation from '../../public/lottie/iconAnimation/animLiens.json'
 import menuAnimation from '../../public/lottie/menu_animation/menu_animation.json'
 import "../style.css"
+import { Link } from "react-router-dom"
 
 export default function Header({ switchBetweenMode, toggleBetweenMode, clickHouse, toggleHouse, clickTravaux, toggleTravaux, clickContact, toggleContact, clickLiens, toggleLiens }) {
     const isSM = useMediaQuery({ query: '(max-width: 640px)' })
@@ -64,8 +65,8 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         setAnimDirectionHouse(animDirectionHouse * -1)
         lottieHouse.current.setDirection(animDirectionHouse); // définit la direction de l'animation
         lottieHouse.current.play();
-        onlyHouseOpen()
-        houseFunction()
+        // onlyHouseOpen()
+        // houseFunction()
 
     }
 
@@ -95,8 +96,8 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         setAnimDirectionTravaux(animDirectionTravaux * -1)
         lottieTravaux.current.setDirection(animDirectionTravaux); // définit la direction de l'animation
         lottieTravaux.current.play();
-        onlyTravauxOpen()
-        travauxFunction()
+        // onlyTravauxOpen()
+        // travauxFunction()
         document.getElementById('travauxID').classList.toggle('activeBox')
     }
 
@@ -123,8 +124,8 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         } else { }
     }
     function contactFull() {
-        onlyContactOpen();
-        contactFunction()
+        // onlyContactOpen();
+        // contactFunction()
         setAnimDirectionContact(animDirectionContact * -1)
         lottieContact.current.setDirection(animDirectionContact); // définit la direction de l'animation
         lottieContact.current.play();
@@ -154,8 +155,8 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
         } else { }
     }
     function liensFull() {
-        onlyLiensOpen();
-        liensFunction()
+        // onlyLiensOpen();
+        // liensFunction()
         setAnimDirectionLiens(animDirectionLiens * -1)
         lottieLiens.current.setDirection(animDirectionLiens); // définit la direction de l'animation
         lottieLiens.current.play();
@@ -207,19 +208,25 @@ export default function Header({ switchBetweenMode, toggleBetweenMode, clickHous
             <div id="menu" className="
             fixed -left-full bg-melon dark:bg-gunmetal flex flex-col text-gunmetal justify-center items-center rounded-r-lg backdrop-blur-xl dark:text-melon dark:shadow-warm transition_darkmode shadow-lg border-y-2 border-r-2 border-gray-800/10
         " >
-                <button onClick={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
+                <button onMouseEnter={houseFull} onMouseLeave={houseFull} className="my-5 px-6 py-3 rounded-full  transition_manual ">
+                    <Link to="/">
+                        <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieHouse} animationData={houseAnimation} loop={false} />
+                    </Link>
                 </button >
-                <button onClick={travauxFull} id="travauxID" className="my-5 px-5 py-3 rounded-full  transition_manual">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
+                <button onMouseEnter={travauxFull} onMouseLeave={travauxFull} id="travauxID" className="my-5 px-5 py-3 rounded-full  transition_manual">
+                    <Link to="/Travaux">
+                        < Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieTravaux} animationData={boxAnimation} loop={false} />
+                    </Link>
                 </button>
-                <button onClick={contactFull} id="contactID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
-
+                <button onMouseEnter={contactFull} onMouseLeave={contactFull} id="contactID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
+                    <Link to="/Contact">
+                        <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieContact} animationData={contactAnimation} loop={false} />
+                    </Link>
                 </button>
-                <button onClick={liensFull} id="liensID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
-
-                    <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
+                <button onMouseEnter={liensFull} onMouseLeave={liensFull} id="liensID" className="my-5 px-5 py-3 rounded-full  transition_manual ">
+                    <Link to="/Liens">
+                        <Lottie className="fill-gunmetal w-6 rounded-full dark:fill-melon transition_darkmode boxAnimation" autoplay={false} lottieRef={lottieLiens} animationData={liensAnimation} loop={false} />
+                    </Link>
                 </button>
                 <div className="my-5 w-14 shadow-inner rounded-full ">
                     <Nightmode switchBetweenMode={switchBetweenMode} />
