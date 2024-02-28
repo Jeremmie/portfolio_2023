@@ -66,7 +66,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
   // }
   return (
     <>
-      {isSM && <Environment files={envMapLight} background blur={0.03} />}
+
       {isMD && <Environment files={envMap} background blur={0.03} />}
       {isMD && <Float rotationIntensity={(3, 3, 0.1)} >
         <PerspectiveCamera makeDefault ref={defaultCamera} position={[0, 0, -10]} />
@@ -77,6 +77,9 @@ export default function HomeCanvas({ toggleBetweenMode }) {
           <PerspectiveCamera makeDefault position={[0, 0, -10]} />
         </Float>}
       {/* <OrbitControls /> */}
+
+
+
 
       <ambientLight intensity={2} />
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
@@ -92,7 +95,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
             </div>
 
             <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <p className='pr-10 mb-5'>Ça fait un bail que j'ai pas vu quelqu'un. <br />Ce monstre n'a pas l'air de vouloir nous laisser partir. Tu peux visiter le phare pour tuer le temps.</p>
+              <p className='pr-10 mb-5'>It's been a while since I've seen anyone. <br />That monster doesn't seem to want to let us go. You can visit the lighthouse to kill time.</p>
               <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">visiter</a>
             </div>
 
@@ -125,6 +128,9 @@ export default function HomeCanvas({ toggleBetweenMode }) {
           color={'#FFB8B8'}
         />
       </group>
+
+
+
     </>
   )
 }
