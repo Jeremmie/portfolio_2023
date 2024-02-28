@@ -61,9 +61,9 @@ export default function HomeCanvas({ toggleBetweenMode }) {
     })
   }
 
-  function newText() {
-    document.getElementById("oldText").innerHTML = 'hehe';
-  }
+  // function newText() {
+  //   document.getElementById("oldText").innerHTML = 'hehe';
+  // }
   return (
     <>
       {isSM && <Environment files={envMapLight} background blur={0.03} />}
@@ -83,8 +83,25 @@ export default function HomeCanvas({ toggleBetweenMode }) {
       <group scale={1.3} position={[0, -0.2, 0]}>
 
         <Phare className='touch-none' toggleBetweenMode={toggleBetweenMode} />
-        <Html position={[-1.5, 1.05, -1.2]}>
-          <h1 id='oldText' onClick={newText} className='w-full text-white'>Hello there!</h1>
+        <Html style={{ userSelect: 'none' }} position={[-0.8, 1.5, -1.2]}>
+
+          <div className='w-[300%]'>
+            <div className='w-fit pr-10 p-3 mb-2 whitespace-nowrap bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <h1 className='text-xl'>Hey!!</h1>
+              <p>Over Here!</p>
+            </div>
+
+            <div className='w-full flex flex-col justify-center items-center pr-10 p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <p>Ça fait un bail que j'ai pas vu quelqu'un. <br />Ce monstre n'a pas l'air de vouloir nous laisser partir. Tu peux visiter le phare pour tuer le temps.</p>
+              <a className='bg-melon hover:bg-gunmetal hover:text-melon w-fit px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">visiter</a>
+            </div>
+
+            <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+            </div>
+
+          </div>
 
         </Html>
         <SpriteAnimator
