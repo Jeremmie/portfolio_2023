@@ -91,13 +91,13 @@ export default function HomeCanvas({ toggleBetweenMode }) {
               <p>Over Here!</p>
             </div>
 
-            <div className='w-full flex flex-col justify-center items-center pr-10 p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <p>Ça fait un bail que j'ai pas vu quelqu'un. <br />Ce monstre n'a pas l'air de vouloir nous laisser partir. Tu peux visiter le phare pour tuer le temps.</p>
-              <a className='bg-melon hover:bg-gunmetal hover:text-melon w-fit px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">visiter</a>
+            <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <p className='pr-10 mb-5'>Ça fait un bail que j'ai pas vu quelqu'un. <br />Ce monstre n'a pas l'air de vouloir nous laisser partir. Tu peux visiter le phare pour tuer le temps.</p>
+              <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">visiter</a>
             </div>
 
             <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
             </div>
 
