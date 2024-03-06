@@ -2,6 +2,8 @@ import React from "react"
 import { Canvas } from "@react-three/fiber"
 import HomeCanvas from "./HomeCanvas"
 import { useMediaQuery } from 'react-responsive'
+import { Loader } from "@react-three/drei";
+
 
 
 export default function Home({ toggleBetweenMode }) {
@@ -15,20 +17,30 @@ export default function Home({ toggleBetweenMode }) {
             </div>
         </div>
         <div className="h-full w-full fixed">
-            {isMD && <Canvas>
-                <HomeCanvas className='touch-none' toggleBetweenMode={toggleBetweenMode} />
-            </Canvas>}
-            <div className="w-full h-full bg-bg_mobile bg-center bg-cover">
-                <div className="w-full h-full flex bg-gunmetal/90 flex-col items-center justify-center">
-                    <div className="w-10/12 flex flex-col justify-center items-center">
-                        <h1 className="text-3xl">Hey!</h1>
-                        <p className="mb-5 text-2xl">Welcome in my portfolio</p>
-                        <p className="text-lg">Don't hesitate to discover <a className="font-bold text-white underline rounded-lg" href="#/travaux">my works</a>, or to <a className="font-bold text-white underline rounded-lg" href="#/contact">contact me</a>.</p>
-                        <iframe className='rounded-lg mt-24 w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
+
+            {isMD &&
+
+                <Canvas>
+
+                    <HomeCanvas className='touch-none' toggleBetweenMode={toggleBetweenMode} />
+
+                </Canvas>}
+
+
+            {isSM &&
+                <div className="w-full h-full bg-bg_mobile bg-center bg-cover">
+                    <div className="w-full h-full flex bg-gunmetal/90 text-melon flex-col items-center justify-center">
+                        <div className="w-10/12 flex flex-col justify-center text-melon items-center">
+                            <h1 className="text-3xl">Hey!</h1>
+                            <p className="mb-5 text-2xl">Welcome in my portfolio</p>
+                            <p className="text-lg">Don't hesitate to discover <a className="font-bold text-white underline rounded-lg" href="#/travaux">my works</a>, or to <a className="font-bold text-white underline rounded-lg" href="#/contact">contact me</a>.</p>
+                            <iframe className='rounded-lg mt-24 w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div>}
+
         </div>
 
     </>)

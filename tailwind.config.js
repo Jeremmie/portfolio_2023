@@ -45,12 +45,12 @@ export default {
         'figma': 'box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);'
       },
       backgroundImage: {
-        'placeholder-bg': "url('https://jeremiejaouen.ch/img/works_modal/modal_10/leon_original.jpg')",
-        'video': "url('https://jeremiejaouen.ch/img/works_modal/modal_1/vignette.jpg')",
-        'dessin': "url('https://jeremiejaouen.ch/img/works_modal/modal_11/vignette.png')",
+        'placeholder-bg': "url('https://jeremmie.github.io/portfolio_2021/img/works_modal/modal_10/leon_original.jpg')",
+        'video': "url('https://jeremmie.github.io/portfolio_2021/img/works_modal/modal_1/vignette.jpg')",
+        'dessin': "url('https://jeremmie.github.io/portfolio_2021/img/works_modal/modal_11/vignette.png')",
         'web': "url('https://i.ibb.co/x1j72Sc/web.png')",
-        'photo': "url('https://jeremiejaouen.ch/img/nature_morte/naturemorte_2.png')",
-        'JV': "url('https://jeremiejaouen.ch/img/works_modal/modal_12/vignette.jpg')",
+        'photo': "url('https://jeremmie.github.io/portfolio_2021/img/nature_morte/naturemorte_2.png')",
+        'JV': "url('https://jeremmie.github.io/portfolio_2021/img/works_modal/modal_12/vignette.jpg')",
         'leonAscii': "url('https://i.ibb.co/ZzPHtcb/leon.jpgjpg')",
         'galaxyGroove': "url('https://i.ibb.co/Ws5bfB7/galaxygroove.png')",
         'loop': "url('https://i.ibb.co/D9F2Hx4/vignette.png')",
