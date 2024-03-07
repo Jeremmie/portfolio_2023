@@ -90,13 +90,13 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
           <div className='w-[300%]'>
             <div className='w-fit pr-10 p-3 mb-2 whitespace-nowrap bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <h1 className='text-xl'>Coucou!!</h1>
+              <h1 className='text-xl'>Hey!!</h1>
               <p>Over Here!</p>
             </div>
 
             <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
               <p className='pr-10 mb-5'>It's been a while since I've seen anyone. <br />That monster doesn't seem to want to let us go. You can visit the lighthouse to kill time.</p>
-              <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">visiter</a>
+              <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">take a look inside</a>
             </div>
 
             <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>

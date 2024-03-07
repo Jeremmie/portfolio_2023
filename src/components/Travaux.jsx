@@ -163,8 +163,8 @@ export default function Travaux({ clickInHouse }) {
             </div>
             <div className='work_header'>
                 <div>
-                    <p>2022</p>
-                    <h1>Loop</h1>
+                    <p>2024</p>
+                    <h1>Clothes Simulation</h1>
                 </div>
 
                 <button onClick={popUpCloth}>
@@ -177,72 +177,29 @@ export default function Travaux({ clickInHouse }) {
 
             <div className='work_section'>
 
-                <span className='work_content_video'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM48 368v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16H416zM48 240v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H416zM48 112v32c0 8.8 7.2 16 16 16H96c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H64c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H416zM160 128v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V128c0-17.7-14.3-32-32-32H192c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H320c17.7 0 32-14.3 32-32V320c0-17.7-14.3-32-32-32H192z" /></svg>
-                        <p>Loop render</p>
-                    </div>
-                    <iframe className='shadow-lg' src="https://www.youtube-nocookie.com/embed/Vvss8V0_oWk?si=Ii8Y4ktZWVUVO3AK" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                </span>
 
-                <p>The work was carried out in groups of two over the course of a week. The main aim of the workshop was to inlay a green screen video into a 3D environment.</p>
-
-                <span className='work_content_sketchfab'>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M234.5 5.7c13.9-5 29.1-5 43.1 0l192 68.6C495 83.4 512 107.5 512 134.6V377.4c0 27-17 51.2-42.5 60.3l-192 68.6c-13.9 5-29.1 5-43.1 0l-192-68.6C17 428.6 0 404.5 0 377.4V134.6c0-27 17-51.2 42.5-60.3l192-68.6zM256 66L82.3 128 256 190l173.7-62L256 66zm32 368.6l160-57.1v-188L288 246.6v188z" /></svg>
-                        <p>3D scene</p>
-                    </span>
-                    <div class="sketchfab-embed-wrapper"> <iframe title="loop - scene" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b2a332de2209448eae09c7536cc48fee/embed"> </iframe></div>
-                </span>
-                <p>We were inspired by the visuals of Dedouze and the adventures of
-                    Julius Corentin Acquefacques (comic strip by Marc Antoine Mathieu).</p>
-                <div className='w-[90vw] lg:w-11/12 my-4 lg:my-8 h-auto flex justify-between'>
-                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
-                        <div className='bg-dedouze shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
-                        <p className='small_text'>Dedouze</p>
-                        <div className='flex justify-center items-center rounded-full'>
-                            <a href="https://www.dedouze.com/" target='blank' className='bg-melonSoft px-6 py-3 lg:py-6 lg:px-12 rounded-full'>
-                                <svg className='fill-gunmetal h-3 lg:h-4' xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                    <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className='w-[44vw] aspect-square border-gunmetal flex flex-col items-center justify-around rounded-3xl'>
-                        <div className='bg-MarcAntoine shadow-lg bg-center bg-cover rounded-full shadow-ms w-1/2 aspect-square'></div>
-                        <p className='small_text'>Marc-Antoine Mathieu</p>
-                        <div className='flex justify-center items-center rounded-full'>
-                            <a href="https://fr.wikipedia.org/wiki/Marc-Antoine_Mathieu" target='blank' className='bg-melonSoft px-6 py-3 lg:py-6 lg:px-12 rounded-full'>
-                                <svg className='fill-gunmetal h-3 lg:h-4' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                                    <path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" /></svg>
-                            </a>
-                        </div>
+                <div className='flex flex-row w-full h-1/2 lg:h-2/3 justify-between'>
+                    <div className='bg-clothSim w-1/2 h-full bg-center bg-cover'></div>
+                    <div className='flex flex-col justify-between w-1/2 h-full items-center'>
+                        <div className='bg-clothSimSquare bg-center bg-cover text-black w-full h-full'></div>
+                        <div className='bg-clothSimSquare_2 bg-center bg-cover text-black w-full h-full'></div>
                     </div>
                 </div>
+                <div className='bg-clothSimPaysage h-1/5 lg:h-1/2 bg-center bg-cover w-full bg-white'></div>
 
-                <span className='work_content_video'>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                            {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
-                            <path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z" /></svg>
-                        <p>Moodboard</p>
-                    </div>
-                    <img src="../img/media/loop_moodboard.jpg" alt="" />
-                </span>
+                <iframe className='w-full h-1/4 lg:h-2/5' src="https://www.youtube-nocookie.com/embed/QKphD9ZJlX8?si=_p91qys0j8eyb9Vp" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-                <div className='h-[300px] w-full'></div>
+                <p>Experimenting with Marvelous Designer to get good and accurate clothing simulations.</p>
+                <div className='h-[400px]'></div>
+                n
+
+
                 <div className='w-screen absolute bottom-0 '>
                     <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
-
             </div>
         </div >
+
 
         {/* ROBOT VIDEOGAME */}
         < div id='popUpVideoGame' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
