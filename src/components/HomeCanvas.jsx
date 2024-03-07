@@ -90,7 +90,7 @@ export default function HomeCanvas({ toggleBetweenMode }) {
 
           <div className='w-[300%]'>
             <div className='w-fit pr-10 p-3 mb-2 whitespace-nowrap bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <h1 className='text-xl'>Hey!!</h1>
+              <h1 className='text-xl'>Coucou!!</h1>
               <p>Over Here!</p>
             </div>
 
