@@ -35,7 +35,7 @@ export default function Home({ toggleBetweenMode }) {
                             <h1 className="text-3xl">Hey!</h1>
                             <p className="mb-5 text-2xl">Welcome in my portfolio</p>
                             <p className="text-lg">Don't hesitate to discover <a className="font-bold text-white underline rounded-lg" href="#/travaux">my works</a>, or to <a className="font-bold text-white underline rounded-lg" href="#/contact">contact me</a>.</p>
-                            <iframe className='rounded-lg mt-24 w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                            {/* <iframe className='rounded-lg mt-24 w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
 
                         </div>
                     </div>
