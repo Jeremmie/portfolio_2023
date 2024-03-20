@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import Travaux3D from './travaux/Travaux_3D'
 import ReactPlayer from 'react-player'
 import Header from './Header'
+import { Timeline, Event } from "react-timeline-scribble";
+
 
 
 
@@ -63,6 +65,10 @@ export default function Travaux({ clickInHouse }) {
         const popUpTinyTroubles = document.querySelector("#popUpTinyTroubles")
         popUpTinyTroubles.classList.toggle('showPopUp')
     }
+    function popUpDiplome() {
+        const popUpDiplome = document.querySelector("#popUpDiplome")
+        popUpDiplome.classList.toggle('showPopUp')
+    }
 
 
 
@@ -123,6 +129,52 @@ export default function Travaux({ clickInHouse }) {
                 </div>
             </div>
         </div >
+
+        < div id='popUpDiplome' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
+            <div className='bg-vignette_phare bg-cover bg-center '>
+                <div className='bg-gradient-to-t from-gunmetal to-black/80 w-full h-[50px]'></div>
+            </div>
+            <div className='work_header'>
+                <div>
+                    <p>2024</p>
+                    <h1>Meldroc et Popof</h1>
+                    <p>work in progress for my degree project</p>
+                </div>
+
+                <button onClick={popUpDiplome}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512">
+                        {/* <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --> */}
+                        <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" /></svg>
+                </button>
+            </div>
+            <hr className='w-11/12 block mx-auto border-melonSoft transition_darkmode lg:w-1/2' />
+
+            <div className='work_section'>
+                <p>At my school, diploma projects consist in giving students carte blanche for three months to create a project to showcase in their portfolio.</p>
+                <p className='font-bold'>So I took the opportunity to make my first short animation project.</p>
+                <h3 className='italic text-base m-0'>This project isn't finished yet, so here's my current progress (with further notes on figma)</h3>
+                {/* <iframe className='w-full h-auto aspect-video' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FPLhPzWljvV0K3golClx454%2Fdiplome%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dm5p3okzDeBqUEnjs-1" allowfullscreen></iframe> */}
+                <div className='overflow-auto rounded-lg grid-cols-2 lg:grid-cols-4 grid_row_template lg:grid-rows-7 w-full h-1/2 grid'>
+
+                    <iframe className='row-span-1 lg:row-span-1 col-span-2 lg:col-span-4 h-full w-full' src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FRcMldgcYxTEVTgYEDvdhTg%2FUntitled%3Ftype%3Dwhiteboard%26node-id%3D0%253A1%26t%3DD4fL9jUrvkkGUPPn-1" allowfullscreen></iframe>
+                    <img className='object-cover row-span-1 lg:row-span-2 col-span-2  w-full h-full' src="./img/media/diplome/phare.jpg" alt="" />
+                    <video className='object-cover row-span-2 lg:row-span-2 col-span-1 w-full h-full' src="./img/media/diplome/motion-capture.mp4 " type="video/mp4" autoPlay loop></video>
+                    <video className='object-cover row-span-2 lg:row-span-2 col-span-1 w-full h-full' src="./img/media/diplome/motion-capturevw.mp4 " type="video/mp4" autoPlay loop></video>
+                    <iframe className='w-full h-full row-span-1 lg:col-span-4 lg:row-span-2 col-span-2' src="https://www.youtube-nocookie.com/embed/l_HDiFEJQxY?si=lcF0MwZUVVomoTIp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div className='w-full h-[300px]'>
+                    {/* empty */}
+                </div>
+            </div >
+
+
+        </div>
+
+
+
+
+
+
 
         {/*Galaxy GROOVE*/}
         < div id='popUpGalaxyGroove' className='work_principal -bottom-full transition_pop-up lg:backdrop-blur-xl' >
@@ -407,7 +459,7 @@ export default function Travaux({ clickInHouse }) {
                     <div className='w-11/12 lg:w-1/2 h-auto'><p className='text-sm text-center'>Copyright © 2023 Jérémie Jaouen tous droits résérvés</p></div>
                 </div>
             </div>
-        </div>
+        </div >
 
         {/* Face */}
         < div id='popUpFace' className='work_principal -bottom-full transition_pop-up' >
@@ -762,7 +814,7 @@ export default function Travaux({ clickInHouse }) {
         </div >
 
         {/* Vignettes */}
-        <div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none lg:flex lg:items-center lg:justify-center'>
+        < div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none lg:flex lg:items-center lg:justify-center' >
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen lg:hidden'>
                 <div className='flex flex-col justify-center my-5 items-center'>
                     <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg lg:hidden'><p className=' px-2 py-1 text-base'>showreel</p></div>
@@ -776,22 +828,18 @@ export default function Travaux({ clickInHouse }) {
                 </div>
                 {/* HIGHLITED PROJECT */}
                 <div className='overflow-x-scroll whitespace-nowrap rounded-lg mb-5 lg:overflow-y-scroll lg:whitespace-none'>
+
+                    <div onClick={popUpDiplome} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode lg:bg-leonAscii lg:rounded-none'>
+                        <div className='bg-vignette_phare bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden lg:h-[100%]'></div>
+                        <p className='text-sm ml-2 mt-2 lg:hidden'>/wip Diplôme</p>
+                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>Meldroc et Popof</p>
+
+                    </div>
+
                     <div onClick={popUpCloth} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode lg:bg-leonAscii lg:rounded-none'>
                         <div className='bg-clothSim bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden lg:h-[100%]'></div>
                         <p className='text-sm ml-2 mt-2 lg:hidden'>Marvelous designer</p>
                         <p className=' text-2xl ml-2 mt-2 lg:hidden'>3D Clothes</p>
-                    </div>
-
-                    <div onClick={popUpFace} className='h-[40vh] inline-block shadow-lg mb-5 text-melon dark:bg-melon ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode lg:bg-leonAscii lg:rounded-none'>
-                        <div className='bg-visagesculpt bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden lg:h-[100%]'></div>
-                        <p className='text-sm ml-2 mt-2 lg:hidden'>charachter design</p>
-                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>3D Face</p>
-                    </div>
-
-                    <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode bg-center bg-cover lg:bg-galaxyGroove lg:rounded-none'>
-                        <div onClick={popUpGalaxyGroove} className='bg-galaxyGroove bg-center bg-cover h-2/3 rounded-t-lg w-full lg:hidden'></div>
-                        <p className='text-sm ml-2 mt-2 lg:hidden'>album cover</p>
-                        <p className=' text-2xl ml-2 mt-2 lg:hidden'>Galaxy Groove</p>
                     </div>
 
                     <div className='h-[40vh] inline-block mb-5 shadow-lg text-melon dark:bg-melon  ml-5 w-[65%] dark:text-gunmetal bg-gunmetal rounded-xl transition_darkmode mr-5 lg:bg-loop lg:rounded-none'>
@@ -799,7 +847,6 @@ export default function Travaux({ clickInHouse }) {
                         <p className='text-sm ml-2 mt-2 lg:hidden'>3D animation</p>
                         <p className=' text-2xl ml-2 mt-2 lg:hidden'>Loop</p>
                     </div>
-
 
                 </div>
 
@@ -916,6 +963,24 @@ export default function Travaux({ clickInHouse }) {
                         <div className='bg-gunmetal dark:bg-melon w-fit px-4 shadow-lg rounded-t-lg ml-5'><p className='text-base text-melon dark:text-gunmetal'>3D / animation</p></div>
                         <div className='overflow-auto shadow-lg whitespace-nowrap py-3 bg-gunmetal dark:bg-melon pl-3 rounded-l-lg mb-5'>
 
+                            <div onClick={popUpFace} className='inline-block mr-5'>
+                                <div className='bg-visagesculpt bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                    <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
+                                        <p className='text-sm ml-2 mt-2'>charachter design</p>
+                                        <p className=' text-2xl ml-2 mb-2'>3D Face</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div onClick={popUpGalaxyGroove} className='inline-block mr-5'>
+                                <div className='bg-galaxyGroove bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
+                                    <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
+                                        <p className='text-sm ml-2 mt-2'>Album Cover</p>
+                                        <p className=' text-2xl ml-2 mb-2'>Galaxy Groove</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div onClick={popUpLeon} className='inline-block mr-5'>
                                 <div className='bg-leonAscii bg-center bg-cover aspect-square shadow-lg rounded-lg w-[42vw] flex items-end'>
                                     <div className='h-fit dark:bg-gunmetal/90 bg-melon/90 text-gunmetal dark:text-melon rounded-b-lg w-full transition_darkmode'>
@@ -1004,6 +1069,16 @@ export default function Travaux({ clickInHouse }) {
             </div>
 
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] grid-cols-4 grid_row_template w-screen mt-20 h-screen hidden lg:rounded-none bg-white lg:mt-0 lg:grid'>
+                <div onClick={popUpDiplome} className='bg-vignette_phare bg-cover bg-top row-span-2 col-span-4'>
+                    <div className='grid_items flex justify-center items-center'>
+                        <div className='w-fit'>
+                            <h1 className='cursor-pointer'>Meldroc et Popof</h1>
+                            <p className='cursor-pointer'>Projet de diplôme</p>
+                            <p className='underline hover:decoration-double mt-10 cursor-pointer'>more...</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div onClick={popUpCloth} className='bg-clothTram bg-cover bg-top row-span-3 col-span-2'>
                     <div className='grid_items flex justify-center items-center'>
                         <div className='w-fit'>

@@ -108,6 +108,7 @@ export default {
         'eclipseMobile': "url('../img/media/eclipse_mobile.jpg')",
         'hehe': "url('../img/media/hehe.jpeg')",
         'bg_mobile': "url('../img/media/bg_mobile.jpg')",
+        'vignette_phare': "url('../img/media/diplome/phare.jpg')",
 
 
 
