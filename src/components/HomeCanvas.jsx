@@ -99,10 +99,10 @@ export default function HomeCanvas({ toggleBetweenMode }) {
               <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">take a look inside</a>
             </div>
 
-            {/* <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
-              <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/RrCDRWtpCpA?si=T3RhsC0tB8xzfc2D" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
-            </div> */}
+            </div>
 
           </div>
 
