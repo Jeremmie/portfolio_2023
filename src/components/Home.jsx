@@ -8,8 +8,8 @@ import { Loader } from "@react-three/drei";
 
 export default function Home({ toggleBetweenMode }) {
 
-    const isSM = useMediaQuery({ query: '(max-width: 640px)' })
-    const isMD = useMediaQuery({ query: '(min-width: 768px)' })
+    const isSM = useMediaQuery({ query: '(max-width: 940px)' })
+    const isMD = useMediaQuery({ query: '(min-width: 950px)' })
     return (<>
         <div className="h-full w-full flex flex-col justify-center items-center md:absolute">
             <div className="h-fit absolute left-0 z-10 px-2">
