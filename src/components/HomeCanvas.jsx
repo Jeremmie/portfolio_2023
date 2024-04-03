@@ -99,10 +99,12 @@ export default function HomeCanvas({ toggleBetweenMode }) {
               <a className='bg-melon text-center font-bold hover:bg-gunmetal hover:text-melon w-full px-3 py-2 rounded-xl text-gunmetal text-xl' href="#/Travaux">take a look inside</a>
             </div>
 
-            <div className='w-full flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+            {/* <div className='w-fit flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
               <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-lg aspect-video' src="https://www.youtube-nocookie.com/embed/RrCDRWtpCpA?si=T3RhsC0tB8xzfc2D" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-
-            </div>
+            </div> */}
+            <div className='w-11/12 flex flex-col justify-center items-center p-3 mb-2 bg-gunmetal/80 touch-none text-white rounded-lg'>
+              <iframe src="https://player.vimeo.com/video/930275465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" className='rounded-lg w-full bg-gunmetal lg:rounded-lg aspect-video' title="Showreel 2024-2023"></iframe>
+            </div><script src="https://player.vimeo.com/api/player.js"></script>
 
           </div>
 

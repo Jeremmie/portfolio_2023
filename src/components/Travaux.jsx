@@ -819,7 +819,8 @@ export default function Travaux({ clickInHouse }) {
                 <div className='flex flex-col justify-center my-5 items-center'>
                     <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg lg:hidden'><p className=' px-2 py-1 text-base'>showreel</p></div>
                     <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal dark:bg-melon flex justify-center p-2 lg:p-0 lg:rounded-none'>
-                        <iframe className='rounded-lg w-full bg-gunmetal lg:rounded-none' src="https://www.youtube-nocookie.com/embed/eeH90wwWKM8?si=S6GaKqYifEUS7jvx" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/930275465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" className='rounded-lg w-[150%] bg-gunmetal lg:rounded-lg aspect-video' title="Showreel 2024-2023"></iframe>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
                 </div>
                 <div className='px-5 lg:hidden'>
