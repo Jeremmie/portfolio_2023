@@ -816,14 +816,14 @@ export default function Travaux({ clickInHouse }) {
         {/* Vignettes */}
         < div className='w-screen h-screen fixed bg-melon dark:bg-gunmetal touch-none lg:flex lg:items-center lg:justify-center' >
             <div className='overflow-auto rounded-tl-[40px] rounded-tr-[20px] w-screen mt-20 h-screen lg:hidden'>
-                <div className='flex flex-col justify-center my-5 items-center'>
+                {/* <div className='flex flex-col justify-center my-5 items-center'>
                     <div className='w-[90%] text-melon dark:text-gunmetal bg-gunmetal dark:bg-melon rounded-t-lg lg:hidden'><p className=' px-2 py-1 text-base'>showreel</p></div>
                     <div className='shadow-lg w-[90%] h-[21vh] rounded-b-lg bg-gunmetal dark:bg-melon flex justify-center pt-4 lg:p-0 lg:rounded-none'>
                         <div className='w-full flex flex-col justify-center items-center  bg-gunmetal/80 touch-none text-white '>
                             <iframe src="https://player.vimeo.com/video/930275465?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" className='w-full rounded-b-lg bg-gunmetal lg:rounded-lg aspect-video' title="Showreel 2024-2023"></iframe>
                         </div><script src="https://player.vimeo.com/api/player.js"></script>
                     </div>
-                </div>
+                </div> */}
                 <div className='px-5 lg:hidden'>
                     <h1>Highlighted projects</h1>
                     <hr className='mb-5 border-gunmetal dark:border-melon transition_darkmode' />
